@@ -1,0 +1,9 @@
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Miss K STEM logo">
+<defs><linearGradient id="mkg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2E3FA6"/><stop offset="1" stop-color="#1E2C7A"/></linearGradient></defs>
+<rect x="4" y="4" width="92" height="92" rx="24" fill="url(#mkg)"/>
+<g stroke="#fff" stroke-opacity=".10" stroke-width="1.4"><path d="M4 30h92M4 54h92M4 78h92M30 4v92M54 4v92M78 4v92"/></g>
+<ellipse cx="50" cy="52" rx="33" ry="12.5" fill="none" stroke="#E8811F" stroke-width="2.6" transform="rotate(-32 50 52)"/>
+<ellipse cx="50" cy="52" rx="33" ry="12.5" fill="none" stroke="#E8811F" stroke-opacity=".45" stroke-width="2" transform="rotate(32 50 52)"/>
+<g stroke="#fff" stroke-width="8.5" stroke-linecap="round" stroke-linejoin="round" fill="none"><path d="M37 27V75"/><path d="M37 52L61 27"/><path d="M37 52L62 76"/></g>
+<circle cx="37" cy="52" r="5.6" fill="#E8811F" stroke="#fff" stroke-width="1.6"/>
+</svg>

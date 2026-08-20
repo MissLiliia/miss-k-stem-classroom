@@ -27,9 +27,13 @@ a{color:#0A5A62}
 /* ---------- nav ---------- */
 nav{position:sticky; top:0; z-index:50; background:rgba(247,249,248,.92); backdrop-filter:blur(8px); border-bottom:1px solid var(--line)}
 .nav-in{display:flex; align-items:center; gap:14px; padding:10px 20px; max-width:1060px; margin:0 auto; flex-wrap:wrap}
-.brand{font-family:'Space Grotesk'; font-weight:700; font-size:1.05rem; color:var(--ink); text-decoration:none; margin-right:auto; display:flex; align-items:center; gap:9px}
-.brand .prompt{width:28px;height:26px;border-radius:7px;background:var(--ink);color:#7be0a3;display:grid;place-items:center;font-family:'JetBrains Mono';font-size:.8rem;font-weight:700}
-.navlinks{display:flex; gap:6px; flex-wrap:wrap}
+.basis-badge{margin-right:auto; order:1; display:flex; align-items:center; height:96px}
+.basis-badge img{height:100%; width:auto; display:block}
+
+.brand{font-family:'Space Grotesk'; font-weight:700; font-size:1.05rem; color:var(--ink); text-decoration:none; order:3; display:flex; align-items:center; gap:9px}
+.brand .glyph{width:28px; height:28px; flex-shrink:0; display:block}
+.brand .glyph svg{display:block; width:100%; height:100%}
+.navlinks{display:flex; gap:6px; flex-wrap:wrap; order:2}
 .nlink{text-decoration:none; border:1.5px solid var(--line); border-radius:8px; padding:4px 11px; font-family:'Space Grotesk'; font-weight:700; font-size:.85rem; color:var(--ink); background:#fff}
 .nlink:hover{border-color:var(--ink)}
 
@@ -104,6 +108,11 @@ section h2{font-size:1.8rem; margin-bottom:10px}
 .why-quote{border-left:4px solid var(--amber); padding-left:16px; font-style:italic; color:var(--ink-soft)}
 
 footer{padding:32px 0 44px; color:var(--ink-soft); font-size:.9rem}
+.footer-brand{display:flex; align-items:center; gap:16px; flex-wrap:wrap}
+.footer-logo{display:inline-flex; align-items:center; gap:9px; text-decoration:none; color:var(--ink)}
+.footer-logo .glyph{width:26px; height:26px; flex-shrink:0}
+.footer-logo .glyph svg{display:block; width:100%; height:100%}
+.footer-logo span.label{font-family:'Space Grotesk'; font-weight:700; font-size:.85rem}
 footer .mono{font-size:.78rem}
 
 @media (max-width:820px){
@@ -120,14 +129,15 @@ footer .mono{font-size:.78rem}
 
 <nav aria-label="Main">
   <div class="nav-in">
-    <a class="brand" href="#top"><span class="prompt">&gt;_</span> Miss K's STEM Classroom</a>
+    <a class="brand" href="#top"><span class="glyph"><svg viewBox="0 0 100 100" role="img" aria-label="Miss K STEM logo"><defs><linearGradient id="mkg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2E3FA6"/><stop offset="1" stop-color="#1E2C7A"/></linearGradient></defs><rect x="4" y="4" width="92" height="92" rx="24" fill="url(#mkg)"/><g stroke="#fff" stroke-opacity=".10" stroke-width="1.4"><path d="M4 30h92M4 54h92M4 78h92M30 4v92M54 4v92M78 4v92"/></g><ellipse cx="50" cy="52" rx="33" ry="12.5" fill="none" stroke="#E8811F" stroke-width="2.6" transform="rotate(-32 50 52)"/><ellipse cx="50" cy="52" rx="33" ry="12.5" fill="none" stroke="#E8811F" stroke-opacity=".45" stroke-width="2" transform="rotate(32 50 52)"/><g stroke="#fff" stroke-width="8.5" stroke-linecap="round" stroke-linejoin="round" fill="none"><path d="M37 27V75"/><path d="M37 52L61 27"/><path d="M37 52L62 76"/></g><circle cx="37" cy="52" r="5.6" fill="#E8811F" stroke="#fff" stroke-width="1.6"/></svg></span> Miss K's STEM Classroom</a>
     <div class="navlinks">
       <a class="nlink" href="#classes">Classes</a>
       <a class="nlink" href="#classroom">My Classroom</a>
       <a class="nlink" href="#about">About Miss K</a>
       <a class="nlink" href="#why">Why This Site</a>
     </div>
-  </div>
+    <div class="basis-badge"><img src="basis-logo.png" alt="BASIS International School Bangkok" title="BASIS International School Bangkok"></div>
+</div>
 </nav>
 
 <header id="top">
@@ -281,7 +291,10 @@ footer .mono{font-size:.78rem}
 
 <footer>
   <div class="wrap">
-    <p><b>Miss K's STEM Classroom</b> — Liliia Khmarskaia · l.khmarskaia@gmail.com</p>
+    <div class="footer-brand">
+      <a class="footer-logo" href="mailto:l.khmarskaia@basis.ac.th" title="Email Miss K at BASIS International School Bangkok"><span class="glyph"><svg viewBox="0 0 100 100" role="img" aria-label="Miss K STEM logo"><defs><linearGradient id="mkgf" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2E3FA6"/><stop offset="1" stop-color="#1E2C7A"/></linearGradient></defs><rect x="4" y="4" width="92" height="92" rx="24" fill="url(#mkgf)"/><g stroke="#fff" stroke-opacity=".10" stroke-width="1.4"><path d="M4 30h92M4 54h92M4 78h92M30 4v92M54 4v92M78 4v92"/></g><ellipse cx="50" cy="52" rx="33" ry="12.5" fill="none" stroke="#E8811F" stroke-width="2.6" transform="rotate(-32 50 52)"/><ellipse cx="50" cy="52" rx="33" ry="12.5" fill="none" stroke="#E8811F" stroke-opacity=".45" stroke-width="2" transform="rotate(32 50 52)"/><g stroke="#fff" stroke-width="8.5" stroke-linecap="round" stroke-linejoin="round" fill="none"><path d="M37 27V75"/><path d="M37 52L61 27"/><path d="M37 52L62 76"/></g><circle cx="37" cy="52" r="5.6" fill="#E8811F" stroke="#fff" stroke-width="1.6"/></svg></span><span class="label">Email Miss K</span></a>
+      <p><b>Miss K's STEM Classroom</b> — Liliia Khmarskaia</p>
+    </div>
     <p class="mono">&gt; built with curiosity, for curious people_</p>
   </div>
 </footer>
