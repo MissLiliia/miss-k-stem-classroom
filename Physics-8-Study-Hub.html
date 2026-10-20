@@ -30,14 +30,20 @@ button{font-family:inherit; cursor:pointer}
 /* ---------- nav ---------- */
 nav{position:sticky; top:0; z-index:50; background:rgba(247,249,248,.92); backdrop-filter:blur(8px); border-bottom:1px solid var(--line)}
 .nav-in{display:flex; align-items:center; gap:14px; padding:10px 20px; max-width:1060px; margin:0 auto; flex-wrap:wrap}
-.brand{font-family:'Space Grotesk'; font-weight:700; font-size:1.05rem; color:var(--ink); text-decoration:none; margin-right:auto; display:flex; align-items:center; gap:9px}
+.brand{font-family:'Space Grotesk'; font-weight:700; font-size:1.05rem; color:var(--ink); text-decoration:none; order:3; display:flex; align-items:center; gap:9px}
 .brand .prompt{width:28px;height:26px;border-radius:7px;background:var(--ink);color:#7be0a3;display:grid;place-items:center;font-family:'JetBrains Mono';font-size:.8rem;font-weight:700}
-.navtiles{display:flex; gap:6px; flex-wrap:wrap}
+.navtiles{display:flex; gap:6px; flex-wrap:wrap; order:2}
 .ntile{display:block; text-decoration:none; border:1.5px solid var(--line); border-radius:8px; padding:3px 8px; font-family:'Space Grotesk'; font-weight:700; font-size:.85rem; color:var(--ink); background:#fff}
 .ntile small{display:block; font-size:.55rem; font-weight:500; color:var(--ink-soft); letter-spacing:.02em}
 .ntile:hover{border-color:currentColor}
 .ntile.active{color:#fff!important; border-color:transparent}
 .ntile.play{border-style:dashed}
+
+.basis-badge{margin-right:auto; order:1; display:flex; align-items:center; height:96px}
+.basis-badge img{height:100%; width:auto; display:block}
+.homebtn{order:2; margin-left:10px; padding:5px 12px; border:1.5px solid var(--ink); border-radius:8px; font-size:.8rem; font-weight:700; text-decoration:none; color:var(--ink); white-space:nowrap; font-family:inherit; background:#fff}
+.homebtn:hover{background:var(--paper)}
+.nav-in .navlinks{order:2; display:flex; gap:8px; align-items:center; flex-wrap:wrap}
 
 /* ---------- unit tiles: little code windows (signature) ---------- */
 .etile{border:2px solid; border-radius:12px; background:#fff; text-decoration:none; color:var(--ink); display:flex; flex-direction:column; min-height:158px; position:relative; overflow:hidden; transition:transform .15s ease, box-shadow .15s ease}
@@ -199,6 +205,9 @@ sub,sup{line-height:0}
   <div class="nav-in">
     <a class="brand" href="#/"><span class="prompt">&Phi;</span> Physics 8 Study Hub</a>
     <div class="navtiles" id="navtiles"></div>
+    <a class="homebtn" href="JPC-Prep-Hub.html">&#127942; JPC Practice</a>
+    <a class="homebtn" href="index.html">&larr; Home</a>
+    <div class="basis-badge"><img src="basis-logo.png" alt="BASIS International School Bangkok" title="BASIS International School Bangkok"></div>
   </div>
 </nav>
 <div class="wrap">

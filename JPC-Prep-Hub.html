@@ -275,16 +275,22 @@ input[type=text]:focus,select:focus{border-color:var(--teal);outline:none}
 .reviewq h4{font-size:1rem;margin-bottom:6px}
 .tag{font-family:'JetBrains Mono'}
 
+.brand{order:3!important;margin-right:0!important}.navtiles{order:2}
+.basis-badge{margin-right:auto; order:1; display:flex; align-items:center; height:96px}
+.basis-badge img{height:100%; width:auto; display:block}
+.homebtn{order:2; margin-left:10px; padding:5px 12px; border:1.5px solid var(--ink); border-radius:8px; font-size:.8rem; font-weight:700; text-decoration:none; color:var(--ink); white-space:nowrap; font-family:inherit; background:#fff}
+.homebtn:hover{background:var(--paper)}
+.nav-in .navlinks{order:2; display:flex; gap:8px; align-items:center; flex-wrap:wrap}
+
 </style>
 </head>
 <body>
 <nav>
   <div class="nav-in">
     <a class="brand" id="brandlink" href="#/"><span class="prompt">&Phi;</span> JPC Practice</a>
-    <div id="who"></div>
-    <a class="btn small" href="#/progress">Progress</a>
-    <a class="btn small" href="#/guide">Guide</a>
-    <a class="btn small" href="Physics-8-Study-Hub.html">&larr; Physics 8 Hub</a>
+    <div class="navlinks"><span id="who"></span><a class="homebtn" style="margin:0" href="#/progress">Progress</a><a class="homebtn" style="margin:0" href="#/guide">Guide</a><a class="homebtn" style="margin:0" href="Physics-8-Study-Hub.html">&larr; Physics 8 Hub</a></div>
+    <a class="homebtn" href="index.html">&larr; Home</a>
+    <div class="basis-badge"><img src="basis-logo.png" alt="BASIS International School Bangkok" title="BASIS International School Bangkok"></div>
   </div>
 </nav>
 <div class="wrap">
