@@ -282,13 +282,71 @@ input[type=text]:focus,select:focus{border-color:var(--teal);outline:none}
 .homebtn:hover{background:var(--paper)}
 .nav-in .navlinks{order:2; display:flex; gap:8px; align-items:center; flex-wrap:wrap}
 
+/* ---------- accounts edition ---------- */
+.muted{color:var(--ink-soft)}
+.err{color:var(--bad);font-weight:700;min-height:1.2em;margin-top:8px}
+.btn.big{font-size:1.05rem;padding:12px 20px}
+.homebtn.pri{background:var(--teal);color:#fff;border-color:var(--teal)}
+.ava{display:inline-grid;place-items:center;border-radius:50%;border:2px solid #fff;box-shadow:0 1px 4px rgba(30,42,56,.25);flex:none;line-height:1;overflow:hidden}
+.whochip{display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--ink);border:1.5px solid var(--line);border-radius:30px;padding:3px 12px 3px 3px;background:#fff}
+.whochip small{display:block;font-size:.7rem;color:var(--ink-soft);line-height:1.1}
+.whochip b{display:block;line-height:1.1;font-size:.9rem}
+.savebadge{font-size:.72rem;color:var(--good)}.savebadge.bad{color:var(--bad)}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:16px 0}
+.steps>div{background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px}
+.steps span{display:inline-grid;place-items:center;width:26px;height:26px;border-radius:50%;background:var(--teal);color:#fff;font-weight:700;margin-right:6px}
+.steps p{font-size:.9rem;color:var(--ink-soft);margin-top:4px}
+ol.board{list-style:none;padding:0;margin:0}
+ol.board li{display:flex;align-items:center;gap:12px;padding:8px 6px;border-bottom:1px solid var(--line)}
+ol.board li.mine{background:var(--amber-soft);border-radius:10px}
+ol.board .rk{width:36px;text-align:center;font-weight:700;font-family:'JetBrains Mono',monospace}
+ol.board .bn{flex:1;min-width:0}ol.board .bn b{display:block}ol.board .bn small{color:var(--ink-soft)}
+ol.board .bx{font-family:'JetBrains Mono',monospace;font-weight:700;color:var(--teal-dark);white-space:nowrap}
+.authcard{max-width:520px;margin:28px auto}
+.authcard label{display:block;font-weight:700;margin:12px 0}
+.authcard label small{font-weight:400;color:var(--ink-soft)}
+.authcard input,.authcard select{display:block;width:100%;margin-top:5px;padding:10px;border:1.5px solid #aabfc3;border-radius:9px;font:inherit}
+.avpick{border:none;margin:12px 0;display:flex;gap:10px;flex-wrap:wrap}
+.avpick legend{font-weight:700;margin-bottom:6px}
+.avpick label{margin:0;cursor:pointer}.avpick input{position:absolute;opacity:0}
+.avpick input:checked+.ava{outline:4px solid var(--amber)}
+.pcard{border-radius:18px;padding:14px;margin:22px 0 14px;box-shadow:0 2px 10px rgba(30,42,56,.12)}
+.pinner{display:flex;gap:16px;align-items:center;background:rgba(255,255,255,.9);border-radius:14px;padding:12px 16px}
+.pinfo{flex:1;min-width:0}.pnick{font-family:'Space Grotesk';font-weight:700;font-size:1.5rem}
+.xpbar{height:12px;border-radius:8px;background:#e3eaec;overflow:hidden;margin:6px 0}
+.xpbar i{display:block;height:100%;background:linear-gradient(90deg,var(--teal),#7be0a3)}
+.pnum{display:flex;gap:16px;flex-wrap:wrap;font-weight:700;font-size:.9rem}
+.modes{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.mode{display:block;text-align:left;background:#fff;border:2px solid var(--line);border-radius:16px;padding:16px;text-decoration:none;color:var(--ink);font:inherit;cursor:pointer;transition:transform .15s,box-shadow .15s}
+.mode:hover{transform:translateY(-2px);box-shadow:0 6px 16px rgba(30,42,56,.12);border-color:var(--teal)}
+.mode .mi{font-size:2rem;display:block}.mode b{font-family:'Space Grotesk';font-size:1.1rem}.mode p{font-size:.88rem;color:var(--ink-soft);margin-top:4px}
+.scimini{display:flex;align-items:center;gap:8px;font-size:.8rem;font-weight:700;color:var(--ink-soft)}
+.scihero{display:flex;gap:20px;align-items:flex-start;background:#fff;border:2px solid;border-radius:18px;padding:18px;margin:12px 0}
+.sciface{flex:none;background:var(--amber-soft);border-radius:50%;padding:10px}
+.bubble{position:relative;background:var(--amber-soft);border-radius:14px;padding:12px 16px;margin-top:10px}
+.bubble ul{margin:6px 0 4px 20px}.bubble li{margin:4px 0}.bubble small{color:var(--ink-soft)}
+.done-card{border:2px dashed var(--teal)}
+.xplive{font-family:'JetBrains Mono',monospace;font-weight:700;color:var(--good);margin-right:10px}
+.xpgain{display:inline-block;margin-top:8px;background:#e4f5ec;color:#1d5c39;border-radius:10px;padding:8px 14px;font-weight:700}
+.sh{margin:18px 0 8px}
+.sgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:10px}
+.sitem{background:#fff;border:1.5px solid var(--line);border-radius:14px;padding:12px;display:flex;flex-direction:column;align-items:center;gap:6px;text-align:center;font-size:.9rem}
+.sitem.on{border-color:var(--good);box-shadow:0 0 0 2px #2e7d4f33}
+.sitem button[disabled]{opacity:.45;cursor:not-allowed}
+.tbars>div{display:grid;grid-template-columns:200px 1fr 50px;gap:10px;align-items:center;margin:4px 0;font-size:.9rem}
+.thb{background:none;border:none;font:inherit;font-weight:700;color:inherit;cursor:pointer;padding:0}
+.toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,30px);opacity:0;background:var(--ink);color:#fff;padding:12px 18px;border-radius:12px;z-index:99;transition:all .3s;font-weight:700;max-width:90vw}
+.toast.on{opacity:1;transform:translate(-50%,0)}
+details summary{cursor:pointer;margin:8px 0}
+@media(max-width:800px){.modes{grid-template-columns:1fr 1fr}.steps{grid-template-columns:1fr}.scihero{flex-direction:column;align-items:center}.tbars>div{grid-template-columns:120px 1fr 44px}}
+@media(max-width:480px){.modes{grid-template-columns:1fr}.pinner{flex-direction:column;text-align:center}.pnum{justify-content:center}}
 </style>
 </head>
 <body>
 <nav>
   <div class="nav-in">
     <a class="brand" id="brandlink" href="#/"><span class="prompt">&Phi;</span> JPC Practice</a>
-    <div class="navlinks"><span id="who"></span><a class="homebtn" style="margin:0" href="#/progress">Progress</a><a class="homebtn" style="margin:0" href="#/guide">Guide</a><a class="homebtn" style="margin:0" href="Physics-8-Study-Hub.html">&larr; Physics 8 Hub</a></div>
+    <div class="navlinks"><span id="who" class="navlinks"></span><a class="homebtn" style="margin:0" href="#/guide">Guide</a><a class="homebtn" style="margin:0" href="Physics-8-Study-Hub.html">&larr; Physics 8 Hub</a></div>
     <a class="homebtn" href="index.html">&larr; Home</a>
     <div class="basis-badge"><img src="basis-logo.png" alt="BASIS International School Bangkok" title="BASIS International School Bangkok"></div>
   </div>
@@ -297,9 +355,26 @@ input[type=text]:focus,select:focus{border-color:var(--teal);outline:none}
   <main id="app"></main>
   <footer>
     Junior Physics Challenge practice site &middot; Created by Miss K &middot; Liliia Khmarskaia &middot; BASIS International School Bangkok<br>
-    This is <b>preparation only</b>. The questions are original and written in the style of past Junior Physics Challenge papers. They are not the official test. The Junior Physics Challenge is run by the British Physics Olympiad.
+    <span id="modeline"></span><br>This is <b>preparation only</b>. The questions are original and written in the style of past Junior Physics Challenge papers. They are not the official test. The Junior Physics Challenge is run by the British Physics Olympiad.
   </footer>
 </div>
+<script>
+/* ======================================================================
+   SCHOOL-WIDE ACCOUNTS (Firebase). Paste your Firebase web-app config
+   object below, replacing null. Example:
+   window.JPC_FIREBASE_CONFIG = { apiKey: "...", authDomain: "...", projectId: "...",
+     storageBucket: "...", messagingSenderId: "...", appId: "..." };
+   Leave it as null for device-only mode (accounts saved on each computer).
+   ====================================================================== */
+window.JPC_FIREBASE_CONFIG = {
+  apiKey: "AIzaSyDy5yspP7huMyiI9PjrcDyk5Hj_Ir25x_k",
+  authDomain: "jpc-bisb.firebaseapp.com",
+  projectId: "jpc-bisb",
+  storageBucket: "jpc-bisb.firebasestorage.app",
+  messagingSenderId: "122517593879",
+  appId: "1:122517593879:web:ebb752a6a3bd69ec5ca152"
+};
+</script>
 <script>
 const ART={"mascot_wave": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 80\" class=\"mascot\" role=\"img\"><g transform=\"translate(0,80) scale(1,-1)\"><g transform=\"translate(48.00,40.00)\"><g transform=\"scale(1.0,1.0)\"><rect x=\"-26.00\" y=\"-34.00\" width=\"52.00\" height=\"12.00\" rx=\"6.00\" fill=\"#3d5a8a\" stroke=\"none\"/><rect x=\"-24.00\" y=\"-26.00\" width=\"48.00\" height=\"6.00\" fill=\"#f2e9e1\" stroke=\"none\"/><rect x=\"-22.00\" y=\"-20.00\" width=\"44.00\" height=\"6.00\" fill=\"#e8899a\" stroke=\"none\"/><rect x=\"-5.00\" y=\"-18.00\" width=\"10.00\" height=\"8.00\" fill=\"#e8b58d\" stroke=\"none\"/><circle cx=\"-16.00\" cy=\"10.00\" r=\"13.00\" fill=\"#7a4a2e\" stroke=\"none\"/><circle cx=\"16.00\" cy=\"10.00\" r=\"13.00\" fill=\"#7a4a2e\" stroke=\"none\"/><circle cx=\"-20.00\" cy=\"-2.00\" r=\"10.00\" fill=\"#7a4a2e\" stroke=\"none\"/><circle cx=\"20.00\" cy=\"-2.00\" r=\"10.00\" fill=\"#7a4a2e\" stroke=\"none\"/><circle cx=\"0.00\" cy=\"18.00\" r=\"15.00\" fill=\"#7a4a2e\" stroke=\"none\"/><circle cx=\"-10.00\" cy=\"17.00\" r=\"11.00\" fill=\"#7a4a2e\" stroke=\"none\"/><circle cx=\"10.00\" cy=\"17.00\" r=\"11.00\" fill=\"#7a4a2e\" stroke=\"none\"/><circle cx=\"-22.00\" cy=\"7.00\" r=\"8.00\" fill=\"#7a4a2e\" stroke=\"none\"/><circle cx=\"22.00\" cy=\"7.00\" r=\"8.00\" fill=\"#7a4a2e\" stroke=\"none\"/><circle cx=\"-18.00\" cy=\"-9.00\" r=\"7.00\" fill=\"#7a4a2e\" stroke=\"none\"/><circle cx=\"18.00\" cy=\"-9.00\" r=\"7.00\" fill=\"#7a4a2e\" stroke=\"none\"/><circle cx=\"-23.00\" cy=\"3.00\" r=\"4.50\" fill=\"#8f5b39\" stroke=\"none\"/><circle cx=\"23.00\" cy=\"3.00\" r=\"4.50\" fill=\"#8f5b39\" stroke=\"none\"/><circle cx=\"-19.00\" cy=\"14.00\" r=\"4.00\" fill=\"#8f5b39\" stroke=\"none\"/><circle cx=\"19.00\" cy=\"14.00\" r=\"4.00\" fill=\"#8f5b39\" stroke=\"none\"/><circle cx=\"-21.00\" cy=\"-7.00\" r=\"3.50\" fill=\"#8f5b39\" stroke=\"none\"/><circle cx=\"21.00\" cy=\"-7.00\" r=\"3.50\" fill=\"#8f5b39\" stroke=\"none\"/><circle cx=\"0.00\" cy=\"4.00\" r=\"15.50\" fill=\"#f6cba6\" stroke=\"none\"/><circle cx=\"-9.00\" cy=\"15.00\" r=\"6.00\" fill=\"#7a4a2e\" stroke=\"none\"/><circle cx=\"0.00\" cy=\"17.00\" r=\"6.50\" fill=\"#7a4a2e\" stroke=\"none\"/><circle cx=\"9.00\" cy=\"15.00\" r=\"6.00\" fill=\"#7a4a2e\" stroke=\"none\"/><circle cx=\"-9.00\" cy=\"0.00\" r=\"2.60\" fill=\"#f2a5a0\" stroke=\"none\"/><circle cx=\"9.00\" cy=\"0.00\" r=\"2.60\" fill=\"#f2a5a0\" stroke=\"none\"/><circle cx=\"-6.50\" cy=\"2.20\" r=\"0.55\" fill=\"#d99b72\" stroke=\"none\"/><circle cx=\"-4.50\" cy=\"1.20\" r=\"0.55\" fill=\"#d99b72\" stroke=\"none\"/><circle cx=\"6.50\" cy=\"2.20\" r=\"0.55\" fill=\"#d99b72\" stroke=\"none\"/><circle cx=\"4.50\" cy=\"1.20\" r=\"0.55\" fill=\"#d99b72\" stroke=\"none\"/><path d=\"M -5.50 -4.00 C -2.00 -8.00 2.00 -8.00 5.50 -4.00\" fill=\"none\" stroke=\"#b0563f\" stroke-width=\"1.5\" stroke-linecap=\"round\"/><circle cx=\"-6.00\" cy=\"6.00\" r=\"1.90\" fill=\"#1e2a38\" stroke=\"none\"/><circle cx=\"6.00\" cy=\"6.00\" r=\"1.90\" fill=\"#1e2a38\" stroke=\"none\"/><circle cx=\"-5.40\" cy=\"6.70\" r=\"0.60\" fill=\"#ffffff\" stroke=\"none\"/><circle cx=\"6.60\" cy=\"6.70\" r=\"0.60\" fill=\"#ffffff\" stroke=\"none\"/><path d=\"M -9.50 10.50 C -7.00 12.30 -4.00 12.30 -2.50 10.80\" fill=\"none\" stroke=\"#4a2e1c\" stroke-width=\"1.8\" stroke-linecap=\"round\"/><path d=\"M 2.50 10.80 C 4.00 12.30 7.00 12.30 9.50 10.50\" fill=\"none\" stroke=\"#4a2e1c\" stroke-width=\"1.8\" stroke-linecap=\"round\"/><circle cx=\"27.00\" cy=\"-8.00\" r=\"4.00\" fill=\"#f6cba6\" stroke=\"none\"/><line x1=\"23.00\" y1=\"-5.00\" x2=\"23.00\" y2=\"-10.00\" stroke=\"#e8b58d\" stroke-width=\"1\" stroke-linecap=\"round\"/><line x1=\"25.00\" y1=\"-5.00\" x2=\"25.00\" y2=\"-10.00\" stroke=\"#e8b58d\" stroke-width=\"1\" stroke-linecap=\"round\"/><line x1=\"27.00\" y1=\"-5.00\" x2=\"27.00\" y2=\"-10.00\" stroke=\"#e8b58d\" stroke-width=\"1\" stroke-linecap=\"round\"/></g></g></g></svg>", "mascot_pencil": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 80\" class=\"mascot\" role=\"img\"><g transform=\"translate(0,80) scale(1,-1)\"><g transform=\"translate(48.00,40.00)\"><g transform=\"scale(1.0,1.0)\"><rect x=\"-26.00\" y=\"-34.00\" width=\"52.00\" height=\"12.00\" rx=\"6.00\" fill=\"#3d5a8a\" stroke=\"none\"/><rect x=\"-24.00\" y=\"-26.00\" width=\"48.00\" height=\"6.00\" fill=\"#f2e9e1\" stroke=\"none\"/><rect x=\"-22.00\" y=\"-20.00\" width=\"44.00\" height=\"6.00\" fill=\"#e8899a\" stroke=\"none\"/><rect x=\"-5.00\" y=\"-18.00\" width=\"10.00\" height=\"8.00\" fill=\"#e8b58d\" stroke=\"none\"/><circle cx=\"-16.00\" cy=\"10.00\" r=\"13.00\" fill=\"#7a4a2e\" stroke=\"none\"/><circle cx=\"16.00\" cy=\"10.00\" r=\"13.00\" fill=\"#7a4a2e\" stroke=\"none\"/><circle cx=\"-20.00\" cy=\"-2.00\" r=\"10.00\" fill=\"#7a4a2e\" stroke=\"none\"/><circle cx=\"20.00\" cy=\"-2.00\" r=\"10.00\" fill=\"#7a4a2e\" stroke=\"none\"/><circle cx=\"0.00\" cy=\"18.00\" r=\"15.00\" fill=\"#7a4a2e\" stroke=\"none\"/><circle cx=\"-10.00\" cy=\"17.00\" r=\"11.00\" fill=\"#7a4a2e\" stroke=\"none\"/><circle cx=\"10.00\" cy=\"17.00\" r=\"11.00\" fill=\"#7a4a2e\" stroke=\"none\"/><circle cx=\"-22.00\" cy=\"7.00\" r=\"8.00\" fill=\"#7a4a2e\" stroke=\"none\"/><circle cx=\"22.00\" cy=\"7.00\" r=\"8.00\" fill=\"#7a4a2e\" stroke=\"none\"/><circle cx=\"-18.00\" cy=\"-9.00\" r=\"7.00\" fill=\"#7a4a2e\" stroke=\"none\"/><circle cx=\"18.00\" cy=\"-9.00\" r=\"7.00\" fill=\"#7a4a2e\" stroke=\"none\"/><circle cx=\"-23.00\" cy=\"3.00\" r=\"4.50\" fill=\"#8f5b39\" stroke=\"none\"/><circle cx=\"23.00\" cy=\"3.00\" r=\"4.50\" fill=\"#8f5b39\" stroke=\"none\"/><circle cx=\"-19.00\" cy=\"14.00\" r=\"4.00\" fill=\"#8f5b39\" stroke=\"none\"/><circle cx=\"19.00\" cy=\"14.00\" r=\"4.00\" fill=\"#8f5b39\" stroke=\"none\"/><circle cx=\"-21.00\" cy=\"-7.00\" r=\"3.50\" fill=\"#8f5b39\" stroke=\"none\"/><circle cx=\"21.00\" cy=\"-7.00\" r=\"3.50\" fill=\"#8f5b39\" stroke=\"none\"/><circle cx=\"0.00\" cy=\"4.00\" r=\"15.50\" fill=\"#f6cba6\" stroke=\"none\"/><circle cx=\"-9.00\" cy=\"15.00\" r=\"6.00\" fill=\"#7a4a2e\" stroke=\"none\"/><circle cx=\"0.00\" cy=\"17.00\" r=\"6.50\" fill=\"#7a4a2e\" stroke=\"none\"/><circle cx=\"9.00\" cy=\"15.00\" r=\"6.00\" fill=\"#7a4a2e\" stroke=\"none\"/><circle cx=\"-9.00\" cy=\"0.00\" r=\"2.60\" fill=\"#f2a5a0\" stroke=\"none\"/><circle cx=\"9.00\" cy=\"0.00\" r=\"2.60\" fill=\"#f2a5a0\" stroke=\"none\"/><circle cx=\"-6.50\" cy=\"2.20\" r=\"0.55\" fill=\"#d99b72\" stroke=\"none\"/><circle cx=\"-4.50\" cy=\"1.20\" r=\"0.55\" fill=\"#d99b72\" stroke=\"none\"/><circle cx=\"6.50\" cy=\"2.20\" r=\"0.55\" fill=\"#d99b72\" stroke=\"none\"/><circle cx=\"4.50\" cy=\"1.20\" r=\"0.55\" fill=\"#d99b72\" stroke=\"none\"/><path d=\"M -5.50 -4.00 C -2.00 -8.00 2.00 -8.00 5.50 -4.00\" fill=\"none\" stroke=\"#b0563f\" stroke-width=\"1.5\" stroke-linecap=\"round\"/><circle cx=\"-6.00\" cy=\"6.00\" r=\"1.90\" fill=\"#1e2a38\" stroke=\"none\"/><circle cx=\"6.00\" cy=\"6.00\" r=\"1.90\" fill=\"#1e2a38\" stroke=\"none\"/><circle cx=\"-5.40\" cy=\"6.70\" r=\"0.60\" fill=\"#ffffff\" stroke=\"none\"/><circle cx=\"6.60\" cy=\"6.70\" r=\"0.60\" fill=\"#ffffff\" stroke=\"none\"/><path d=\"M -9.50 10.50 C -7.00 12.30 -4.00 12.30 -2.50 10.80\" fill=\"none\" stroke=\"#4a2e1c\" stroke-width=\"1.8\" stroke-linecap=\"round\"/><path d=\"M 2.50 10.80 C 4.00 12.30 7.00 12.30 9.50 10.50\" fill=\"none\" stroke=\"#4a2e1c\" stroke-width=\"1.8\" stroke-linecap=\"round\"/><g transform=\"translate(28.00,-10.00)\"><g transform=\"rotate(50)\"><rect x=\"-2.20\" y=\"-9.00\" width=\"4.40\" height=\"15.00\" fill=\"#f2b441\" stroke=\"none\"/><path d=\"M -2.20 6.00 L 0.00 11.00 L 2.20 6.00 Z\" fill=\"#f6cba6\" stroke=\"none\"/><path d=\"M -0.90 9.00 L 0.00 11.00 L 0.90 9.00 Z\" fill=\"#1e2a38\" stroke=\"none\"/><rect x=\"-2.20\" y=\"-11.00\" width=\"4.40\" height=\"2.40\" fill=\"#e8899a\" stroke=\"none\"/></g></g><circle cx=\"26.00\" cy=\"-13.00\" r=\"4.00\" fill=\"#f6cba6\" stroke=\"none\"/></g></g></g></svg>", "mascot_clipboard": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 80\" class=\"mascot\" role=\"img\"><g transform=\"translate(0,80) scale(1,-1)\"><g transform=\"translate(48.00,40.00)\"><g transform=\"scale(1.0,1.0)\"><rect x=\"-26.00\" y=\"-34.00\" width=\"52.00\" height=\"12.00\" rx=\"6.00\" fill=\"#3d5a8a\" stroke=\"none\"/><rect x=\"-24.00\" y=\"-26.00\" width=\"48.00\" height=\"6.00\" fill=\"#f2e9e1\" stroke=\"none\"/><rect x=\"-22.00\" y=\"-20.00\" width=\"44.00\" height=\"6.00\" fill=\"#e8899a\" stroke=\"none\"/><rect x=\"-5.00\" y=\"-18.00\" width=\"10.00\" height=\"8.00\" fill=\"#e8b58d\" stroke=\"none\"/><circle cx=\"-16.00\" cy=\"10.00\" r=\"13.00\" fill=\"#7a4a2e\" stroke=\"none\"/><circle cx=\"16.00\" cy=\"10.00\" r=\"13.00\" fill=\"#7a4a2e\" stroke=\"none\"/><circle cx=\"-20.00\" cy=\"-2.00\" r=\"10.00\" fill=\"#7a4a2e\" stroke=\"none\"/><circle cx=\"20.00\" cy=\"-2.00\" r=\"10.00\" fill=\"#7a4a2e\" stroke=\"none\"/><circle cx=\"0.00\" cy=\"18.00\" r=\"15.00\" fill=\"#7a4a2e\" stroke=\"none\"/><circle cx=\"-10.00\" cy=\"17.00\" r=\"11.00\" fill=\"#7a4a2e\" stroke=\"none\"/><circle cx=\"10.00\" cy=\"17.00\" r=\"11.00\" fill=\"#7a4a2e\" stroke=\"none\"/><circle cx=\"-22.00\" cy=\"7.00\" r=\"8.00\" fill=\"#7a4a2e\" stroke=\"none\"/><circle cx=\"22.00\" cy=\"7.00\" r=\"8.00\" fill=\"#7a4a2e\" stroke=\"none\"/><circle cx=\"-18.00\" cy=\"-9.00\" r=\"7.00\" fill=\"#7a4a2e\" stroke=\"none\"/><circle cx=\"18.00\" cy=\"-9.00\" r=\"7.00\" fill=\"#7a4a2e\" stroke=\"none\"/><circle cx=\"-23.00\" cy=\"3.00\" r=\"4.50\" fill=\"#8f5b39\" stroke=\"none\"/><circle cx=\"23.00\" cy=\"3.00\" r=\"4.50\" fill=\"#8f5b39\" stroke=\"none\"/><circle cx=\"-19.00\" cy=\"14.00\" r=\"4.00\" fill=\"#8f5b39\" stroke=\"none\"/><circle cx=\"19.00\" cy=\"14.00\" r=\"4.00\" fill=\"#8f5b39\" stroke=\"none\"/><circle cx=\"-21.00\" cy=\"-7.00\" r=\"3.50\" fill=\"#8f5b39\" stroke=\"none\"/><circle cx=\"21.00\" cy=\"-7.00\" r=\"3.50\" fill=\"#8f5b39\" stroke=\"none\"/><circle cx=\"0.00\" cy=\"4.00\" r=\"15.50\" fill=\"#f6cba6\" stroke=\"none\"/><circle cx=\"-9.00\" cy=\"15.00\" r=\"6.00\" fill=\"#7a4a2e\" stroke=\"none\"/><circle cx=\"0.00\" cy=\"17.00\" r=\"6.50\" fill=\"#7a4a2e\" stroke=\"none\"/><circle cx=\"9.00\" cy=\"15.00\" r=\"6.00\" fill=\"#7a4a2e\" stroke=\"none\"/><circle cx=\"-9.00\" cy=\"0.00\" r=\"2.60\" fill=\"#f2a5a0\" stroke=\"none\"/><circle cx=\"9.00\" cy=\"0.00\" r=\"2.60\" fill=\"#f2a5a0\" stroke=\"none\"/><circle cx=\"-6.50\" cy=\"2.20\" r=\"0.55\" fill=\"#d99b72\" stroke=\"none\"/><circle cx=\"-4.50\" cy=\"1.20\" r=\"0.55\" fill=\"#d99b72\" stroke=\"none\"/><circle cx=\"6.50\" cy=\"2.20\" r=\"0.55\" fill=\"#d99b72\" stroke=\"none\"/><circle cx=\"4.50\" cy=\"1.20\" r=\"0.55\" fill=\"#d99b72\" stroke=\"none\"/><path d=\"M -5.50 -4.00 C -2.00 -8.00 2.00 -8.00 5.50 -4.00\" fill=\"none\" stroke=\"#b0563f\" stroke-width=\"1.5\" stroke-linecap=\"round\"/><circle cx=\"-6.00\" cy=\"6.00\" r=\"1.90\" fill=\"#1e2a38\" stroke=\"none\"/><circle cx=\"6.00\" cy=\"6.00\" r=\"1.90\" fill=\"#1e2a38\" stroke=\"none\"/><circle cx=\"-5.40\" cy=\"6.70\" r=\"0.60\" fill=\"#ffffff\" stroke=\"none\"/><circle cx=\"6.60\" cy=\"6.70\" r=\"0.60\" fill=\"#ffffff\" stroke=\"none\"/><path d=\"M -9.50 10.50 C -7.00 12.30 -4.00 12.30 -2.50 10.80\" fill=\"none\" stroke=\"#4a2e1c\" stroke-width=\"1.8\" stroke-linecap=\"round\"/><path d=\"M 2.50 10.80 C 4.00 12.30 7.00 12.30 9.50 10.50\" fill=\"none\" stroke=\"#4a2e1c\" stroke-width=\"1.8\" stroke-linecap=\"round\"/><rect x=\"23.00\" y=\"-18.00\" width=\"17.00\" height=\"23.00\" rx=\"2.00\" fill=\"#c89b6c\" stroke=\"none\"/><rect x=\"24.70\" y=\"-16.30\" width=\"13.60\" height=\"19.00\" fill=\"#ffffff\" stroke=\"none\"/><rect x=\"28.50\" y=\"3.00\" width=\"6.00\" height=\"4.00\" rx=\"1.50\" fill=\"#5a6b7c\" stroke=\"none\"/><line x1=\"26.50\" y1=\"-1.00\" x2=\"36.50\" y2=\"-1.00\" stroke=\"#9fb2c4\" stroke-width=\"1\" stroke-linecap=\"round\"/><line x1=\"26.50\" y1=\"-5.00\" x2=\"36.50\" y2=\"-5.00\" stroke=\"#9fb2c4\" stroke-width=\"1\" stroke-linecap=\"round\"/><line x1=\"26.50\" y1=\"-9.00\" x2=\"36.50\" y2=\"-9.00\" stroke=\"#9fb2c4\" stroke-width=\"1\" stroke-linecap=\"round\"/><line x1=\"26.50\" y1=\"-13.00\" x2=\"36.50\" y2=\"-13.00\" stroke=\"#9fb2c4\" stroke-width=\"1\" stroke-linecap=\"round\"/><circle cx=\"24.00\" cy=\"-16.00\" r=\"4.00\" fill=\"#f6cba6\" stroke=\"none\"/></g></g></g></svg>", "mascot_magnifier": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 80\" class=\"mascot\" role=\"img\"><g transform=\"translate(0,80) scale(1,-1)\"><g transform=\"translate(48.00,40.00)\"><g transform=\"scale(1.0,1.0)\"><rect x=\"-26.00\" y=\"-34.00\" width=\"52.00\" height=\"12.00\" rx=\"6.00\" fill=\"#3d5a8a\" stroke=\"none\"/><rect x=\"-24.00\" y=\"-26.00\" width=\"48.00\" height=\"6.00\" fill=\"#f2e9e1\" stroke=\"none\"/><rect x=\"-22.00\" y=\"-20.00\" width=\"44.00\" height=\"6.00\" fill=\"#e8899a\" stroke=\"none\"/><rect x=\"-5.00\" y=\"-18.00\" width=\"10.00\" height=\"8.00\" fill=\"#e8b58d\" stroke=\"none\"/><circle cx=\"-16.00\" cy=\"10.00\" r=\"13.00\" fill=\"#7a4a2e\" stroke=\"none\"/><circle cx=\"16.00\" cy=\"10.00\" r=\"13.00\" fill=\"#7a4a2e\" stroke=\"none\"/><circle cx=\"-20.00\" cy=\"-2.00\" r=\"10.00\" fill=\"#7a4a2e\" stroke=\"none\"/><circle cx=\"20.00\" cy=\"-2.00\" r=\"10.00\" fill=\"#7a4a2e\" stroke=\"none\"/><circle cx=\"0.00\" cy=\"18.00\" r=\"15.00\" fill=\"#7a4a2e\" stroke=\"none\"/><circle cx=\"-10.00\" cy=\"17.00\" r=\"11.00\" fill=\"#7a4a2e\" stroke=\"none\"/><circle cx=\"10.00\" cy=\"17.00\" r=\"11.00\" fill=\"#7a4a2e\" stroke=\"none\"/><circle cx=\"-22.00\" cy=\"7.00\" r=\"8.00\" fill=\"#7a4a2e\" stroke=\"none\"/><circle cx=\"22.00\" cy=\"7.00\" r=\"8.00\" fill=\"#7a4a2e\" stroke=\"none\"/><circle cx=\"-18.00\" cy=\"-9.00\" r=\"7.00\" fill=\"#7a4a2e\" stroke=\"none\"/><circle cx=\"18.00\" cy=\"-9.00\" r=\"7.00\" fill=\"#7a4a2e\" stroke=\"none\"/><circle cx=\"-23.00\" cy=\"3.00\" r=\"4.50\" fill=\"#8f5b39\" stroke=\"none\"/><circle cx=\"23.00\" cy=\"3.00\" r=\"4.50\" fill=\"#8f5b39\" stroke=\"none\"/><circle cx=\"-19.00\" cy=\"14.00\" r=\"4.00\" fill=\"#8f5b39\" stroke=\"none\"/><circle cx=\"19.00\" cy=\"14.00\" r=\"4.00\" fill=\"#8f5b39\" stroke=\"none\"/><circle cx=\"-21.00\" cy=\"-7.00\" r=\"3.50\" fill=\"#8f5b39\" stroke=\"none\"/><circle cx=\"21.00\" cy=\"-7.00\" r=\"3.50\" fill=\"#8f5b39\" stroke=\"none\"/><circle cx=\"0.00\" cy=\"4.00\" r=\"15.50\" fill=\"#f6cba6\" stroke=\"none\"/><circle cx=\"-9.00\" cy=\"15.00\" r=\"6.00\" fill=\"#7a4a2e\" stroke=\"none\"/><circle cx=\"0.00\" cy=\"17.00\" r=\"6.50\" fill=\"#7a4a2e\" stroke=\"none\"/><circle cx=\"9.00\" cy=\"15.00\" r=\"6.00\" fill=\"#7a4a2e\" stroke=\"none\"/><circle cx=\"-9.00\" cy=\"0.00\" r=\"2.60\" fill=\"#f2a5a0\" stroke=\"none\"/><circle cx=\"9.00\" cy=\"0.00\" r=\"2.60\" fill=\"#f2a5a0\" stroke=\"none\"/><circle cx=\"-6.50\" cy=\"2.20\" r=\"0.55\" fill=\"#d99b72\" stroke=\"none\"/><circle cx=\"-4.50\" cy=\"1.20\" r=\"0.55\" fill=\"#d99b72\" stroke=\"none\"/><circle cx=\"6.50\" cy=\"2.20\" r=\"0.55\" fill=\"#d99b72\" stroke=\"none\"/><circle cx=\"4.50\" cy=\"1.20\" r=\"0.55\" fill=\"#d99b72\" stroke=\"none\"/><path d=\"M -5.50 -4.00 C -2.00 -8.00 2.00 -8.00 5.50 -4.00\" fill=\"none\" stroke=\"#b0563f\" stroke-width=\"1.5\" stroke-linecap=\"round\"/><circle cx=\"-6.00\" cy=\"6.00\" r=\"1.90\" fill=\"#1e2a38\" stroke=\"none\"/><circle cx=\"6.00\" cy=\"6.00\" r=\"1.90\" fill=\"#1e2a38\" stroke=\"none\"/><circle cx=\"-5.40\" cy=\"6.70\" r=\"0.60\" fill=\"#ffffff\" stroke=\"none\"/><circle cx=\"6.60\" cy=\"6.70\" r=\"0.60\" fill=\"#ffffff\" stroke=\"none\"/><path d=\"M -9.50 10.50 C -7.00 12.30 -4.00 12.30 -2.50 10.80\" fill=\"none\" stroke=\"#4a2e1c\" stroke-width=\"1.8\" stroke-linecap=\"round\"/><path d=\"M 2.50 10.80 C 4.00 12.30 7.00 12.30 9.50 10.50\" fill=\"none\" stroke=\"#4a2e1c\" stroke-width=\"1.8\" stroke-linecap=\"round\"/><line x1=\"31.00\" y1=\"-14.00\" x2=\"36.00\" y2=\"-19.00\" stroke=\"#5a6b7c\" stroke-width=\"2.6\" stroke-linecap=\"round\"/><circle cx=\"27.00\" cy=\"-8.00\" r=\"6.50\" fill=\"#dff2fa\" stroke=\"#5a6b7c\" stroke-width=\"2.2\" stroke-linecap=\"round\"/><line x1=\"24.00\" y1=\"-5.00\" x2=\"26.00\" y2=\"-3.50\" stroke=\"#ffffff\" stroke-width=\"1.2\" stroke-linecap=\"round\"/><circle cx=\"21.00\" cy=\"-13.00\" r=\"4.00\" fill=\"#f6cba6\" stroke=\"none\"/></g></g></g></svg>", "mascot_calculator": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 80\" class=\"mascot\" role=\"img\"><g transform=\"translate(0,80) scale(1,-1)\"><g transform=\"translate(48.00,40.00)\"><g transform=\"scale(1.0,1.0)\"><rect x=\"-26.00\" y=\"-34.00\" width=\"52.00\" height=\"12.00\" rx=\"6.00\" fill=\"#3d5a8a\" stroke=\"none\"/><rect x=\"-24.00\" y=\"-26.00\" width=\"48.00\" height=\"6.00\" fill=\"#f2e9e1\" stroke=\"none\"/><rect x=\"-22.00\" y=\"-20.00\" width=\"44.00\" height=\"6.00\" fill=\"#e8899a\" stroke=\"none\"/><rect x=\"-5.00\" y=\"-18.00\" width=\"10.00\" height=\"8.00\" fill=\"#e8b58d\" stroke=\"none\"/><circle cx=\"-16.00\" cy=\"10.00\" r=\"13.00\" fill=\"#7a4a2e\" stroke=\"none\"/><circle cx=\"16.00\" cy=\"10.00\" r=\"13.00\" fill=\"#7a4a2e\" stroke=\"none\"/><circle cx=\"-20.00\" cy=\"-2.00\" r=\"10.00\" fill=\"#7a4a2e\" stroke=\"none\"/><circle cx=\"20.00\" cy=\"-2.00\" r=\"10.00\" fill=\"#7a4a2e\" stroke=\"none\"/><circle cx=\"0.00\" cy=\"18.00\" r=\"15.00\" fill=\"#7a4a2e\" stroke=\"none\"/><circle cx=\"-10.00\" cy=\"17.00\" r=\"11.00\" fill=\"#7a4a2e\" stroke=\"none\"/><circle cx=\"10.00\" cy=\"17.00\" r=\"11.00\" fill=\"#7a4a2e\" stroke=\"none\"/><circle cx=\"-22.00\" cy=\"7.00\" r=\"8.00\" fill=\"#7a4a2e\" stroke=\"none\"/><circle cx=\"22.00\" cy=\"7.00\" r=\"8.00\" fill=\"#7a4a2e\" stroke=\"none\"/><circle cx=\"-18.00\" cy=\"-9.00\" r=\"7.00\" fill=\"#7a4a2e\" stroke=\"none\"/><circle cx=\"18.00\" cy=\"-9.00\" r=\"7.00\" fill=\"#7a4a2e\" stroke=\"none\"/><circle cx=\"-23.00\" cy=\"3.00\" r=\"4.50\" fill=\"#8f5b39\" stroke=\"none\"/><circle cx=\"23.00\" cy=\"3.00\" r=\"4.50\" fill=\"#8f5b39\" stroke=\"none\"/><circle cx=\"-19.00\" cy=\"14.00\" r=\"4.00\" fill=\"#8f5b39\" stroke=\"none\"/><circle cx=\"19.00\" cy=\"14.00\" r=\"4.00\" fill=\"#8f5b39\" stroke=\"none\"/><circle cx=\"-21.00\" cy=\"-7.00\" r=\"3.50\" fill=\"#8f5b39\" stroke=\"none\"/><circle cx=\"21.00\" cy=\"-7.00\" r=\"3.50\" fill=\"#8f5b39\" stroke=\"none\"/><circle cx=\"0.00\" cy=\"4.00\" r=\"15.50\" fill=\"#f6cba6\" stroke=\"none\"/><circle cx=\"-9.00\" cy=\"15.00\" r=\"6.00\" fill=\"#7a4a2e\" stroke=\"none\"/><circle cx=\"0.00\" cy=\"17.00\" r=\"6.50\" fill=\"#7a4a2e\" stroke=\"none\"/><circle cx=\"9.00\" cy=\"15.00\" r=\"6.00\" fill=\"#7a4a2e\" stroke=\"none\"/><circle cx=\"-9.00\" cy=\"0.00\" r=\"2.60\" fill=\"#f2a5a0\" stroke=\"none\"/><circle cx=\"9.00\" cy=\"0.00\" r=\"2.60\" fill=\"#f2a5a0\" stroke=\"none\"/><circle cx=\"-6.50\" cy=\"2.20\" r=\"0.55\" fill=\"#d99b72\" stroke=\"none\"/><circle cx=\"-4.50\" cy=\"1.20\" r=\"0.55\" fill=\"#d99b72\" stroke=\"none\"/><circle cx=\"6.50\" cy=\"2.20\" r=\"0.55\" fill=\"#d99b72\" stroke=\"none\"/><circle cx=\"4.50\" cy=\"1.20\" r=\"0.55\" fill=\"#d99b72\" stroke=\"none\"/><path d=\"M -5.50 -4.00 C -2.00 -8.00 2.00 -8.00 5.50 -4.00\" fill=\"none\" stroke=\"#b0563f\" stroke-width=\"1.5\" stroke-linecap=\"round\"/><circle cx=\"-6.00\" cy=\"6.00\" r=\"1.90\" fill=\"#1e2a38\" stroke=\"none\"/><circle cx=\"6.00\" cy=\"6.00\" r=\"1.90\" fill=\"#1e2a38\" stroke=\"none\"/><circle cx=\"-5.40\" cy=\"6.70\" r=\"0.60\" fill=\"#ffffff\" stroke=\"none\"/><circle cx=\"6.60\" cy=\"6.70\" r=\"0.60\" fill=\"#ffffff\" stroke=\"none\"/><path d=\"M -9.50 10.50 C -7.00 12.30 -4.00 12.30 -2.50 10.80\" fill=\"none\" stroke=\"#4a2e1c\" stroke-width=\"1.8\" stroke-linecap=\"round\"/><path d=\"M 2.50 10.80 C 4.00 12.30 7.00 12.30 9.50 10.50\" fill=\"none\" stroke=\"#4a2e1c\" stroke-width=\"1.8\" stroke-linecap=\"round\"/><rect x=\"23.00\" y=\"-19.00\" width=\"16.00\" height=\"22.00\" rx=\"2.50\" fill=\"#33475c\" stroke=\"none\"/><rect x=\"25.00\" y=\"-3.50\" width=\"12.00\" height=\"4.50\" fill=\"#b8e6d0\" stroke=\"none\"/><circle cx=\"27.00\" cy=\"-7.50\" r=\"1.25\" fill=\"#ffffff\" stroke=\"none\"/><circle cx=\"31.00\" cy=\"-7.50\" r=\"1.25\" fill=\"#ffffff\" stroke=\"none\"/><circle cx=\"35.00\" cy=\"-7.50\" r=\"1.25\" fill=\"#ffffff\" stroke=\"none\"/><circle cx=\"27.00\" cy=\"-11.50\" r=\"1.25\" fill=\"#ffffff\" stroke=\"none\"/><circle cx=\"31.00\" cy=\"-11.50\" r=\"1.25\" fill=\"#ffffff\" stroke=\"none\"/><circle cx=\"35.00\" cy=\"-11.50\" r=\"1.25\" fill=\"#ffffff\" stroke=\"none\"/><circle cx=\"27.00\" cy=\"-15.50\" r=\"1.25\" fill=\"#ffffff\" stroke=\"none\"/><circle cx=\"31.00\" cy=\"-15.50\" r=\"1.25\" fill=\"#ffffff\" stroke=\"none\"/><circle cx=\"35.00\" cy=\"-15.50\" r=\"1.25\" fill=\"#ffffff\" stroke=\"none\"/><circle cx=\"24.00\" cy=\"-17.00\" r=\"4.00\" fill=\"#f6cba6\" stroke=\"none\"/></g></g></g></svg>", "mascot_goggles": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 80\" class=\"mascot\" role=\"img\"><g transform=\"translate(0,80) scale(1,-1)\"><g transform=\"translate(48.00,40.00)\"><g transform=\"scale(1.0,1.0)\"><rect x=\"-26.00\" y=\"-34.00\" width=\"52.00\" height=\"12.00\" rx=\"6.00\" fill=\"#3d5a8a\" stroke=\"none\"/><rect x=\"-24.00\" y=\"-26.00\" width=\"48.00\" height=\"6.00\" fill=\"#f2e9e1\" stroke=\"none\"/><rect x=\"-22.00\" y=\"-20.00\" width=\"44.00\" height=\"6.00\" fill=\"#e8899a\" stroke=\"none\"/><rect x=\"-5.00\" y=\"-18.00\" width=\"10.00\" height=\"8.00\" fill=\"#e8b58d\" stroke=\"none\"/><circle cx=\"-16.00\" cy=\"10.00\" r=\"13.00\" fill=\"#7a4a2e\" stroke=\"none\"/><circle cx=\"16.00\" cy=\"10.00\" r=\"13.00\" fill=\"#7a4a2e\" stroke=\"none\"/><circle cx=\"-20.00\" cy=\"-2.00\" r=\"10.00\" fill=\"#7a4a2e\" stroke=\"none\"/><circle cx=\"20.00\" cy=\"-2.00\" r=\"10.00\" fill=\"#7a4a2e\" stroke=\"none\"/><circle cx=\"0.00\" cy=\"18.00\" r=\"15.00\" fill=\"#7a4a2e\" stroke=\"none\"/><circle cx=\"-10.00\" cy=\"17.00\" r=\"11.00\" fill=\"#7a4a2e\" stroke=\"none\"/><circle cx=\"10.00\" cy=\"17.00\" r=\"11.00\" fill=\"#7a4a2e\" stroke=\"none\"/><circle cx=\"-22.00\" cy=\"7.00\" r=\"8.00\" fill=\"#7a4a2e\" stroke=\"none\"/><circle cx=\"22.00\" cy=\"7.00\" r=\"8.00\" fill=\"#7a4a2e\" stroke=\"none\"/><circle cx=\"-18.00\" cy=\"-9.00\" r=\"7.00\" fill=\"#7a4a2e\" stroke=\"none\"/><circle cx=\"18.00\" cy=\"-9.00\" r=\"7.00\" fill=\"#7a4a2e\" stroke=\"none\"/><circle cx=\"-23.00\" cy=\"3.00\" r=\"4.50\" fill=\"#8f5b39\" stroke=\"none\"/><circle cx=\"23.00\" cy=\"3.00\" r=\"4.50\" fill=\"#8f5b39\" stroke=\"none\"/><circle cx=\"-19.00\" cy=\"14.00\" r=\"4.00\" fill=\"#8f5b39\" stroke=\"none\"/><circle cx=\"19.00\" cy=\"14.00\" r=\"4.00\" fill=\"#8f5b39\" stroke=\"none\"/><circle cx=\"-21.00\" cy=\"-7.00\" r=\"3.50\" fill=\"#8f5b39\" stroke=\"none\"/><circle cx=\"21.00\" cy=\"-7.00\" r=\"3.50\" fill=\"#8f5b39\" stroke=\"none\"/><circle cx=\"0.00\" cy=\"4.00\" r=\"15.50\" fill=\"#f6cba6\" stroke=\"none\"/><circle cx=\"-9.00\" cy=\"15.00\" r=\"6.00\" fill=\"#7a4a2e\" stroke=\"none\"/><circle cx=\"0.00\" cy=\"17.00\" r=\"6.50\" fill=\"#7a4a2e\" stroke=\"none\"/><circle cx=\"9.00\" cy=\"15.00\" r=\"6.00\" fill=\"#7a4a2e\" stroke=\"none\"/><circle cx=\"-9.00\" cy=\"0.00\" r=\"2.60\" fill=\"#f2a5a0\" stroke=\"none\"/><circle cx=\"9.00\" cy=\"0.00\" r=\"2.60\" fill=\"#f2a5a0\" stroke=\"none\"/><circle cx=\"-6.50\" cy=\"2.20\" r=\"0.55\" fill=\"#d99b72\" stroke=\"none\"/><circle cx=\"-4.50\" cy=\"1.20\" r=\"0.55\" fill=\"#d99b72\" stroke=\"none\"/><circle cx=\"6.50\" cy=\"2.20\" r=\"0.55\" fill=\"#d99b72\" stroke=\"none\"/><circle cx=\"4.50\" cy=\"1.20\" r=\"0.55\" fill=\"#d99b72\" stroke=\"none\"/><path d=\"M -5.50 -4.00 C -2.00 -8.00 2.00 -8.00 5.50 -4.00\" fill=\"none\" stroke=\"#b0563f\" stroke-width=\"1.5\" stroke-linecap=\"round\"/><line x1=\"-14.50\" y1=\"6.00\" x2=\"-20.00\" y2=\"8.00\" stroke=\"#5a6b7c\" stroke-width=\"2.4\" stroke-linecap=\"round\"/><line x1=\"14.50\" y1=\"6.00\" x2=\"20.00\" y2=\"8.00\" stroke=\"#5a6b7c\" stroke-width=\"2.4\" stroke-linecap=\"round\"/><rect x=\"-13.50\" y=\"1.50\" width=\"27.00\" height=\"9.50\" rx=\"4.50\" fill=\"#bfe9f5\" stroke=\"#5a6b7c\" stroke-width=\"1.6\" stroke-linecap=\"round\"/><circle cx=\"-6.50\" cy=\"6.20\" r=\"3.40\" fill=\"#ffffff\" stroke=\"#5a6b7c\" stroke-width=\"1.6\" stroke-linecap=\"round\"/><circle cx=\"6.50\" cy=\"6.20\" r=\"3.40\" fill=\"#ffffff\" stroke=\"#5a6b7c\" stroke-width=\"1.6\" stroke-linecap=\"round\"/><circle cx=\"-6.50\" cy=\"6.00\" r=\"1.50\" fill=\"#1e2a38\" stroke=\"none\"/><circle cx=\"6.50\" cy=\"6.00\" r=\"1.50\" fill=\"#1e2a38\" stroke=\"none\"/><line x1=\"-11.50\" y1=\"9.50\" x2=\"-9.50\" y2=\"10.50\" stroke=\"#ffffff\" stroke-width=\"1\" stroke-linecap=\"round\"/></g></g></g></svg>"};
 (function(){
@@ -313,218 +388,355 @@ const MINI=[['meas',3],['motion',3],['forces',4],['energy',3],['thermal',2],['el
 const LW={7:{1:.6,2:.35,3:.05},8:{1:.25,2:.5,3:.25},9:{1:.05,2:.4,3:.55}};
 const GRADE_NOTE={7:'Grade 7: starts with the easier questions',8:'Grade 8: a balanced mix',9:'Grade 9: more of the challenging questions'};
 
-/* ---------- storage ---------- */
-let memOnly=false, mem={};
-const LS={get(k,d){try{const v=localStorage.getItem(k);return v?JSON.parse(v):d}catch(e){memOnly=true;return k in mem?mem[k]:d}},
- set(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){memOnly=true;mem[k]=v}}};
-let DB=LS.get('jpc_db',{profiles:{},current:null});
-function save(){LS.set('jpc_db',DB)}
-function P(){return DB.current?DB.profiles[DB.current]:null}
-function newProfile(name,grade){name=name.trim().replace(/\s+/g,' ');if(!name)return false;
- if(!DB.profiles[name])DB.profiles[name]={name,grade:+grade,created:Date.now(),attempts:[],hist:{},seen:{},missed:{}};
- else DB.profiles[name].grade=+grade;
- DB.current=name;save();return true}
+/* ====================================================================== JPC Practice · accounts edition
+   Accounts (unique nickname + grade + password), XP + photons, store, leaderboard, scientist concepts,
+   teacher dashboard. Backend: Firebase (Auth + Firestore) when JPC_FIREBASE_CONFIG is filled in,
+   otherwise a device-only local mode with the same features. */
+const CFG = window.JPC_FIREBASE_CONFIG || null;
+const DOMAIN = 'jpc.misskstem.app';
+const TEACHERS = {missk:'Miss K', neesha:'Miss Neesha'};
+const NICK_RE = /^[A-Za-z0-9_]{3,16}$/;
+const today = () => new Date().toISOString().slice(0,10);
 
-/* ---------- helpers ---------- */
+/* ---------------------------------------------------------------- XP, levels, store */
+const LEVELS = ['Curious Spark','Lab Rookie','Unit Converter','Graph Reader','Force Finder','Energy Tracker','Circuit Builder','Wave Rider','Star Gazer','Junior Physicist','Physics Champion'];
+function levelOf(xp){const n=Math.min(LEVELS.length,Math.floor(Math.sqrt(Math.max(0,xp)/50))+1);const lo=50*(n-1)*(n-1),hi=50*n*n;return {n,title:LEVELS[n-1],lo,hi,pct:n>=LEVELS.length?100:Math.round(100*(xp-lo)/(hi-lo))};}
+const XP_Q = {1:10,2:15,3:20};
+const AVATARS = [
+ ['sci','🧑‍🔬',0],['owl','🦉',0],['ele','🐘',0],['cat','🐱',0],
+ ['rocket','🚀',60],['fox','🦊',150],['robot','🤖',150],['scope','🔭',200],['panda','🐼',200],['magnet','🧲',250],
+ ['atom','⚛️',250],['octo','🐙',300],['rainbow','🌈',300],['volcano','🌋',350],['sat','🛰️',400],['bolt','⚡',450],
+ ['dragon','🐉',500],['brain','🧠',600],['unicorn','🦄',700],['crown','👑',900]];
+const BGS = [
+ ['paper','Lab paper',0,'#fff repeating-linear-gradient(0deg,#e6eef0 0 1px,transparent 1px 12px),repeating-linear-gradient(90deg,#e6eef0 0 1px,#fff 1px 12px)'],
+ ['mint','Mint',0,'linear-gradient(135deg,#d9f5ec,#b9e6dc)'],
+ ['sky','Night sky',150,'radial-gradient(circle at 30% 30%,#fff 0 1px,transparent 2px),radial-gradient(circle at 70% 60%,#fff 0 1px,transparent 2px),linear-gradient(160deg,#0b1d3a,#203a6b)'],
+ ['sunset','Bangkok sunset',200,'linear-gradient(180deg,#ff9a5a,#ff5e7e 55%,#5b3c88)'],
+ ['ocean','Andaman Sea',200,'linear-gradient(180deg,#5ed1e8,#1477b8)'],
+ ['lava','Lava',300,'linear-gradient(135deg,#ffcf3f,#ff6a2b 50%,#9b1b1b)'],
+ ['circuit','Circuit board',350,'repeating-linear-gradient(90deg,transparent 0 10px,#2fd38a33 10px 12px),repeating-linear-gradient(0deg,transparent 0 10px,#2fd38a33 10px 12px),#0f3d2e'],
+ ['aurora','Aurora',450,'linear-gradient(160deg,#0b1d3a,#11806a 45%,#7be0a3 70%,#5b3c88)'],
+ ['nebula','Nebula',550,'radial-gradient(circle at 30% 40%,#ff7ad9aa,transparent 45%),radial-gradient(circle at 70% 60%,#6ec8ffaa,transparent 50%),#1b1033'],
+ ['prism','Prism',650,'conic-gradient(from 0deg,#ff5e5e,#ffd23f,#5ee08a,#4fb3ff,#a77bff,#ff5e5e)'],
+ ['gold','Champion gold',1000,'radial-gradient(circle at 35% 30%,#fff7c2,#f5c542 45%,#b8860b)']];
+const AVN = {"sci": "Scientist", "owl": "Owl", "ele": "Elephant", "cat": "Cat", "rocket": "Rocket", "fox": "Fox", "robot": "Robot", "scope": "Telescope", "panda": "Panda", "magnet": "Magnet", "atom": "Atom", "octo": "Octopus", "rainbow": "Rainbow", "volcano": "Volcano", "sat": "Satellite", "bolt": "Lightning", "dragon": "Dragon", "brain": "Brain", "unicorn": "Unicorn", "crown": "Crown"};
+const AV = Object.fromEntries(AVATARS.map(a=>[a[0],a])), BG = Object.fromEntries(BGS.map(b=>[b[0],b]));
+const ava = (a,b,size) => `<span class="ava" style="width:${size||44}px;height:${size||44}px;font-size:${Math.round((size||44)*0.55)}px;background:${(BG[b]||BG.paper)[3]}">${(AV[a]||AV.sci)[1]}</span>`;
+
+/* ---------------------------------------------------------------- scientists (one per concept) */
+const SCI = {
+ meas:{name:'Lord Kelvin',life:'William Thomson, 1824–1907, Scotland',known:'Precise measurement, the absolute temperature scale (kelvin) and the first transatlantic telegraph cable.',hair:'side',beard:true,coat:'#3b4a6b',
+  advice:['Before you compare two numbers, put them in the SAME unit. Most measurement traps are really unit traps.','To read any scale, first work out what ONE small division is worth, then count from a labelled mark.','Area and volume grow fast: 1 m² is 10 000 cm², not 100 cm².']},
+ motion:{name:'Galileo Galilei',life:'1564–1642, Italy',known:'Rolling balls down ramps to study acceleration, and showing that heavy and light objects fall together (without air resistance).',hair:'bald',beard:true,coat:'#7a3b2e',
+  advice:['Read the AXES before the line: a distance–time graph and a speed–time graph tell completely different stories.','On a distance–time graph the slope is the speed; on a speed–time graph the AREA is the distance.','Slow the motion down in your head, one second at a time, like my ramps did.']},
+ forces:{name:'Isaac Newton',life:'1643–1727, England',known:'The three laws of motion and the law of universal gravitation.',hair:'wig',beard:false,coat:'#5b3c88',
+  advice:['Draw every force on ONE object as an arrow first; then add them up to find the net force.','Balanced forces do not mean “not moving” — they mean “not changing its motion”.','Pressure is force spread over an area: p = F ÷ A. Same force on a smaller area means more pressure.']},
+ energy:{name:'James Prescott Joule',life:'1818–1889, England',known:'Showing that work and heat are two forms of energy — the unit of energy is named after him.',hair:'short',beard:true,coat:'#2e5d4a',
+  advice:['Energy never disappears. When an answer “loses” energy, ask where it went: usually heat and sound.','Power is energy per second: P = E ÷ t. A bigger power does the same job faster.','Efficiency is useful energy out ÷ total energy in — it can never be more than 100%.']},
+ thermal:{name:'Anders Celsius',life:'1701–1744, Sweden',known:'The Celsius temperature scale based on melting ice and boiling water.',hair:'wig',beard:false,coat:'#1f6f8b',
+  advice:['Temperature and heat are not the same: a bathtub of warm water holds more heat than a cup of boiling water.','During melting or boiling the temperature stays flat, even though energy keeps going in.','To change °C into kelvin, add 273.']},
+ elec:{name:'Georg Ohm',life:'1789–1854, Germany',known:'Discovering that current through a wire is proportional to the voltage across it — Ohm’s law, V = IR.',hair:'short',beard:false,coat:'#8a5a1f',
+  advice:['Current is the flow, voltage is the push, resistance is what slows the flow. V = I × R ties them together.','In SERIES the current is the same everywhere; in PARALLEL the voltage is the same on every branch.','Trace the circuit with your finger. If there is a gap anywhere in a loop, nothing in that loop works.']},
+ waves:{name:'Heinrich Hertz',life:'1857–1894, Germany',known:'The first experiments to make and detect radio waves — frequency is measured in hertz.',hair:'short',beard:true,coat:'#2b4f8a',
+  advice:['Wave speed = frequency × wavelength. If the speed stays fixed, a higher frequency means a shorter wavelength.','Sound needs a medium to travel through; light does not.','Loudness is about amplitude; pitch is about frequency. Do not mix them up.']},
+ light:{name:'Ibn al-Haytham',life:'c. 965–1040, Basra and Cairo',known:'The Book of Optics: explaining vision with light entering the eye, and testing ideas with careful experiments.',hair:'turban',beard:true,coat:'#1f7a5a',
+  advice:['Always measure angles from the NORMAL, the line at 90° to the surface — not from the surface itself.','Light slows down entering glass or water and bends TOWARD the normal.','Draw ray diagrams with a ruler. A sloppy ray gives a sloppy answer.']},
+ space:{name:'Johannes Kepler',life:'1571–1630, Germany',known:'The three laws of planetary motion, including the fact that planets move in ellipses.',hair:'short',beard:true,coat:'#3d3d7a',
+  advice:['Days come from Earth spinning; years come from Earth orbiting the Sun; seasons come from Earth’s tilt, not its distance.','The Moon shines by reflected sunlight. Its phases come from how much of the lit half we can see.','Planets closer to the Sun go around faster and have shorter years.']},
+ atoms:{name:'Marie Skłodowska-Curie',life:'1867–1934, Poland and France',known:'Pioneering research on radioactivity and the discovery of polonium and radium — the first person to win two Nobel Prizes in science.',hair:'bun',beard:false,coat:'#333a44',
+  advice:['An atom is mostly empty space: a tiny, heavy nucleus with electrons around it.','Alpha, beta and gamma are very different: paper stops alpha, aluminum stops beta, thick lead or concrete reduces gamma.','Half-life is the time for HALF of what is left to decay — every half-life, halve it again.']},
+ ctx:{name:'Archimedes',life:'c. 287–212 BC, Syracuse',known:'The principle of buoyancy, the law of the lever, and clever problem solving.',hair:'curly',beard:true,coat:'#a3782f',
+  advice:['Read the question twice. Underline words like NOT, EXCEPT, TOTAL and AVERAGE.','Estimate first. If your answer is the wrong size, you will notice before you choose.','No marks are lost for guessing in the JPC — never leave a question blank.']}};
+function sciFace(s,size){const sz=size||110,c=s.coat;let hair='';
+ if(s.hair==='wig')hair='<path d="M18 46 Q14 14 50 12 Q86 14 82 46 Q90 70 78 84 L70 60 Q50 20 30 60 L22 84 Q10 70 18 46Z" fill="#f2f2f2" stroke="#b9b9b9"/>';
+ else if(s.hair==='bald')hair='<path d="M24 44 Q26 30 34 26 M76 44 Q74 30 66 26" stroke="#7a6a5a" stroke-width="5" fill="none"/>';
+ else if(s.hair==='bun')hair='<circle cx="50" cy="14" r="9" fill="#4a3a2e"/><path d="M24 46 Q22 18 50 18 Q78 18 76 46 Q66 28 50 28 Q34 28 24 46Z" fill="#4a3a2e"/>';
+ else if(s.hair==='turban')hair='<path d="M22 40 Q22 10 50 10 Q78 10 78 40 Q66 30 50 30 Q34 30 22 40Z" fill="#f4f1e8" stroke="#cfc8b2"/><path d="M28 24 Q50 14 72 24" stroke="#cfc8b2" fill="none"/>';
+ else if(s.hair==='curly')hair='<g fill="#d9d9d9">'+[28,38,50,62,72].map(x=>`<circle cx="${x}" cy="22" r="9"/>`).join('')+'<circle cx="23" cy="34" r="8"/><circle cx="77" cy="34" r="8"/></g>';
+ else if(s.hair==='side')hair='<path d="M24 44 Q20 20 50 18 Q80 20 76 44 Q70 30 56 28 L40 34 Q28 34 24 44Z" fill="#8a8a8a"/>';
+ else hair='<path d="M24 44 Q22 18 50 18 Q78 18 76 44 Q66 28 50 28 Q34 28 24 44Z" fill="#5a4636"/>';
+ const beard=s.beard?'<path d="M30 56 Q32 82 50 86 Q68 82 70 56 Q62 70 50 70 Q38 70 30 56Z" fill="'+(s.hair==='curly'||s.hair==='side'||s.hair==='turban'?'#cfcfcf':'#6a5442')+'"/>':'';
+ return `<svg viewBox="0 0 100 110" width="${sz}" height="${sz*1.1}" role="img" aria-label="Cartoon portrait of ${esc(s.name)}"><path d="M14 110 Q16 86 50 84 Q84 86 86 110Z" fill="${c}"/><path d="M42 84 L50 96 L58 84Z" fill="#fff"/><ellipse cx="50" cy="50" rx="25" ry="29" fill="#f3d2b3"/>${hair}${beard}<circle cx="41" cy="48" r="3" fill="#24323f"/><circle cx="59" cy="48" r="3" fill="#24323f"/><path d="M43 64 Q50 69 57 64" stroke="#8a4b3a" stroke-width="2.4" fill="none" stroke-linecap="round"/></svg>`;}
+
+/* ---------------------------------------------------------------- backend: local (device only) */
+async function sha(t){try{const b=await crypto.subtle.digest('SHA-256',new TextEncoder().encode(t));return [...new Uint8Array(b)].map(x=>x.toString(16).padStart(2,'0')).join('');}catch(e){let h=0;for(const c of t)h=(h*31+c.charCodeAt(0))|0;return 'w'+h;}}
+const LocalBackend = {
+ mode:'local',
+ _db(){try{return JSON.parse(localStorage.getItem('jpc2_local')||'null')||{users:{},board:{},stats:{},session:null};}catch(e){return this._mem||(this._mem={users:{},board:{},stats:{},session:null});}},
+ _save(d){try{localStorage.setItem('jpc2_local',JSON.stringify(d));}catch(e){this._mem=d;}},
+ async init(){const d=this._db();if(!d.session||!d.users[d.session])return null;const u=d.users[d.session];return {id:d.session,nick:u.nick,role:u.role};},
+ async signUp(nick,grade,pw,avatar){const id=nick.toLowerCase(),d=this._db();if(d.users[id])throw new Error('That nickname is already taken. Try another one.');
+  const salt=Math.random().toString(36).slice(2);d.users[id]={nick,role:'student',salt,hash:await sha(salt+pw)};
+  if(!d.board[id])d.board[id]={nick,grade:+grade,xp:0,avatar,bg:'paper',updated:Date.now()};else{Object.assign(d.board[id],{grade:+grade});delete d.board[id].ownerUid;}
+  if(!d.stats[id])d.stats[id]=freshStats(nick,+grade);d.session=id;this._save(d);return {id,nick,role:'student'};},
+ async logIn(nick,pw){const id=nick.toLowerCase(),d=this._db(),u=d.users[id];if(!u||u.role!=='student'||u.hash!==await sha(u.salt+pw))throw new Error('Nickname or password is not right. Check capital letters and try again.');d.session=id;this._save(d);return {id,nick:u.nick,role:'student'};},
+ async teacherLogIn(name,pw,create){const id='teacher-'+name,d=this._db(),u=d.users[id];
+  if(!u){if(!create)throw new Error('No teacher login on this device yet — choose “Create teacher login”.');const salt=Math.random().toString(36).slice(2);d.users[id]={nick:TEACHERS[name],role:'teacher',salt,hash:await sha(salt+pw)};}
+  else if(u.hash!==await sha(u.salt+pw))throw new Error('Wrong teacher password.');d.session=id;this._save(d);return {id,nick:TEACHERS[name],role:'teacher'};},
+ async createTeacher(name,pw){const id='teacher-'+name,d=this._db();if(d.users[id])throw new Error('That teacher login already exists.');const salt=Math.random().toString(36).slice(2);d.users[id]={nick:TEACHERS[name],role:'teacher',salt,hash:await sha(salt+pw)};this._save(d);},
+ async logOut(){const d=this._db();d.session=null;this._save(d);},
+ async loadMe(id){const d=this._db();return {board:d.board[id],stats:d.stats[id]};},
+ async save(id,board,stats){const d=this._db();d.board[id]=Object.assign({},board,{updated:Date.now()});d.stats[id]=stats;this._save(d);},
+ async leaderboard(n){const d=this._db();return Object.entries(d.board).map(([id,b])=>Object.assign({id},b)).filter(b=>b.ownerUid!==null).sort((a,b)=>b.xp-a.xp).slice(0,n||100);},
+ async allStudents(){const d=this._db();return Object.keys(d.board).map(id=>({id,board:d.board[id],stats:d.stats[id]||{}}));},
+ async release(id){const d=this._db();delete d.users[id];if(d.board[id])d.board[id].ownerUid=null;this._save(d);},
+ async remove(id){const d=this._db();delete d.users[id];delete d.board[id];delete d.stats[id];this._save(d);}};
+
+/* ---------------------------------------------------------------- backend: Firebase */
+const FV='10.12.2';
+const FirebaseBackend = {
+ mode:'firebase',
+ async _load(){if(this.fb)return;const base='https://www.gstatic.com/firebasejs/'+FV+'/';
+  const [A,U,F]=await Promise.all([import(base+'firebase-app.js'),import(base+'firebase-auth.js'),import(base+'firebase-firestore.js')]);
+  this.A=A;this.U=U;this.F=F;this.app=A.initializeApp(CFG);this.auth=U.getAuth(this.app);this.db=F.getFirestore(this.app);this.fb=true;},
+ email:id=>id+'@'+DOMAIN,
+ _err(e){const c=(e&&e.code)||'';if(c.includes('email-already-in-use'))return new Error('That nickname is already taken. Try another one.');
+  if(c.includes('invalid-credential')||c.includes('wrong-password')||c.includes('user-not-found')||c.includes('invalid-login'))return new Error('Nickname or password is not right. Check capital letters and try again.');
+  if(c.includes('weak-password'))return new Error('Password must be at least 6 characters.');if(c.includes('too-many-requests'))return new Error('Too many tries. Wait a minute, then try again.');
+  if(c.includes('network'))return new Error('No internet connection. Check your Wi-Fi and try again.');if(c.includes('permission-denied'))return new Error('The database said no (permission denied). Ask Miss K to check the setup.');
+  return new Error((e&&e.message)||'Something went wrong. Try again.');},
+ async init(){await this._load();const user=await new Promise(r=>{const un=this.U.onAuthStateChanged(this.auth,u=>{un();r(u);});});return user?this._who(user):null;},
+ _who(user){const id=user.email.split('@')[0];if(id.startsWith('teacher-')){const t=id.slice(8);return {id,nick:TEACHERS[t]||t,role:'teacher',uid:user.uid};}return {id,nick:id,role:'student',uid:user.uid};},
+ async signUp(nick,grade,pw,avatar){await this._load();const F=this.F,id=nick.toLowerCase(),bref=F.doc(this.db,'board',id),sref=F.doc(this.db,'stats',id);
+  let existing=null;try{const s=await F.getDoc(bref);existing=s.exists()?s.data():null;}catch(e){throw this._err(e);}
+  if(existing&&existing.ownerUid)throw new Error('That nickname is already taken. Try another one.');
+  let cred;try{cred=await this.U.createUserWithEmailAndPassword(this.auth,this.email(id),pw);}catch(e){throw this._err(e);}
+  const uid=cred.user.uid;
+  try{if(existing){await F.updateDoc(bref,{ownerUid:uid,grade:+grade,updated:Date.now()});await F.updateDoc(sref,{ownerUid:uid});}
+   else{await F.setDoc(bref,{nick,grade:+grade,xp:0,avatar,bg:'paper',ownerUid:uid,updated:Date.now()});await F.setDoc(sref,Object.assign(freshStats(nick,+grade),{ownerUid:uid}));}}catch(e){throw this._err(e);}
+  return {id,nick,role:'student',uid};},
+ async logIn(nick,pw){await this._load();const id=nick.toLowerCase();let cred;try{cred=await this.U.signInWithEmailAndPassword(this.auth,this.email(id),pw);}catch(e){throw this._err(e);}
+  const b=await this.F.getDoc(this.F.doc(this.db,'board',id));return {id,nick:b.exists()?b.data().nick:nick,role:'student',uid:cred.user.uid};},
+ async teacherLogIn(name,pw,create){await this._load();const email=this.email('teacher-'+name);let cred;
+  try{cred=create?await this.U.createUserWithEmailAndPassword(this.auth,email,pw):await this.U.signInWithEmailAndPassword(this.auth,email,pw);}catch(e){throw this._err(e);}return this._who(cred.user);},
+ async createTeacher(name,pw){await this._load();const app2=this.A.initializeApp(CFG,'teacher-maker-'+Date.now()),a2=this.U.getAuth(app2);
+  try{await this.U.createUserWithEmailAndPassword(a2,this.email('teacher-'+name),pw);await this.U.signOut(a2);}catch(e){throw this._err(e);}finally{try{await this.A.deleteApp(app2);}catch(e){}}},
+ async logOut(){await this.U.signOut(this.auth);},
+ async loadMe(id){const F=this.F;try{const [b,s]=await Promise.all([F.getDoc(F.doc(this.db,'board',id)),F.getDoc(F.doc(this.db,'stats',id))]);return {board:b.exists()?b.data():null,stats:s.exists()?s.data():null};}catch(e){throw this._err(e);}},
+ async save(id,board,stats){const F=this.F,uid=this.auth.currentUser&&this.auth.currentUser.uid;try{const batch=F.writeBatch(this.db);
+  batch.set(F.doc(this.db,'board',id),Object.assign({},board,{ownerUid:uid,updated:Date.now()}));batch.set(F.doc(this.db,'stats',id),Object.assign({},stats,{ownerUid:uid}));await batch.commit();}catch(e){throw this._err(e);}},
+ async leaderboard(n){await this._load();const F=this.F;try{const q=F.query(F.collection(this.db,'board'),F.orderBy('xp','desc'),F.limit(n||100));const s=await F.getDocs(q);return s.docs.map(d=>Object.assign({id:d.id},d.data())).filter(b=>b.ownerUid);}catch(e){throw this._err(e);}},
+ async allStudents(){const F=this.F;try{const [b,s]=await Promise.all([F.getDocs(F.collection(this.db,'board')),F.getDocs(F.collection(this.db,'stats'))]);const st={};s.docs.forEach(d=>st[d.id]=d.data());return b.docs.map(d=>({id:d.id,board:d.data(),stats:st[d.id]||{}}));}catch(e){throw this._err(e);}},
+ async release(id){const F=this.F;try{await F.updateDoc(F.doc(this.db,'board',id),{ownerUid:null});await F.updateDoc(F.doc(this.db,'stats',id),{ownerUid:null});}catch(e){throw this._err(e);}},
+ async remove(id){const F=this.F;try{await F.deleteDoc(F.doc(this.db,'board',id));await F.deleteDoc(F.doc(this.db,'stats',id));}catch(e){throw this._err(e);}}};
+
+const BE = CFG ? FirebaseBackend : LocalBackend;
+
+/* ---------------------------------------------------------------- player state */
+function freshStats(nick,grade){return {nick,grade,photons:0,owned:['sci','owl','ele','cat','paper','mint'],answered:0,correct:0,hist:{},seen:{},missed:{},attempts:[],concepts:{},streak:{day:'',count:0},created:Date.now(),lastActive:Date.now()};}
+let ME=null, BOARD=null, STATS=null, saving=false, dirty=false;
+function cacheKey(){return 'jpc2_cache_'+(ME&&ME.id);}
+function cacheMe(){try{localStorage.setItem(cacheKey(),JSON.stringify({board:BOARD,stats:STATS,dirty}));}catch(e){}}
+async function persist(){if(!ME||ME.role!=='student')return;dirty=true;cacheMe();if(saving)return;saving=true;setSaveBadge('Saving…');
+ try{await BE.save(ME.id,BOARD,STATS);dirty=false;cacheMe();setSaveBadge('Saved ✓');}catch(e){setSaveBadge('Not saved yet — will retry',true);}finally{saving=false;}}
+function setSaveBadge(t,bad){const el=$('#savebadge');if(el){el.textContent=t;el.className='savebadge'+(bad?' bad':'');}}
+setInterval(()=>{if(dirty&&!saving)persist();},20000);
+function award(xp){xp=Math.max(0,Math.round(xp));BOARD.xp=(BOARD.xp||0)+xp;STATS.photons=(STATS.photons||0)+xp;return xp;}
+function dailyStreak(){const t=today(),s=STATS.streak||{day:'',count:0};if(s.day===t)return 0;const y=new Date(Date.now()-864e5).toISOString().slice(0,10);s.count=s.day===y?s.count+1:1;s.day=t;STATS.streak=s;return award(20);}
+function mastery(t){const h=(STATS.hist[t]||[]);if(!h.length)return null;const r=h.slice(-20);return Math.round(100*r.reduce((a,b)=>a+b,0)/r.length);}
+function mlevel(m,n){if(m===null)return['Not started','#9AA8A6'];if(n<4)return['Warming up','#E8A33D'];if(m>=75)return['Strong','#2E7D4F'];if(m>=50)return['Getting there','#E8A33D'];return['Needs practice','#C0392B'];}
+
+/* ---------------------------------------------------------------- helpers */
 function shuffle(a){a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
 function fmt(s){s=Math.max(0,Math.round(s));const m=Math.floor(s/60);return m+':'+String(s%60).padStart(2,'0')}
-function fdate(t){const d=new Date(t);return d.toLocaleDateString(undefined,{day:'numeric',month:'short'})+' '+d.toLocaleTimeString(undefined,{hour:'2-digit',minute:'2-digit'})}
-function mastery(t){const h=(P().hist[t]||[]);if(!h.length)return null;const r=h.slice(-20);return Math.round(100*r.reduce((a,b)=>a+b,0)/r.length)}
-function level(m,n){if(m===null)return['Not started','#9AA8A6'];if(n<4)return['Warming up','#E8A33D'];if(m>=75)return['Strong','#2E7D4F'];if(m>=50)return['Getting there','#E8A33D'];return['Needs practice','#C0392B']}
+function fdate(t){if(!t)return '—';const d=new Date(t);return d.toLocaleDateString(undefined,{day:'numeric',month:'short'})+' '+d.toLocaleTimeString(undefined,{hour:'2-digit',minute:'2-digit'})}
 function art(k,w){return '<div style="width:'+(w||170)+'px;margin:0 auto">'+(ART[k]||'')+'</div>'}
 function figHTML(id){return id&&FIGS[id]?'<div class="figwrap">'+FIGS[id]+'</div>':''}
+const app=()=>$('#app');
+function toast(t){document.querySelectorAll('.toast').forEach(x=>x.remove());const d=document.createElement('div');d.className='toast';d.innerHTML=t;document.body.appendChild(d);setTimeout(()=>d.classList.add('on'),10);setTimeout(()=>{d.classList.remove('on');setTimeout(()=>d.remove(),400)},2600);}
+function noticeHTML(){return '<div class="notice"><b>Practice site, not the real test.</b> This is preparation for the Junior Physics Challenge (JPC). The questions are original, written in the style and topics of past JPC papers. A great score here is a great sign — but it does not guarantee the same score in the real challenge.</div>'}
 
-/* ---------- test building ---------- */
-function pick(topic,n,grade){
- const p=P();
- const cand=BANK.map((q,i)=>({q,i})).filter(x=>x.q.t===topic);
- const keyed=cand.map(x=>{let w=LW[grade][x.q.l];const s=p.seen['q'+x.i]||0;w*=1/(1+s*.7);if((p.missed['q'+x.i]||0)>0)w*=1.6;return{x,k:Math.pow(Math.random(),1/w)}});
+/* ---------------------------------------------------------------- sessions */
+function pick(topic,n,grade){const cand=BANK.map((q,i)=>({q,i})).filter(x=>x.q.t===topic);
+ const keyed=cand.map(x=>{let w=LW[grade][x.q.l];const s=STATS.seen['q'+x.i]||0;w*=1/(1+s*.7);if((STATS.missed['q'+x.i]||0)>0)w*=1.6;return{x,k:Math.pow(Math.random(),1/w)}});
  keyed.sort((a,b)=>b.k-a.k);return keyed.slice(0,n).map(o=>o.x.i)}
-function buildSession(o){
- const g=P().grade;let ids=[];
+function buildSession(o){const g=BOARD.grade||8;let ids=[];
  if(o.ids)ids=o.ids.slice();else o.mix.forEach(([t,n])=>{ids=ids.concat(pick(t,n,g))});
  if(!o.ids){ids=shuffle(ids);if(o.sortLevel)ids.sort((a,b)=>BANK[a].l-BANK[b].l)}
  const qs=ids.map(i=>{const b=BANK[i];const opts=shuffle(b.o.map((t,k)=>({t,ok:k===0})));return{id:'q'+i,i,opts}});
- return{label:o.label,mode:o.mode,qs,ans:qs.map(()=>-1),flags:qs.map(()=>false),cur:0,start:Date.now(),limit:o.limit||0,instant:!!o.instant,topicFocus:o.topic||null,done:false,confirm:false}}
+ return{label:o.label,mode:o.mode,qs,ans:qs.map(()=>-1),flags:qs.map(()=>false),cur:0,start:Date.now(),limit:o.limit||0,instant:!!o.instant,done:false,confirm:false,xpLive:0}}
 let S=null,TI=null;
 function startSession(o){S=buildSession(o);if(TI)clearInterval(TI);TI=null;location.hash='#/test';render()}
+function tick(){if(!S||S.done||!S.limit)return;const left=S.limit-(Date.now()-S.start)/1000;const el=$('#timer');if(el){el.textContent=fmt(left);el.classList.toggle('low',left<300)}if(left<=0)finish()}
 
-/* ---------- rendering ---------- */
-const app=()=>$('#app');
-function setNav(){const p=P();$('#who').innerHTML=p?'<span class="who">&#128100; <b>'+esc(p.name)+'</b> &middot; Grade '+p.grade+'</span> <a class="btn small" href="#/profile">Switch</a>':''}
+/* ---------------------------------------------------------------- nav + router */
+function setNav(){const w=$('#who');if(!w)return;
+ if(!ME){w.innerHTML='<a class="homebtn" style="margin:0" href="#/login">Log in</a><a class="homebtn pri" style="margin:0" href="#/join">New player</a>';return;}
+ if(ME.role==='teacher'){w.innerHTML='<span class="who">🍎 <b>'+esc(ME.nick)+'</b> · teacher</span><a class="homebtn" style="margin:0" href="#/teacher">Dashboard</a><a class="homebtn" style="margin:0" href="#/board">Leaderboard</a><button class="homebtn" style="margin:0" id="logout">Log out</button>';}
+ else{const L=levelOf(BOARD.xp||0);w.innerHTML='<a class="whochip" href="#/me">'+ava(BOARD.avatar,BOARD.bg,30)+'<span><b>'+esc(BOARD.nick)+'</b><small>Lv '+L.n+' · '+(BOARD.xp||0)+' XP · ⚡'+(STATS.photons||0)+'</small></span></a><a class="homebtn" style="margin:0" href="#/board">🏆 Board</a><a class="homebtn" style="margin:0" href="#/store">🛍️ Store</a><button class="homebtn" style="margin:0" id="logout">Log out</button><span id="savebadge" class="savebadge"></span>';}
+ const lo=$('#logout');if(lo)lo.onclick=async()=>{if(dirty)await persist();await BE.logOut();ME=null;BOARD=null;STATS=null;S=null;location.hash='#/';render();};}
 function route(){render()}
-function render(){
- setNav();const h=location.hash||'#/';const p=P();
- if(TI&&!h.startsWith('#/test')){clearInterval(TI);TI=null}
- window.scrollTo(0,0);
- if(!p&&!h.startsWith('#/guide')&&!h.startsWith('#/teacher'))return viewWelcome();
- if(h.startsWith('#/topic/'))return viewTopic(h.slice(8));
+function render(){setNav();const h=location.hash||'#/';
+ if(TI&&!h.startsWith('#/test')){clearInterval(TI);TI=null}window.scrollTo(0,0);
+ if(h.startsWith('#/guide'))return viewGuide();
+ if(h.startsWith('#/board'))return viewBoard();
+ if(h.startsWith('#/teacher-login'))return viewTeacherLogin();
+ if(!ME){if(h.startsWith('#/login'))return viewLogin();if(h.startsWith('#/join'))return viewJoin();return viewWelcome();}
+ if(ME.role==='teacher'){if(h.startsWith('#/student/'))return viewStudent(decodeURIComponent(h.slice(10)));if(h.startsWith('#/concept/'))return viewConcept(h.slice(10));return viewTeacher();}
+ if(h.startsWith('#/concept/'))return viewConcept(h.slice(10));
+ if(h.startsWith('#/concepts'))return viewConcepts();
+ if(h.startsWith('#/topics'))return viewTopics();
+ if(h.startsWith('#/exam'))return viewExamIntro();
  if(h.startsWith('#/test'))return S?(S.done?viewResults():viewQuestion()):(location.hash='#/');
  if(h.startsWith('#/results'))return S&&S.done?viewResults():(location.hash='#/');
- if(h.startsWith('#/progress'))return viewProgress();
- if(h.startsWith('#/guide'))return viewGuide();
- if(h.startsWith('#/teacher'))return viewTeacher();
- if(h.startsWith('#/profile'))return viewWelcome(true);
+ if(h.startsWith('#/store'))return viewStore();
+ if(h.startsWith('#/me'))return viewMe();
  viewHome()}
 
-function noticeHTML(){return '<div class="notice"><b>Practice site, not the real test.</b> This is preparation for the Junior Physics Challenge (JPC). The questions are original, written in the style and topics of past JPC papers. They are <b>not</b> the official JPC and are not copied from it.</div>'}
+/* ---------------------------------------------------------------- welcome / auth */
+function boardRows(rows,me){if(!rows.length)return '<p class="muted">No players yet — be the first on the board!</p>';
+ return '<ol class="board">'+rows.map((b,i)=>{const L=levelOf(b.xp||0),medal=['🥇','🥈','🥉'][i]||('#'+(i+1));return `<li class="${me&&b.id===me?'mine':''}"><span class="rk">${medal}</span>${ava(b.avatar,b.bg,40)}<span class="bn"><b>${esc(b.nick)}</b><small>Grade ${b.grade} · Lv ${L.n} ${esc(L.title)}</small></span><span class="bx">${(b.xp||0).toLocaleString()} XP</span></li>`;}).join('')+'</ol>';}
+async function viewWelcome(){
+ let h='<section class="hero"><div class="herotext"><div class="kicker">Miss K STEM · BASIS International School Bangkok</div><h1>Junior Physics Challenge <em>practice</em></h1><p>Practise JPC-style questions, earn XP, unlock avatars and climb the leaderboard. Grades 7, 8 and 9.</p><div class="row"><a class="btn pri big" href="#/login">🔑 Log in</a><a class="btn big" href="#/join">✨ New player</a></div></div><div class="heroart">'+art('mascot_wave',190)+'<div class="herocap">Let’s practise!</div></div></section>';
+ h+='<div class="steps"><div><span>1</span><b>Log in</b><p>Your nickname and password. New here? Choose “New player”.</p></div><div><span>2</span><b>Practise every day</b><p>Every correct answer earns XP and ⚡ photons. Study concepts with famous scientists.</p></div><div><span>3</span><b>Climb the board</b><p>Spend photons in the store on avatars and backgrounds — your XP keeps you on the leaderboard.</p></div></div>';
+ h+=noticeHTML()+'<div class="section-h"><h2>🏆 Top players</h2><span class="tag" style="background:var(--amber)">all grades</span></div><div class="card" id="topb"><p class="muted">Loading the leaderboard…</p></div><p style="margin-top:6px"><a href="#/board">See the full leaderboard →</a> · <a href="#/guide">How the JPC works</a> · <a href="#/teacher-login">Teacher login</a></p>';
+ app().innerHTML=h;try{const rows=await BE.leaderboard(10);const el=$('#topb');if(el)el.innerHTML=boardRows(rows);}catch(e){const el=$('#topb');if(el)el.innerHTML='<p class="muted">'+esc(e.message)+'</p>';}}
+function viewLogin(){app().innerHTML='<div class="authcard card"><h2>🔑 Log in</h2><form id="lf"><label>Nickname<input id="ln" autocomplete="username" required maxlength="16" autocapitalize="off"></label><label>Password<input id="lp" type="password" autocomplete="current-password" required></label><button class="btn pri big" type="submit">Log in</button><p class="err" id="le" role="alert"></p></form><p>New here? <a href="#/join">Create a player</a>. Forgot your password? Ask Miss K — she can reset your login and you keep your XP.</p></div>';
+ $('#lf').onsubmit=async e=>{e.preventDefault();const b=e.submitter||$('#lf button');b.disabled=true;$('#le').textContent='';try{ME=await BE.logIn($('#ln').value.trim(),$('#lp').value);await loadPlayer();location.hash='#/';render();}catch(x){$('#le').textContent=x.message;b.disabled=false;}};}
+function viewJoin(){const starters=AVATARS.filter(a=>a[2]===0);
+ app().innerHTML='<div class="authcard card"><h2>✨ New player</h2><form id="jf"><label>Nickname <small>3–16 letters, numbers or _ · no real full names, please</small><input id="jn" required maxlength="16" autocapitalize="off" pattern="[A-Za-z0-9_]{3,16}"></label><label>Grade<select id="jg"><option value="7">Grade 7</option><option value="8" selected>Grade 8</option><option value="9">Grade 9</option></select></label><label>Password <small>at least 6 characters — write it in your Communication Journal</small><input id="jp" type="password" autocomplete="new-password" required minlength="6"></label><label>Repeat password<input id="jp2" type="password" autocomplete="new-password" required minlength="6"></label><fieldset class="avpick"><legend>Pick a starter avatar</legend>'+starters.map((a,i)=>`<label><input type="radio" name="av" value="${a[0]}" ${i?'':'checked'}>${ava(a[0],'paper',52)}</label>`).join('')+'</fieldset><button class="btn pri big" type="submit">Create my player</button><p class="err" id="je" role="alert"></p></form><p>Already have one? <a href="#/login">Log in</a></p></div>';
+ $('#jf').onsubmit=async e=>{e.preventDefault();const n=$('#jn').value.trim(),p=$('#jp').value,err=$('#je');err.textContent='';
+  if(!NICK_RE.test(n)){err.textContent='Nickname must be 3–16 letters, numbers or _ (no spaces).';return;}if(n.toLowerCase().startsWith('teacher')){err.textContent='That nickname is reserved. Pick another one.';return;}
+  if(p.length<6){err.textContent='Password must be at least 6 characters.';return;}if(p!==$('#jp2').value){err.textContent='The two passwords are different.';return;}
+  const b=$('#jf button[type=submit]');b.disabled=true;try{ME=await BE.signUp(n,$('#jg').value,p,(document.querySelector('[name=av]:checked')||{}).value||'sci');await loadPlayer();toast('Welcome, '+esc(n)+'! 🎉');location.hash='#/';render();}catch(x){err.textContent=x.message;b.disabled=false;}};}
+function viewTeacherLogin(){app().innerHTML='<div class="authcard card"><h2>🍎 Teacher login</h2><p class="muted">For Miss K and Miss Neesha only. Teachers see every student’s statistics.</p><form id="tf"><label>Teacher<select id="tn">'+Object.entries(TEACHERS).map(([k,v])=>`<option value="${k}">${v}</option>`).join('')+'</select></label><label>Password<input id="tp" type="password" required minlength="6" autocomplete="current-password"></label><button class="btn pri big" type="submit">Log in</button> <button class="btn" type="button" id="tc">First time: create teacher login</button><p class="err" id="te" role="alert"></p></form></div>';
+ const go=async create=>{$('#te').textContent='';try{ME=await BE.teacherLogIn($('#tn').value,$('#tp').value,create);location.hash='#/teacher';render();}catch(x){$('#te').textContent=x.message;}};
+ $('#tf').onsubmit=e=>{e.preventDefault();go(false);};$('#tc').onclick=()=>{if($('#tp').value.length<6){$('#te').textContent='Choose a password with at least 6 characters.';return;}go(true);};}
+async function loadPlayer(){if(!ME||ME.role!=='student')return;let d=await BE.loadMe(ME.id);
+ let cache=null;try{cache=JSON.parse(localStorage.getItem(cacheKey())||'null');}catch(e){}
+ if(cache&&cache.dirty&&cache.board&&(!d.board||(cache.board.xp||0)>=(d.board.xp||0))){d=cache;dirty=true;}
+ BOARD=d.board||{nick:ME.nick,grade:8,xp:0,avatar:'sci',bg:'paper'};STATS=Object.assign(freshStats(BOARD.nick,BOARD.grade),d.stats||{});
+ ['hist','seen','missed','concepts'].forEach(k=>STATS[k]=STATS[k]||{});STATS.attempts=STATS.attempts||[];
+ const bonus=dailyStreak();if(bonus){STATS.lastActive=Date.now();persist();setTimeout(()=>toast('Daily login bonus: +'+bonus+' XP · streak '+STATS.streak.count+' day'+(STATS.streak.count>1?'s':'')+' 🔥'),400);}}
 
-/* ----- welcome / profile ----- */
-function viewWelcome(switching){
- const names=Object.keys(DB.profiles);
- let h='<section class="hero"><div class="herotext"><div class="kicker">Miss K STEM &middot; Physics 8</div><h1>Junior Physics Challenge <em>practice</em></h1><p>Practise 60-question-style tests, learn from clear explanations, and watch your progress grow. Grades 7, 8 and 9.</p></div><div class="heroart">'+art('mascot_wave',190)+'<div class="herocap">Let\'s practise!</div></div></section>'+noticeHTML();
- h+='<div class="card"><h2>'+(switching?'Who is practising?':'Start here: type your name')+'</h2><p style="margin:8px 0 14px;color:var(--ink-soft)">Your name and results are saved on <b>this device and browser</b>, so you can come back and continue.</p>';
- h+='<form id="pf" class="row"><input type="text" id="pname" placeholder="Your first name" maxlength="30" aria-label="Your name" required> <select id="pgrade" aria-label="Your grade"><option value="7">Grade 7</option><option value="8">Grade 8</option><option value="9">Grade 9</option></select> <button class="btn pri" type="submit">Start practising</button></form>';
- if(names.length){h+='<h3 style="margin-top:18px">Or continue as</h3><div class="row">'+names.map(n=>'<button class="btn" data-pick="'+esc(n)+'">'+esc(n)+' &middot; Gr '+DB.profiles[n].grade+'</button>').join('')+'</div>'}
- if(memOnly)h+='<div class="confirm"><b>Heads up:</b> this browser is not letting the site save data, so progress will be lost when you close the page. Use the Export button on the Progress page to keep a copy.</div>';
- h+='</div><p style="margin-top:10px"><a href="#/guide">How the JPC works</a> &middot; <a href="#/teacher">Teacher view</a></p>';
+/* ---------------------------------------------------------------- home */
+function playerCard(){const L=levelOf(BOARD.xp||0);return `<div class="pcard" style="background:${(BG[BOARD.bg]||BG.paper)[3]}"><div class="pinner">${ava(BOARD.avatar,BOARD.bg,84)}<div class="pinfo"><div class="pnick">${esc(BOARD.nick)}</div><div>Grade ${BOARD.grade} · Level ${L.n}: <b>${esc(L.title)}</b></div><div class="xpbar"><i style="width:${L.pct}%"></i></div><div class="pnum"><span>${(BOARD.xp||0).toLocaleString()} XP</span><span>⚡ ${(STATS.photons||0).toLocaleString()} photons</span><span>🔥 ${(STATS.streak||{}).count||0}-day streak</span></div></div></div></div>`;}
+function recommend(){const arr=TOPICS.map(t=>({t,m:mastery(t.id),n:(STATS.hist[t.id]||[]).length}));const tried=arr.filter(a=>a.n>=3).sort((a,b)=>a.m-b.m);return{weak:tried.filter(a=>a.m<75).slice(0,2),fresh:arr.filter(a=>a.n<3)};}
+function viewHome(){const r=recommend();
+ let h=playerCard();
+ if(!STATS.attempts.length)h+='<div class="card"><b>New here?</b> Start with <b>Quick practice</b>, then study a <b>Concept</b> with its scientist. When you feel ready, take the <b>Full exam</b>.</div>';
+ else if(r.weak.length)h+='<div class="card"><b>Suggested next step:</b> practise <b>'+r.weak.map(w=>esc(w.t.name)+' ('+w.m+'%)').join(' and ')+'</b>. <button class="btn small pri" id="weakbtn">Practise my weak topics</button></div>';
+ h+='<div class="section-h"><h2>Choose how to practise</h2></div><div class="modes">'+
+ '<a class="mode" href="#/topics"><span class="mi">🎯</span><b>Practice by topic</b><p>10 questions on one topic · explanation after every answer · +XP per correct answer.</p></a>'+
+ '<a class="mode" href="#/exam"><span class="mi">📝</span><b>Full exam</b><p>60 questions · 50 minutes · just like the JPC paper · +50 XP bonus.</p></a>'+
+ '<a class="mode" href="#/concepts"><span class="mi">🧑‍🔬</span><b>Concepts</b><p>11 concepts, each presented by a famous scientist with advice · +25 XP each.</p></a>'+
+ '<button class="mode" id="q10"><span class="mi">⚡</span><b>Quick practice</b><p>10 mixed questions · no timer · instant feedback.</p></button></div>';
+ h+=noticeHTML()+'<div class="row" style="margin-top:14px"><a class="btn dark" href="#/me">📊 My stats</a><a class="btn" href="#/board">🏆 Leaderboard</a><a class="btn" href="#/store">🛍️ Store</a><a class="btn" href="#/guide">How the JPC works &amp; formula sheet</a></div>';
  app().innerHTML=h;
- $('#pf').onsubmit=e=>{e.preventDefault();if(newProfile($('#pname').value,$('#pgrade').value)){location.hash='#/';render()}};
- document.querySelectorAll('[data-pick]').forEach(b=>b.onclick=()=>{DB.current=b.dataset.pick;save();location.hash='#/';render()})}
-
-/* ----- home ----- */
-function recommend(){
- const p=P();const arr=TOPICS.map(t=>({t,m:mastery(t.id),n:(p.hist[t.id]||[]).length}));
- const tried=arr.filter(a=>a.n>=3).sort((a,b)=>a.m-b.m);
- const weak=tried.filter(a=>a.m<75).slice(0,2);
- const fresh=arr.filter(a=>a.n<3);
- return{weak,fresh}}
-function viewHome(){
- const p=P();const done=p.attempts.length;
- let h='<section class="hero"><div class="herotext"><div class="kicker">Hello, '+esc(p.name)+' &middot; Grade '+p.grade+'</div><h1>Junior Physics Challenge <em>practice</em></h1><p>'+GRADE_NOTE[p.grade]+'. Pick a test below or study a topic first.</p></div><div class="heroart">'+art('mascot_pencil',170)+'</div></section>'+noticeHTML();
- const r=recommend();
- if(done===0)h+='<div class="card"><b>New here?</b> Try a <b>Quick practice</b> on a topic you know, then take a <b>Mini mock</b>. Read <a href="#/guide">How the JPC works</a> for tips.</div>';
- else if(r.weak.length)h+='<div class="card"><b>Suggested next step:</b> practise <b>'+r.weak.map(w=>esc(w.t.name)+' ('+w.m+'%)').join(' and ')+'. </b> <button class="btn small pri" id="weakbtn">Practise my weak topics</button></div>';
- else if(r.fresh.length)h+='<div class="card"><b>Suggested next step:</b> you have not tried <b>'+esc(r.fresh[0].t.name)+'</b> much yet. <a href="#/topic/'+r.fresh[0].t.id+'">Open topic</a></div>';
- h+='<div class="section-h"><h2>Tests</h2><span class="tag" style="background:var(--teal)">JPC style</span></div><div class="grid3">'+
- '<div class="modecard"><h3>Mini mock</h3><p>30 questions &middot; 25 minutes &middot; topics mixed like the real JPC sections.</p><button class="btn pri" id="m30">Start mini mock</button></div>'+
- '<div class="modecard"><h3>Full mock</h3><p>60 questions &middot; 50 minutes &middot; the same length as the JPC paper.</p><button class="btn pri" id="m60">Start full mock</button></div>'+
- '<div class="modecard"><h3>Quick practice</h3><p>10 mixed questions &middot; no timer &middot; see the explanation after each answer.</p><button class="btn" id="q10">Start quick practice</button></div></div>';
- h+='<div class="section-h"><h2>Topics</h2><span class="tag" style="background:var(--ink)">study + practise</span></div><div class="tilegrid">';
- TOPICS.forEach(t=>{const m=mastery(t.id),n=(p.hist[t.id]||[]).length,L=level(m,n);
-  h+='<a class="etile" href="#/topic/'+t.id+'" style="border-color:'+t.color+'"><div class="bar"><span class="dot" style="background:'+t.color+'"></span><span class="dot" style="background:#DEE6E4"></span><span class="dot" style="background:#DEE6E4"></span><span class="barnum">'+BANK.filter(q=>q.t===t.id).length+' Qs</span></div><div class="inner"><div class="sym" style="color:'+t.color+'">'+t.sym+'</div><div class="ename">'+esc(t.name)+'</div><div class="meter" style="margin:6px 0 3px"><i style="width:'+(m||0)+'%;background:'+L[1]+'"></i></div><div class="emeta">'+L[0]+(m!==null?' &middot; '+m+'%':'')+'</div></div></a>'});
- h+='</div><div class="row" style="margin-top:20px"><a class="btn dark" href="#/progress">My progress</a><a class="btn" href="#/guide">How the JPC works &amp; formula sheet</a></div>';
- app().innerHTML=h;
- $('#m30').onclick=()=>startSession({label:'Mini mock (30 Q)',mode:'mini',mix:MINI,limit:1500,sortLevel:true});
- $('#m60').onclick=()=>startSession({label:'Full mock (60 Q)',mode:'full',mix:FULL,limit:3000,sortLevel:true});
  $('#q10').onclick=()=>{const mix=shuffle(TOPICS.map(t=>t.id)).slice(0,10).map(t=>[t,1]);startSession({label:'Quick practice',mode:'quick',mix,instant:true})};
  const wb=$('#weakbtn');if(wb)wb.onclick=()=>{const mix=[];const ws=r.weak.map(w=>w.t.id);for(let i=0;i<10;i++){const t=ws[i%ws.length];const f=mix.find(m=>m[0]===t);f?f[1]++:mix.push([t,1])}startSession({label:'Weak-topic practice',mode:'weak',mix,instant:true})}}
+function topicTiles(href,extra){return '<div class="tilegrid">'+TOPICS.map(t=>{const m=mastery(t.id),n=(STATS.hist[t.id]||[]).length,L=mlevel(m,n);return '<a class="etile" href="'+href(t)+'" style="border-color:'+t.color+'"><div class="bar"><span class="dot" style="background:'+t.color+'"></span><span class="dot" style="background:#DEE6E4"></span><span class="dot" style="background:#DEE6E4"></span><span class="barnum">'+BANK.filter(q=>q.t===t.id).length+' Qs</span></div><div class="inner">'+(extra?extra(t):'<div class="sym" style="color:'+t.color+'">'+t.sym+'</div>')+'<div class="ename">'+esc(t.name)+'</div><div class="meter" style="margin:6px 0 3px"><i style="width:'+(m||0)+'%;background:'+L[1]+'"></i></div><div class="emeta">'+L[0]+(m!==null?' · '+m+'%':'')+'</div></div></a>';}).join('')+'</div>';}
+function viewTopics(){app().innerHTML='<p style="margin-top:20px"><a href="#/">← Home</a></p><div class="section-h"><h2>🎯 Practice by topic</h2><span class="tag" style="background:var(--teal)">10 questions · instant feedback</span></div><p class="muted">Pick a topic. Questions are chosen for your grade, and ones you missed before come back more often.</p>'+topicTiles(t=>'#/topics/'+t.id);
+ document.querySelectorAll('.etile').forEach(a=>a.onclick=e=>{e.preventDefault();const id=a.getAttribute('href').split('/').pop();startSession({label:TMAP[id].name+' practice',mode:'topic',mix:[[id,10]],instant:true});});}
+function viewExamIntro(){app().innerHTML='<p style="margin-top:20px"><a href="#/">← Home</a></p><section class="hero" style="padding-top:10px"><div class="herotext"><div class="kicker">Full exam</div><h1>60 questions · <em>50 minutes</em></h1><p>The same length and topic mix as the real JPC paper. You can flag questions and come back. There is no negative marking — never leave one blank.</p><div class="row"><button class="btn pri big" id="m60">Start the full exam</button></div><p class="muted">XP: +10/+15/+20 per correct answer (by difficulty) and +50 for finishing. Score 45 or more for another +50.</p></div><div class="heroart">'+art('mascot_clipboard',160)+'</div></section>';
+ $('#m60').onclick=()=>startSession({label:'Full exam (60 Q)',mode:'full',mix:FULL,limit:3000,sortLevel:true});}
 
-/* ----- topic page ----- */
-function viewTopic(id){
- const t=TMAP[id];if(!t){location.hash='#/';return}
- const m=mastery(id),n=(P().hist[id]||[]).length,L=level(m,n),cnt=BANK.filter(q=>q.t===id).length;
- let h='<p style="margin-top:20px"><a href="#/">&larr; All topics</a></p><section class="hero" style="padding-top:20px"><div class="herotext"><div class="kicker" style="color:'+t.color+'">Topic &middot; '+cnt+' practice questions</div><h1 style="color:'+t.color+'">'+esc(t.name)+'</h1><p>'+esc(t.blurb)+'</p><div class="row"><span class="chip" style="background:'+L[1]+'">'+L[0]+(m!==null?' '+m+'%':'')+'</span></div></div><div class="heroart">'+art('mascot_magnifier',150)+'</div></section>';
- h+='<div class="row"><button class="btn pri" id="tp">Practise this topic (10 Q)</button><button class="btn dark" id="tt">Topic test (12 Q, 12 min)</button></div>';
+/* ---------------------------------------------------------------- concepts with scientists */
+function viewConcepts(){app().innerHTML='<p style="margin-top:20px"><a href="#/">← Home</a></p><div class="section-h"><h2>🧑‍🔬 Concepts</h2><span class="tag" style="background:var(--ink)">study with a scientist</span></div><p class="muted">Each concept is presented by a famous scientist with study advice. Finish a concept for +25 XP.</p>'+
+ topicTiles(t=>'#/concept/'+t.id,t=>'<div class="scimini">'+sciFace(SCI[t.id],46)+'<span>'+esc(SCI[t.id].name)+(STATS.concepts[t.id]?' ✅':'')+'</span></div>');}
+function viewConcept(id){const t=TMAP[id],sc=SCI[id];if(!t){location.hash='#/';return;}const teacher=ME.role==='teacher';const done=!teacher&&STATS.concepts[id];
+ let h='<p style="margin-top:20px"><a href="'+(teacher?'#/teacher':'#/concepts')+'">← '+(teacher?'Dashboard':'All concepts')+'</a></p>';
+ h+='<section class="scihero" style="border-color:'+t.color+'"><div class="sciface">'+sciFace(sc,130)+'</div><div><div class="kicker" style="color:'+t.color+'">Concept · '+esc(t.name)+'</div><h1>'+esc(sc.name)+' presents <em style="color:'+t.color+'">'+esc(t.name)+'</em></h1><p class="muted">'+esc(sc.life)+'</p><p><b>Famous for:</b> '+esc(sc.known)+'</p><div class="bubble"><b>My advice for the JPC:</b><ul>'+sc.advice.map(a=>'<li>'+esc(a)+'</li>').join('')+'</ul><small>Cartoon scientist — advice written by Miss K.</small></div></div></section>';
  h+='<div class="section-h"><h2>Key words</h2><span class="tag" style="background:'+t.color+'">vocabulary</span></div><div class="card"><div class="vocablist">'+t.kw.map(k=>'<div><b>'+esc(k[0])+':</b> '+esc(k[1])+'</div>').join('')+'</div></div>';
- h+='<div class="section-h"><h2>What you need to know</h2></div><div class="card theory">'+t.theory+'</div>';
- h+='<div class="levelup"><b class="lu">JPC trap</b>'+esc(t.tip)+'</div>';
- h+='<div class="section-h"><h2>Worked example</h2></div><div class="card"><p><b>'+t.ex[0]+'</b></p><p style="margin-top:8px">'+t.ex[1]+'</p></div>';
- h+='<div class="parentbox" style="border-color:'+t.color+'"><h3>Real life</h3><p>'+esc(t.real)+'</p></div>';
+ h+='<div class="section-h"><h2>What you need to know</h2></div><div class="card theory">'+t.theory+'</div><div class="levelup"><b class="lu">JPC trap</b>'+esc(t.tip)+'</div>';
+ h+='<div class="section-h"><h2>Worked example</h2></div><div class="card"><p><b>'+t.ex[0]+'</b></p><p style="margin-top:8px">'+t.ex[1]+'</p></div><div class="parentbox" style="border-color:'+t.color+'"><h3>Real life</h3><p>'+esc(t.real)+'</p></div>';
  h+='<div class="section-h"><h2>Try it yourself</h2><span class="tag" style="background:var(--amber)">guided</span></div>';
  t.probs.forEach((p,i)=>{h+='<div class="probbox" id="pb'+i+'"><b>'+(i+1)+'. '+p[0]+'</b><div class="row"><button class="btn small" data-h="'+i+'">Hint</button><button class="btn small" data-s="'+i+'">Show solution</button></div><div class="hb"><b>Hint:</b> '+p[1]+'</div><div class="sb">'+p[2]+'</div></div>'});
+ if(!teacher)h+='<div class="card done-card">'+(done?'<b>✅ Concept complete.</b> Ready to test it?':'<b>Finished reading and tried the problems?</b>')+'<div class="row">'+(done?'':'<button class="btn pri" id="cdone">I studied this concept (+25 XP)</button>')+'<button class="btn dark" id="cprac">Practise '+esc(t.name)+' (10 Q)</button></div></div>';
  app().innerHTML=h;
  document.querySelectorAll('[data-h]').forEach(b=>b.onclick=()=>$('#pb'+b.dataset.h).classList.toggle('showh'));
  document.querySelectorAll('[data-s]').forEach(b=>b.onclick=()=>$('#pb'+b.dataset.s).classList.toggle('shows'));
- $('#tp').onclick=()=>startSession({label:t.name+' practice',mode:'topic-practice',mix:[[id,10]],instant:true,topic:id});
- $('#tt').onclick=()=>startSession({label:t.name+' test',mode:'topic-test',mix:[[id,12]],limit:720,topic:id,sortLevel:true})}
+ const cd=$('#cdone');if(cd)cd.onclick=()=>{STATS.concepts[id]=Date.now();const x=award(25);persist();toast('+'+x+' XP · '+esc(sc.name)+' is proud of you!');viewConcept(id);setNav();};
+ const cp=$('#cprac');if(cp)cp.onclick=()=>startSession({label:t.name+' practice',mode:'topic',mix:[[id,10]],instant:true});}
 
-/* ----- question runner ----- */
-function tick(){if(!S||S.done||!S.limit)return;const left=S.limit-(Date.now()-S.start)/1000;const el=$('#timer');if(el){el.textContent=fmt(left);el.classList.toggle('low',left<300)}if(left<=0)finish()}
+/* ---------------------------------------------------------------- question runner */
 function viewQuestion(){
- const q=S.qs[S.cur],b=BANK[q.i],t=TMAP[b.t];const n=S.qs.length;
- const a=S.ans[S.cur],locked=S.instant&&a>=0;
- let h='<div class="qhead"><div><div class="kicker">'+esc(S.label)+'</div><b>Question '+(S.cur+1)+' of '+n+'</b></div><span class="grow"></span>'+(S.limit?'<span class="timer" id="timer">'+fmt(S.limit-(Date.now()-S.start)/1000)+'</span>':'')+'</div>';
+ if(S.limit&&!TI)TI=setInterval(tick,1000);
+ const q=S.qs[S.cur],b=BANK[q.i],t=TMAP[b.t];const n=S.qs.length;const a=S.ans[S.cur],locked=S.instant&&a>=0;
+ let h='<div class="qhead"><div><div class="kicker">'+esc(S.label)+'</div><b>Question '+(S.cur+1)+' of '+n+'</b></div><span class="grow"></span>'+(S.instant?'<span class="xplive">+'+S.xpLive+' XP</span>':'')+(S.limit?'<span class="timer" id="timer">'+fmt(S.limit-(Date.now()-S.start)/1000)+'</span>':'')+'</div>';
  h+='<div class="qnav">'+S.qs.map((x,i)=>{let c='qdot';if(S.instant&&S.ans[i]>=0)c+=x.opts[S.ans[i]].ok?' good':' bad';else if(S.ans[i]>=0)c+=' done';if(S.flags[i])c+=' flag';if(i===S.cur)c+=' cur';return'<button class="'+c+'" data-go="'+i+'" aria-label="Go to question '+(i+1)+'">'+(i+1)+'</button>'}).join('')+'</div>';
- h+='<div class="card"><div class="row" style="margin-top:0"><span class="chip" style="background:'+t.color+'">'+esc(t.name)+'</span>'+(S.instant?'<span class="lvl">Level '+b.l+'</span>':'')+'</div><p class="qtext">'+b.q+'</p>'+figHTML(b.fig);
+ h+='<div class="card"><div class="row" style="margin-top:0"><span class="chip" style="background:'+t.color+'">'+esc(t.name)+'</span><span class="lvl">Level '+b.l+' · +'+XP_Q[b.l]+' XP</span></div><p class="qtext">'+b.q+'</p>'+figHTML(b.fig);
  const figOpts=q.opts.some(o=>o.t.charAt(0)==='@');
  h+='<div class="opts'+(figOpts?' figopts':'')+'">'+q.opts.map((o,k)=>{let c='opt';if(locked){if(o.ok)c+=' ok';else if(k===a)c+=' no'}else if(k===a)c+=' sel';const inner=figOpts?(FIGS[o.t.slice(1)]||''):o.t;return'<button class="'+c+'" data-o="'+k+'"'+(locked?' disabled':'')+'><span class="let">'+LET[k]+'</span><span>'+inner+'</span></button>'}).join('')+'</div>';
- if(locked){const ok=q.opts[a].ok;h+='<div class="explain '+(ok?'good':'bad')+'"><b>'+(ok?'Correct!':'Not quite.')+'</b> '+b.e+'</div>'}
- h+='</div><div class="row"><button class="btn" id="prev"'+(S.cur===0?' disabled':'')+'>&larr; Back</button><button class="btn pri" id="next"'+(S.cur===n-1?' disabled':'')+'>Next &rarr;</button>'+(S.instant?'':'<button class="btn" id="flag">'+(S.flags[S.cur]?'Unflag':'Flag for later')+'</button>')+'<span class="grow" style="flex:1"></span><button class="btn dark" id="fin">Finish test</button></div>';
+ if(locked){const ok=q.opts[a].ok;h+='<div class="explain '+(ok?'good':'bad')+'"><b>'+(ok?'Correct! +'+XP_Q[b.l]+' XP':'Not quite.')+'</b> '+b.e+'</div>'}
+ h+='</div><div class="row"><button class="btn" id="prev"'+(S.cur===0?' disabled':'')+'>← Back</button><button class="btn pri" id="next"'+(S.cur===n-1?' disabled':'')+'>Next →</button>'+(S.instant?'':'<button class="btn" id="flag">'+(S.flags[S.cur]?'Unflag':'Flag for later')+'</button>')+'<span class="grow" style="flex:1"></span><button class="btn dark" id="fin">Finish</button></div>';
  if(S.confirm){const un=S.ans.filter(x=>x<0).length;h+='<div class="confirm"><b>'+(un?'You have '+un+' unanswered question'+(un>1?'s':'')+'.':'You have answered every question.')+'</b> Finish now?<div class="row"><button class="btn pri" id="yes">Yes, finish and see results</button><button class="btn" id="no">Keep working</button></div></div>'}
  app().innerHTML=h;
  document.querySelectorAll('[data-go]').forEach(x=>x.onclick=()=>{S.cur=+x.dataset.go;S.confirm=false;viewQuestion()});
- document.querySelectorAll('[data-o]').forEach(x=>x.onclick=()=>{if(locked)return;S.ans[S.cur]=S.ans[S.cur]===+x.dataset.o&&!S.instant?-1:+x.dataset.o;viewQuestion()});
- $('#prev').onclick=()=>{S.cur--;S.confirm=false;viewQuestion()};
- $('#next').onclick=()=>{S.cur++;S.confirm=false;viewQuestion()};
+ document.querySelectorAll('[data-o]').forEach(x=>x.onclick=()=>{if(locked)return;const k=+x.dataset.o;if(S.instant){S.ans[S.cur]=k;if(q.opts[k].ok)S.xpLive+=XP_Q[b.l];}else S.ans[S.cur]=S.ans[S.cur]===k?-1:k;viewQuestion()});
+ $('#prev').onclick=()=>{S.cur--;S.confirm=false;viewQuestion()};$('#next').onclick=()=>{S.cur++;S.confirm=false;viewQuestion()};
  const fl=$('#flag');if(fl)fl.onclick=()=>{S.flags[S.cur]=!S.flags[S.cur];viewQuestion()};
- $('#fin').onclick=()=>{S.confirm=true;viewQuestion();$('#yes')&&$('#yes').scrollIntoView({block:'center'})};
- const y=$('#yes');if(y)y.onclick=finish;const no=$('#no');if(no)no.onclick=()=>{S.confirm=false;viewQuestion()};
- if(S.limit&&!TI)TI=setInterval(tick,1000);
- window.scrollTo(0,0)}
-
-function finish(){
- if(!S||S.done)return;S.done=true;if(TI){clearInterval(TI);TI=null}
- const p=P();const secs=Math.min((Date.now()-S.start)/1000,S.limit||1e9);let score=0;const by={},wrong=[];
- S.qs.forEach((q,i)=>{const b=BANK[q.i];const ok=S.ans[i]>=0&&q.opts[S.ans[i]].ok;if(ok)score++;
+ $('#fin').onclick=()=>{S.confirm=true;viewQuestion()};const y=$('#yes');if(y)y.onclick=finish;const no=$('#no');if(no)no.onclick=()=>{S.confirm=false;viewQuestion()};}
+function finish(){if(!S||S.done)return;S.done=true;if(TI){clearInterval(TI);TI=null}
+ const secs=Math.min((Date.now()-S.start)/1000,S.limit||1e9);let score=0,xp=0;const by={},wrong=[];
+ S.qs.forEach((q,i)=>{const b=BANK[q.i];const answered=S.ans[i]>=0,ok=answered&&q.opts[S.ans[i]].ok;if(ok){score++;xp+=XP_Q[b.l];}else if(answered)xp+=2;
   by[b.t]=by[b.t]||[0,0];by[b.t][1]++;if(ok)by[b.t][0]++;
-  if(S.ans[i]>=0||!S.limit){p.hist[b.t]=(p.hist[b.t]||[]).concat(ok?1:0).slice(-40)}
-  p.seen[q.id]=(p.seen[q.id]||0)+1;
-  if(!ok){p.missed[q.id]=(p.missed[q.id]||0)+1;wrong.push(q.id)}else if(p.missed[q.id])p.missed[q.id]=Math.max(0,p.missed[q.id]-1)});
- S.score=score;S.by=by;S.secs=secs;
- p.attempts.push({t:Date.now(),label:S.label,mode:S.mode,score,total:S.qs.length,secs:Math.round(secs),by,wrong});
- save();location.hash='#/results';render()}
-
-function viewResults(){
- const n=S.qs.length,sc=S.score,pc=Math.round(100*sc/n);
+  if(answered||!S.limit){STATS.hist[b.t]=(STATS.hist[b.t]||[]).concat(ok?1:0).slice(-40)}
+  STATS.seen[q.id]=(STATS.seen[q.id]||0)+1;if(answered){STATS.answered++;if(ok)STATS.correct++;}
+  if(!ok){STATS.missed[q.id]=(STATS.missed[q.id]||0)+1;wrong.push(q.id)}else if(STATS.missed[q.id])STATS.missed[q.id]=Math.max(0,STATS.missed[q.id]-1)});
+ let bonus=0;if(S.mode==='full'){bonus=50+(score>=45?50:0);}else if(S.qs.length>=10&&S.ans.every(a=>a>=0))bonus=10;
+ const before=levelOf(BOARD.xp||0).n;S.xp=award(xp+bonus);S.bonus=bonus;S.score=score;S.by=by;S.secs=secs;S.levelUp=levelOf(BOARD.xp).n>before;
+ STATS.attempts.push({t:Date.now(),label:S.label,mode:S.mode,score,total:S.qs.length,secs:Math.round(secs),by,xp:S.xp});STATS.attempts=STATS.attempts.slice(-60);STATS.lastActive=Date.now();
+ persist();location.hash='#/results';render()}
+function viewResults(){const n=S.qs.length,sc=S.score,pc=Math.round(100*sc/n);
  const msg=pc>=85?'Excellent work!':pc>=65?'Good job, keep going!':pc>=45?'A solid start. Review the explanations below.':'Keep practising. Every mistake is a chance to learn.';
- let h='<section class="hero" style="padding-top:26px"><div class="herotext"><div class="kicker">'+esc(S.label)+' &middot; results for '+esc(P().name)+'</div><h1><em>'+sc+'</em> / '+n+' <span style="font-size:.5em;color:var(--ink-soft)">('+pc+'%)</span></h1><p>'+msg+' Time used: '+fmt(S.secs)+'.</p></div><div class="heroart">'+art(pc>=65?'mascot_goggles':'mascot_calculator',170)+'</div></section>';
- h+='<div class="notice">Remember: this was practice, not the official JPC. Use the topics below to decide what to study next.</div>';
- h+='<div class="section-h"><h2>By topic</h2></div><div class="card tscroll"><table class="t"><tr><th>Topic</th><th>Score</th><th style="min-width:140px"></th><th></th></tr>'+Object.keys(S.by).map(k=>{const v=S.by[k],p=Math.round(100*v[0]/v[1]),c=p>=75?'#2E7D4F':p>=50?'#E8A33D':'#C0392B';return'<tr><td>'+esc(TMAP[k].name)+'</td><td class="mono">'+v[0]+'/'+v[1]+'</td><td><div class="meter"><i style="width:'+p+'%;background:'+c+'"></i></div></td><td><a class="btn small" href="#/topic/'+k+'">Study</a></td></tr>'}).join('')+'</table></div>';
+ let h='<section class="hero" style="padding-top:26px"><div class="herotext"><div class="kicker">'+esc(S.label)+' · results for '+esc(BOARD.nick)+'</div><h1><em>'+sc+'</em> / '+n+' <span style="font-size:.5em;color:var(--ink-soft)">('+pc+'%)</span></h1><p>'+msg+' Time used: '+fmt(S.secs)+'.</p><div class="xpgain">+'+S.xp+' XP'+(S.bonus?' <small>(includes +'+S.bonus+' bonus)</small>':'')+' · ⚡ +'+S.xp+' photons'+(S.levelUp?' · 🎉 LEVEL UP: '+esc(levelOf(BOARD.xp).title):'')+'</div></div><div class="heroart">'+art(pc>=65?'mascot_goggles':'mascot_calculator',170)+'</div></section>';
+ h+='<div class="section-h"><h2>By topic</h2></div><div class="card tscroll"><table class="t"><tr><th>Topic</th><th>Score</th><th style="min-width:140px"></th><th></th></tr>'+Object.keys(S.by).map(k=>{const v=S.by[k],p=Math.round(100*v[0]/v[1]),c=p>=75?'#2E7D4F':p>=50?'#E8A33D':'#C0392B';return'<tr><td>'+esc(TMAP[k].name)+'</td><td class="mono">'+v[0]+'/'+v[1]+'</td><td><div class="meter"><i style="width:'+p+'%;background:'+c+'"></i></div></td><td><a class="btn small" href="#/concept/'+k+'">Study</a></td></tr>'}).join('')+'</table></div>';
  const wr=S.qs.filter((q,i)=>!(S.ans[i]>=0&&q.opts[S.ans[i]].ok));
- h+='<div class="row">'+(wr.length?'<button class="btn pri" id="retry">Retry the '+wr.length+' missed question'+(wr.length>1?'s':'')+'</button>':'')+'<a class="btn dark" href="#/">Back to home</a><a class="btn" href="#/progress">My progress</a><button class="btn" id="onlyw">'+(S.onlyWrong?'Show all answers':'Show only missed')+'</button></div>';
+ h+='<div class="row">'+(wr.length?'<button class="btn pri" id="retry">Retry the '+wr.length+' missed question'+(wr.length>1?'s':'')+'</button>':'')+'<a class="btn dark" href="#/">Back to home</a><a class="btn" href="#/board">🏆 Leaderboard</a><button class="btn" id="onlyw">'+(S.onlyWrong?'Show all answers':'Show only missed')+'</button></div>';
  h+='<div class="section-h"><h2>Review and explanations</h2></div>';
- S.qs.forEach((q,i)=>{const b=BANK[q.i],a=S.ans[i],ok=a>=0&&q.opts[a].ok;if(S.onlyWrong&&ok)return;
-  const figOpts=q.opts.some(o=>o.t.charAt(0)==='@');const ci=q.opts.findIndex(o=>o.ok);
+ S.qs.forEach((q,i)=>{const b=BANK[q.i],a=S.ans[i],ok=a>=0&&q.opts[a].ok;if(S.onlyWrong&&ok)return;const figOpts=q.opts.some(o=>o.t.charAt(0)==='@');const ci=q.opts.findIndex(o=>o.ok);
   const show=k=>figOpts?'<div style="max-width:200px">'+(FIGS[q.opts[k].t.slice(1)]||'')+'</div>':q.opts[k].t;
-  h+='<div class="reviewq '+(ok?'right':'wrong')+'"><h4>'+(i+1)+'. '+(ok?'&#10003; ':'&#10007; ')+'<span class="chip" style="background:'+TMAP[b.t].color+'">'+esc(TMAP[b.t].name)+'</span></h4><p><b>'+b.q+'</b></p>'+figHTML(b.fig)+'<p>Your answer: '+(a>=0?'<b>'+LET[a]+'</b>':'<i>no answer</i>')+(a>=0?' ':'')+'</p>'+(a>=0&&figOpts?show(a):(a>=0?'<p>'+q.opts[a].t+'</p>':''))+(ok?'':'<p style="margin-top:6px">Correct answer: <b>'+LET[ci]+'</b></p>'+(figOpts?show(ci):'<p>'+q.opts[ci].t+'</p>'))+'<div class="explain '+(ok?'good':'bad')+'">'+b.e+'</div></div>'});
+  h+='<div class="reviewq '+(ok?'right':'wrong')+'"><h4>'+(i+1)+'. '+(ok?'✓ ':'✗ ')+'<span class="chip" style="background:'+TMAP[b.t].color+'">'+esc(TMAP[b.t].name)+'</span></h4><p><b>'+b.q+'</b></p>'+figHTML(b.fig)+'<p>Your answer: '+(a>=0?'<b>'+LET[a]+'</b>':'<i>no answer</i>')+'</p>'+(a>=0?(figOpts?show(a):'<p>'+q.opts[a].t+'</p>'):'')+(ok?'':'<p style="margin-top:6px">Correct answer: <b>'+LET[ci]+'</b></p>'+(figOpts?show(ci):'<p>'+q.opts[ci].t+'</p>'))+'<div class="explain '+(ok?'good':'bad')+'">'+b.e+'</div></div>'});
  app().innerHTML=h;
  const r=$('#retry');if(r)r.onclick=()=>startSession({label:'Retry missed questions',mode:'retry',ids:wr.map(q=>q.i),instant:true});
  $('#onlyw').onclick=()=>{S.onlyWrong=!S.onlyWrong;viewResults()}}
 
-/* ----- progress ----- */
-function download(name,text,type){const b=new Blob([text],{type:type||'application/json'});const a=document.createElement('a');a.href=URL.createObjectURL(b);a.download=name;document.body.appendChild(a);a.click();setTimeout(()=>{URL.revokeObjectURL(a.href);a.remove()},500)}
-function chartSVG(at){
- const w=640,h=230,pl=44,pr=14,pt=14,pb=34;if(!at.length)return'';const n=at.length;
- const X=i=>pl+(n===1?(w-pl-pr)/2:i*(w-pl-pr)/(n-1)),Y=v=>pt+(100-v)/100*(h-pt-pb);
- let s='<svg viewBox="0 0 '+w+' '+h+'" role="img" aria-label="Scores over time" style="width:100%;max-width:'+w+'px;height:auto">';
- [0,25,50,75,100].forEach(v=>{s+='<line x1="'+pl+'" x2="'+(w-pr)+'" y1="'+Y(v)+'" y2="'+Y(v)+'" stroke="#DEE6E4"/><text x="'+(pl-8)+'" y="'+(Y(v)+4)+'" font-size="12" text-anchor="end" fill="#46586B" font-family="JetBrains Mono">'+v+'%</text>'});
- const pts=at.map((a,i)=>[X(i),Y(Math.round(100*a.score/a.total))]);
- s+='<polyline fill="none" stroke="#0E7C86" stroke-width="3" points="'+pts.map(p=>p.join(',')).join(' ')+'"/>';
- pts.forEach((p,i)=>{s+='<circle cx="'+p[0]+'" cy="'+p[1]+'" r="5" fill="'+(at[i].total>=30?'#E8A33D':'#0E7C86')+'" stroke="#1E2A38" stroke-width="1.5"><title>'+esc(at[i].label)+': '+at[i].score+'/'+at[i].total+'</title></circle>';if(n<=14||i%2===0)s+='<text x="'+p[0]+'" y="'+(h-12)+'" font-size="11" text-anchor="middle" fill="#46586B" font-family="JetBrains Mono">'+(i+1)+'</text>'});
- return s+'<text x="'+(w/2)+'" y="'+(h-0)+'" font-size="10" text-anchor="middle" fill="#46586B">attempt number (orange dots = mock tests)</text></svg>'}
-function viewProgress(){
- const p=P(),at=p.attempts;let tq=0,tc=0;at.forEach(a=>{tq+=a.total;tc+=a.score});
- const mocks=at.filter(a=>a.mode==='mini'||a.mode==='full');const best=mocks.length?Math.max(...mocks.map(a=>Math.round(100*a.score/a.total))):null;
- let h='<p style="margin-top:20px"><a href="#/">&larr; Home</a></p><div class="section-h"><h2>Progress for '+esc(p.name)+'</h2><span class="tag" style="background:var(--teal)">Grade '+p.grade+'</span></div>';
- h+='<div class="grid3" style="margin:12px 0"><div class="stat"><b>'+at.length+'</b><span>tests and practices done</span></div><div class="stat"><b>'+tq+'</b><span>questions answered</span></div><div class="stat"><b>'+(tq?Math.round(100*tc/tq)+'%':'-')+'</b><span>overall correct</span></div></div>';
- h+='<div class="grid3" style="margin:12px 0"><div class="stat"><b>'+(best!==null?best+'%':'-')+'</b><span>best mock test</span></div><div class="stat"><b>'+mocks.length+'</b><span>mock tests done</span></div><div class="stat"><b>'+Object.keys(p.seen).length+' / '+BANK.length+'</b><span>different questions seen</span></div></div>';
- if(at.length)h+='<div class="card"><h3>Scores over time</h3>'+chartSVG(at.slice(-30))+'</div>';
- h+='<div class="card tscroll"><h3>Topic mastery</h3><p style="color:var(--ink-soft);font-size:.9rem">Based on your last 20 answers in each topic. Aim for 75% or more.</p><table class="t"><tr><th>Topic</th><th>Level</th><th style="min-width:140px"></th><th></th></tr>'+TOPICS.map(t=>{const m=mastery(t.id),n=(p.hist[t.id]||[]).length,L=level(m,n);return'<tr><td>'+esc(t.name)+'</td><td><span class="chip" style="background:'+L[1]+'">'+L[0]+'</span></td><td><div class="meter"><i style="width:'+(m||0)+'%;background:'+L[1]+'"></i></div></td><td><a class="btn small" href="#/topic/'+t.id+'">Open</a></td></tr>'}).join('')+'</table></div>';
- h+='<div class="card tscroll"><h3>History</h3>'+(at.length?'<table class="t"><tr><th>When</th><th>Test</th><th>Score</th><th>Time</th></tr>'+at.slice().reverse().slice(0,40).map(a=>'<tr><td>'+fdate(a.t)+'</td><td>'+esc(a.label)+'</td><td class="mono">'+a.score+'/'+a.total+' ('+Math.round(100*a.score/a.total)+'%)</td><td class="mono">'+fmt(a.secs)+'</td></tr>').join('')+'</table>':'<p>No tests yet. Start one from the home page.</p>')+'</div>';
- h+='<div class="card"><h3>Save, move or reset</h3><p style="color:var(--ink-soft);font-size:.9rem;margin-bottom:8px">Your progress lives in this browser. Download a backup to move to another device, or send the file to your teacher.</p><div class="row"><button class="btn" id="exp">Download my progress</button><label class="btn">Load a progress file<input type="file" id="imp" accept=".json" style="display:none"></label><button class="btn warn" id="rst">Reset my progress</button></div><div id="msg"></div></div>';
- app().innerHTML=h;
- $('#exp').onclick=()=>download('JPC-progress-'+p.name.replace(/\W+/g,'_')+'.json',JSON.stringify({jpcProfile:1,profile:p},null,1));
- $('#imp').onchange=e=>{const f=e.target.files[0];if(!f)return;const r=new FileReader();r.onload=()=>{try{const d=JSON.parse(r.result);const pr=d.profile;if(!pr||!pr.name||!Array.isArray(pr.attempts))throw 0;pr.hist=pr.hist||{};pr.seen=pr.seen||{};pr.missed=pr.missed||{};DB.profiles[pr.name]=pr;DB.current=pr.name;save();location.hash='#/progress';render()}catch(x){$('#msg').innerHTML='<div class="confirm">That file is not a valid progress file.</div>'}};r.readAsText(f)};
- $('#rst').onclick=()=>{$('#msg').innerHTML='<div class="confirm"><b>Delete all of '+esc(p.name)+'\'s results on this device?</b><div class="row"><button class="btn warn" id="rst2">Yes, reset</button><button class="btn" id="rst3">Cancel</button></div></div>';$('#rst2').onclick=()=>{delete DB.profiles[p.name];DB.current=null;save();location.hash='#/';render()};$('#rst3').onclick=()=>{$('#msg').innerHTML=''}}}
+/* ---------------------------------------------------------------- leaderboard, store, my stats */
+async function viewBoard(){app().innerHTML='<p style="margin-top:20px"><a href="#/">← Home</a></p><div class="section-h"><h2>🏆 Leaderboard</h2><span class="tag" style="background:var(--amber)">all grades · total XP</span></div><p class="muted">Nicknames only. XP never goes down — spending photons in the store does not change your place.</p><div class="card" id="fullb"><p class="muted">Loading…</p></div>';
+ try{const rows=await BE.leaderboard(100);$('#fullb').innerHTML=boardRows(rows,ME&&ME.role==='student'?ME.id:null);const mine=rows.findIndex(r=>ME&&r.id===ME.id);if(ME&&ME.role==='student'&&mine<0)$('#fullb').insertAdjacentHTML('beforeend','<p class="muted">You are not in the top 100 yet — keep practising!</p>');}catch(e){$('#fullb').innerHTML='<p class="err">'+esc(e.message)+'</p>';}}
+function viewStore(){const own=new Set(STATS.owned);const item=(kind,id,face,name,price)=>{const has=own.has(id),on=(kind==='av'?BOARD.avatar:BOARD.bg)===id;
+  return `<div class="sitem${on?' on':''}">${kind==='av'?ava(id,BOARD.bg,64):`<span class="ava" style="width:64px;height:64px;font-size:35px;background:${face}">${(AV[BOARD.avatar]||AV.sci)[1]}</span>`}<b>${esc(name)}</b>${on?'<span class="tag" style="background:var(--good)">wearing</span>':has?`<button class="btn small" data-use="${kind}:${id}">Use</button>`:`<button class="btn small pri" data-buy="${kind}:${id}:${price}" ${STATS.photons<price?'disabled':''}>⚡ ${price}</button>`}</div>`;};
+ app().innerHTML='<p style="margin-top:20px"><a href="#/">← Home</a></p>'+playerCard()+'<div class="section-h"><h2>🛍️ Store</h2><span class="tag" style="background:var(--teal)">⚡ '+STATS.photons+' photons to spend</span></div><p class="muted">Earn photons with every correct answer, finished concept and daily login. Spending photons never lowers your XP or your leaderboard place.</p>'+
+ '<h3 class="sh">Avatars</h3><div class="sgrid">'+AVATARS.map(a=>item('av',a[0],null,AVN[a[0]]||a[0],a[2])).join('')+'</div><h3 class="sh">Backgrounds</h3><div class="sgrid">'+BGS.map(b=>item('bg',b[0],b[3],b[1],b[2])).join('')+'</div>';
+ document.querySelectorAll('[data-buy]').forEach(b=>b.onclick=()=>{const [k,id,p]=b.dataset.buy.split(':');if(STATS.photons<+p)return;STATS.photons-=+p;STATS.owned.push(id);if(k==='av')BOARD.avatar=id;else BOARD.bg=id;persist();toast('Unlocked! ✨');viewStore();setNav();});
+ document.querySelectorAll('[data-use]').forEach(b=>b.onclick=()=>{const [k,id]=b.dataset.use.split(':');if(k==='av')BOARD.avatar=id;else BOARD.bg=id;persist();viewStore();setNav();});}
+function statsBlock(st,b){const at=st.attempts||[];const fulls=at.filter(a=>a.mode==='full');const best=fulls.length?Math.max(...fulls.map(a=>a.score)):null;const acc=st.answered?Math.round(100*st.correct/st.answered):null;
+ let h='<div class="grid3" style="margin:12px 0"><div class="stat"><b>'+(b.xp||0).toLocaleString()+'</b><span>XP · level '+levelOf(b.xp||0).n+'</span></div><div class="stat"><b>'+(st.answered||0)+'</b><span>questions answered</span></div><div class="stat"><b>'+(acc!==null?acc+'%':'–')+'</b><span>overall correct</span></div><div class="stat"><b>'+fulls.length+'</b><span>full exams</span></div><div class="stat"><b>'+(best!==null?best+' / 60':'–')+'</b><span>best full exam</span></div><div class="stat"><b>'+Object.keys(st.concepts||{}).length+' / '+TOPICS.length+'</b><span>concepts completed</span></div></div>';
+ h+='<div class="card tscroll"><h3>Topic mastery</h3><p class="muted">Based on the last 20 answers in each topic. Aim for 75% or more.</p><table class="t"><tr><th>Topic</th><th>Level</th><th style="min-width:140px"></th><th>Answers</th></tr>'+TOPICS.map(t=>{const hh=(st.hist||{})[t.id]||[];const m=hh.length?Math.round(100*hh.slice(-20).reduce((a,c)=>a+c,0)/Math.min(20,hh.length)):null;const L=mlevel(m,hh.length);return'<tr><td>'+esc(t.name)+'</td><td><span class="chip" style="background:'+L[1]+'">'+L[0]+(m!==null?' '+m+'%':'')+'</span></td><td><div class="meter"><i style="width:'+(m||0)+'%;background:'+L[1]+'"></i></div></td><td class="mono">'+hh.length+'</td></tr>'}).join('')+'</table></div>';
+ h+='<div class="card tscroll"><h3>History</h3>'+(at.length?'<table class="t"><tr><th>When</th><th>Practice</th><th>Score</th><th>Time</th><th>XP</th></tr>'+at.slice().reverse().slice(0,40).map(a=>'<tr><td>'+fdate(a.t)+'</td><td>'+esc(a.label)+'</td><td class="mono">'+a.score+'/'+a.total+' ('+Math.round(100*a.score/a.total)+'%)</td><td class="mono">'+fmt(a.secs)+'</td><td class="mono">+'+(a.xp||0)+'</td></tr>').join('')+'</table>':'<p>No practice yet.</p>')+'</div>';return h;}
+function viewMe(){app().innerHTML='<p style="margin-top:20px"><a href="#/">← Home</a></p>'+playerCard()+'<div class="section-h"><h2>📊 My stats</h2></div>'+statsBlock(STATS,BOARD)+'<p class="muted">Your teachers can see these statistics too, so they can help you prepare.</p>';}
 
-/* ----- teacher ----- */
-function viewTeacher(){
- let h='<p style="margin-top:20px"><a href="#/">&larr; Home</a></p><div class="section-h"><h2>Teacher view</h2></div><div class="card"><p>Load the progress files your students downloaded (select many at once). Nothing is uploaded anywhere: the files are read in your browser only.</p><div class="row"><label class="btn pri">Load student files<input type="file" id="tf" accept=".json" multiple style="display:none"></label></div></div><div id="tres"></div>';
- app().innerHTML=h;
- $('#tf').onchange=async e=>{const rows=[];for(const f of e.target.files){try{const d=JSON.parse(await f.text());if(d.profile)rows.push(d.profile)}catch(x){}}
-  if(!rows.length){$('#tres').innerHTML='<div class="confirm">No valid files found.</div>';return}
-  const tm=pr=>{let best=null;TOPICS.forEach(t=>{const hh=(pr.hist||{})[t.id]||[];if(hh.length>=3){const m=hh.slice(-20).reduce((a,b)=>a+b,0)/Math.min(20,hh.length);if(!best||m<best[1])best=[t.name,m]}});return best};
-  const data=rows.map(pr=>{const at=pr.attempts||[];let tq=0,tc=0;at.forEach(a=>{tq+=a.total;tc+=a.score});const mocks=at.filter(a=>a.mode==='mini'||a.mode==='full');const last=mocks.length?mocks[mocks.length-1]:null;const w=tm(pr);return{name:pr.name,grade:pr.grade,tests:at.length,q:tq,acc:tq?Math.round(100*tc/tq):0,mocks:mocks.length,last:last?Math.round(100*last.score/last.total):'',weak:w?w[0]+' ('+Math.round(w[1]*100)+'%)':''}});
-  $('#tres').innerHTML='<div class="card tscroll"><table class="t"><tr><th>Name</th><th>Grade</th><th>Tests</th><th>Questions</th><th>Correct</th><th>Mocks</th><th>Last mock</th><th>Weakest topic</th></tr>'+data.map(d=>'<tr><td>'+esc(d.name)+'</td><td>'+d.grade+'</td><td>'+d.tests+'</td><td>'+d.q+'</td><td>'+d.acc+'%</td><td>'+d.mocks+'</td><td>'+(d.last!==''?d.last+'%':'-')+'</td><td>'+esc(d.weak)+'</td></tr>').join('')+'</table><div class="row"><button class="btn" id="csv">Download as CSV</button></div></div>';
-  $('#csv').onclick=()=>download('JPC-class-summary.csv',['Name,Grade,Tests,Questions,Correct %,Mocks,Last mock %,Weakest topic'].concat(data.map(d=>[d.name,d.grade,d.tests,d.q,d.acc,d.mocks,d.last,d.weak].map(v=>'"'+String(v).replace(/"/g,'""')+'"').join(','))).join('\n'),'text/csv')}}
+/* ---------------------------------------------------------------- teacher dashboard */
+let TROWS=[];
+function weakest(st){let w=null;TOPICS.forEach(t=>{const hh=(st.hist||{})[t.id]||[];if(hh.length>=3){const m=hh.slice(-20).reduce((a,b)=>a+b,0)/Math.min(20,hh.length);if(!w||m<w[1])w=[t.name,m];}});return w;}
+async function viewTeacher(){app().innerHTML='<div class="section-h"><h2>🍎 Teacher dashboard</h2><span class="tag" style="background:var(--ink)">'+esc(ME.nick)+'</span></div><div class="card" id="tsum"><p class="muted">Loading every student…</p></div><div id="ttab"></div><div class="card" id="tadmin"></div>';
+ try{TROWS=(await BE.allStudents()).filter(r=>r.board);}catch(e){$('#tsum').innerHTML='<p class="err">'+esc(e.message)+'</p>';return;}
+ const tot=TROWS.length,act=TROWS.filter(r=>r.stats.lastActive&&Date.now()-r.stats.lastActive<7*864e5).length,ans=TROWS.reduce((s,r)=>s+(r.stats.answered||0),0),cor=TROWS.reduce((s,r)=>s+(r.stats.correct||0),0);
+ const ttot={};TOPICS.forEach(t=>ttot[t.id]=[0,0]);TROWS.forEach(r=>Object.entries(r.stats.hist||{}).forEach(([k,v])=>{if(ttot[k]){ttot[k][0]+=v.reduce((a,b)=>a+b,0);ttot[k][1]+=v.length;}}));
+ $('#tsum').innerHTML='<div class="grid3"><div class="stat"><b>'+tot+'</b><span>players</span></div><div class="stat"><b>'+act+'</b><span>active in the last 7 days</span></div><div class="stat"><b>'+(ans?Math.round(100*cor/ans)+'%':'–')+'</b><span>class accuracy ('+ans+' answers)</span></div></div><h3 style="margin-top:14px">Class accuracy by topic</h3><div class="tbars">'+TOPICS.map(t=>{const v=ttot[t.id],p=v[1]?Math.round(100*v[0]/v[1]):0;return '<div><span>'+esc(t.name)+'</span><div class="meter"><i style="width:'+p+'%;background:'+(p>=75?'#2E7D4F':p>=50?'#E8A33D':'#C0392B')+'"></i></div><b class="mono">'+(v[1]?p+'%':'–')+'</b></div>';}).join('')+'</div>';
+ drawTeacherTable('xp');
+ $('#tadmin').innerHTML='<h3>Accounts</h3><p class="muted">Mode: <b>'+(BE.mode==='firebase'?'school-wide accounts (Firebase)':'device only — accounts on this computer')+'</b>.</p><details><summary><b>Create a teacher login</b> (e.g. for Miss Neesha)</summary><form id="ctf" class="row"><select id="ctn">'+Object.entries(TEACHERS).filter(([k])=>'teacher-'+k!==ME.id).map(([k,v])=>`<option value="${k}">${v}</option>`).join('')+'</select><input id="ctp" type="text" placeholder="first password (6+ characters)" minlength="6" required><button class="btn pri" type="submit">Create</button></form><p class="err" id="cte"></p></details><details><summary><b>Student forgot the password?</b></summary><ol><li>'+(BE.mode==='firebase'?'In the Firebase console → Authentication → Users, delete the user <span class="mono">nickname@'+DOMAIN+'</span>.':'(device mode) nothing else needed.')+'</li><li>Click <b>Reset login</b> next to the student below. XP, photons and stats are kept.</li><li>The student chooses <b>New player</b> with the SAME nickname and a new password.</li></ol></details>';
+ $('#ctf').onsubmit=async e=>{e.preventDefault();$('#cte').textContent='';try{await BE.createTeacher($('#ctn').value,$('#ctp').value);$('#cte').textContent='✓ Created. Share the password privately; it can be used on the Teacher login page.';}catch(x){$('#cte').textContent=x.message;}};}
+function drawTeacherTable(sortBy){const rows=TROWS.map(r=>{const st=r.stats,b=r.board,at=st.attempts||[],fulls=at.filter(a=>a.mode==='full'),w=weakest(st);return {id:r.id,nick:b.nick,grade:b.grade,xp:b.xp||0,lvl:levelOf(b.xp||0).n,ans:st.answered||0,acc:st.answered?Math.round(100*st.correct/st.answered):null,fulls:fulls.length,best:fulls.length?Math.max(...fulls.map(a=>a.score)):null,last:fulls.length?fulls[fulls.length-1].score:null,concepts:Object.keys(st.concepts||{}).length,weak:w?w[0]+' ('+Math.round(w[1]*100)+'%)':'',active:st.lastActive||0,released:b.ownerUid===null,avatar:b.avatar,bg:b.bg};});
+ const key={xp:r=>-r.xp,nick:r=>r.nick.toLowerCase(),grade:r=>r.grade,acc:r=>-(r.acc??-1),active:r=>-r.active,best:r=>-(r.best??-1)}[sortBy]||(r=>-r.xp);rows.sort((a,b)=>{const x=key(a),y=key(b);return x<y?-1:x>y?1:0;});
+ const th=(k,l)=>`<th><button class="thb" data-sort="${k}">${l}${sortBy===k?' ▾':''}</button></th>`;
+ $('#ttab').innerHTML='<div class="card tscroll"><div class="row" style="margin-top:0"><h3 style="margin-right:auto">All students ('+rows.length+')</h3><button class="btn small" id="csv">Download CSV</button></div><table class="t"><tr><th></th>'+th('nick','Nickname')+th('grade','Grade')+th('xp','XP')+'<th>Answered</th>'+th('acc','Correct')+'<th>Full exams</th>'+th('best','Best exam')+'<th>Concepts</th><th>Weakest topic</th>'+th('active','Last active')+'<th></th></tr>'+
+ rows.map(r=>`<tr><td>${ava(r.avatar,r.bg,30)}</td><td><a href="#/student/${encodeURIComponent(r.id)}"><b>${esc(r.nick)}</b></a>${r.released?' <span class="tag" style="background:var(--amber)">reset</span>':''}</td><td>${r.grade}</td><td class="mono">${r.xp} <small>Lv${r.lvl}</small></td><td class="mono">${r.ans}</td><td class="mono">${r.acc!==null?r.acc+'%':'–'}</td><td class="mono">${r.fulls}</td><td class="mono">${r.best!==null?r.best+'/60':'–'}</td><td class="mono">${r.concepts}/${TOPICS.length}</td><td>${esc(r.weak)}</td><td>${fdate(r.active)}</td><td><button class="btn small" data-rel="${esc(r.id)}">Reset login</button></td></tr>`).join('')+'</table></div>';
+ document.querySelectorAll('[data-sort]').forEach(b=>b.onclick=()=>drawTeacherTable(b.dataset.sort));
+ document.querySelectorAll('[data-rel]').forEach(b=>b.onclick=async()=>{if(!b.dataset.arm){b.dataset.arm=1;b.textContent='Click again to confirm';return;}try{await BE.release(b.dataset.rel);toast('Login reset — the student can now choose New player with the same nickname.');viewTeacher();}catch(e){toast(esc(e.message));}});
+ $('#csv').onclick=()=>{const cols=['Nickname','Grade','XP','Level','Answered','Correct %','Full exams','Best exam /60','Last exam /60','Concepts','Weakest topic','Last active'];const lines=[cols.join(',')].concat(rows.map(r=>[r.nick,r.grade,r.xp,r.lvl,r.ans,r.acc??'',r.fulls,r.best??'',r.last??'',r.concepts,r.weak,r.active?new Date(r.active).toISOString().slice(0,16).replace('T',' '):''].map(v=>'"'+String(v).replace(/"/g,'""')+'"').join(',')));
+  const bl=new Blob([lines.join('\n')],{type:'text/csv'}),a=document.createElement('a');a.href=URL.createObjectURL(bl);a.download='JPC-students-'+today()+'.csv';document.body.appendChild(a);a.click();setTimeout(()=>{URL.revokeObjectURL(a.href);a.remove();},500);};}
+async function viewStudent(id){if(!TROWS.length){try{TROWS=(await BE.allStudents()).filter(r=>r.board);}catch(e){}}const r=TROWS.find(x=>x.id===id);if(!r){location.hash='#/teacher';return;}
+ const st=Object.assign(freshStats(r.board.nick,r.board.grade),r.stats);app().innerHTML='<p style="margin-top:20px"><a href="#/teacher">← Dashboard</a></p><div class="pcard" style="background:'+(BG[r.board.bg]||BG.paper)[3]+'"><div class="pinner">'+ava(r.board.avatar,r.board.bg,84)+'<div class="pinfo"><div class="pnick">'+esc(r.board.nick)+'</div><div>Grade '+r.board.grade+' · last active '+fdate(st.lastActive)+' · joined '+fdate(st.created)+'</div><div class="pnum"><span>⚡ '+(st.photons||0)+' photons</span><span>🔥 '+((st.streak||{}).count||0)+'-day streak</span></div></div></div></div>'+statsBlock(st,r.board);}
 
+/* ---------------------------------------------------------------- guide (unchanged content) */
 /* ----- guide ----- */
 function viewGuide(){
  let h='<p style="margin-top:20px"><a href="#/">&larr; Home</a></p><section class="hero" style="padding-top:10px"><div class="herotext"><div class="kicker">Guide</div><h1>How the <em>JPC</em> works</h1><p>Everything you need to know before you start practising.</p></div><div class="heroart">'+art('mascot_clipboard',160)+'</div></section>'+noticeHTML();
  h+='<div class="card theory"><h3>The real challenge</h3><ul><li>The Junior Physics Challenge is a multiple-choice contest from the British Physics Olympiad.</li><li>A full paper has <b>60 questions</b> in <b>50 minutes</b>. The online version has two sections of 30 questions, 25 minutes each.</li><li>Every question has four answers A, B, C, D and exactly one is correct. Each is worth one mark.</li><li>There is <b>no negative marking</b>, so never leave a question blank.</li><li>Topics: measurement, motion and graphs, forces, energy, heat, electricity, waves, light, space, atoms, plus history and puzzle questions.</li></ul></div>';
  h+='<div class="card theory"><h3>Test-taking strategy</h3><ol><li><b>First pass:</b> answer the quick ones and flag the long ones. Aim for about 50 seconds per question.</li><li><b>Read the diagram first</b>: axes, units, labels and scale.</li><li><b>Write the formula</b> and units on scrap paper before calculating.</li><li><b>Eliminate</b> answers that are obviously the wrong size or unit.</li><li><b>Check the question word</b>: <i>not</i>, <i>except</i>, <i>average</i>, <i>total</i>, <i>per second</i>.</li><li>Guess if you must: there is no penalty.</li></ol></div>';
- h+='<div class="card theory"><h3>This site</h3><ul><li><b>Study a topic</b> first: key words, theory, a JPC trap, a worked example and guided problems.</li><li><b>Quick practice</b> and <b>topic practice</b> show the explanation after every answer.</li><li><b>Mini mock</b> (30 Q, 25 min) and <b>Full mock</b> (60 Q, 50 min) copy the JPC format and topic mix.</li><li>The site picks questions at the right difficulty for your grade and avoids repeating ones you have already seen.</li><li>The <b>Progress</b> page tracks your results and finds your weakest topics.</li></ul></div>';
+ h+='<div class="card theory"><h3>This site</h3><ul><li><b>Concepts</b>: each topic is presented by a famous scientist with advice, key words, theory, a JPC trap, a worked example and guided problems.</li><li><b>Practice by topic</b> and <b>Quick practice</b> show the explanation after every answer.</li><li>The <b>Full exam</b> (60 Q, 50 min) copies the JPC format and topic mix.</li><li>Questions are chosen for your grade, and ones you missed come back more often.</li><li>Every correct answer earns <b>XP</b> (your leaderboard score) and <b>⚡ photons</b> (to spend in the store). Log in every day for a streak bonus.</li><li><b>My stats</b> shows your progress; your teachers can see it too.</li></ul></div>';
  h+='<div class="section-h"><h2>Formula sheet</h2><span class="tag" style="background:var(--ink)">remember these</span></div><div class="card"><div class="vocablist">'+[["speed", "v = d ÷ t"], ["acceleration", "a = (v − u) ÷ t"], ["free fall (g = 10)", "v = gt, d = ½gt²"], ["weight", "W = mg"], ["Newton's 2nd law", "F = ma"], ["pressure", "p = F ÷ A"], ["Hooke's law", "F = kx"], ["momentum", "p = mv"], ["work", "W = Fd"], ["power", "P = E ÷ t"], ["kinetic energy", "KE = ½mv²"], ["gravitational PE", "GPE = mgh"], ["efficiency", "useful ÷ total"], ["density", "ρ = m ÷ V"], ["heating", "E = mcΔT"], ["change of state", "E = mL"], ["Ohm's law", "V = IR"], ["charge", "Q = It"], ["electric power", "P = VI"], ["wave speed", "v = fλ"], ["period", "T = 1 ÷ f"], ["kelvin", "K = °C + 273"]].map(f=>'<div><b>'+esc(f[0])+':</b> <span class="mono">'+esc(f[1])+'</span></div>').join('')+'</div></div>';
  h+='<div class="section-h"><h2>Prefixes and handy numbers</h2></div><div class="card theory"><table><tr><th>Prefix</th><th>Factor</th><th>Handy number</th><th>Value</th></tr><tr><td>giga (G)</td><td>10⁹</td><td>g (Earth)</td><td>10 N/kg</td></tr><tr><td>mega (M)</td><td>10⁶</td><td>speed of sound in air</td><td>340 m/s</td></tr><tr><td>kilo (k)</td><td>10³</td><td>speed of light</td><td>3 × 10⁸ m/s</td></tr><tr><td>centi (c)</td><td>10⁻²</td><td>density of water</td><td>1000 kg/m³ = 1 g/cm³</td></tr><tr><td>milli (m)</td><td>10⁻³</td><td>specific heat of water</td><td>4200 J/kg°C</td></tr><tr><td>micro (µ)</td><td>10⁻⁶</td><td>Earth–Sun distance</td><td>1.5 × 10¹¹ m</td></tr><tr><td>nano (n)</td><td>10⁻⁹</td><td>1 kWh</td><td>3 600 000 J</td></tr></table></div>';
  h+='<div class="card theory"><h3>Planets in order from the Sun</h3><p>Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, Neptune.</p></div>';
@@ -532,10 +744,10 @@ function viewGuide(){
 
 /* ---------- init ---------- */
 window.addEventListener('hashchange',route);
-$('#brandlink').addEventListener('click',()=>{});
-route();
+(async()=>{try{ME=await BE.init();if(ME&&ME.role==='student')await loadPlayer();}catch(e){ME=null;console.warn(e);}
+ const f=$('#modeline');if(f)f.textContent=BE.mode==='firebase'?'School-wide accounts: your progress follows you to any device.':'Device-only mode: accounts are saved on this computer only, until Miss K switches on school-wide accounts.';
+ route();})();
 })();
-
 </script>
 </body>
 </html>
