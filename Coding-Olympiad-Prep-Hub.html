@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Coding Olympiad Practice | Miss K STEM</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+ --navy:#12294d; --navy2:#1b3a63; --teal:#0f8aa0; --teal-d:#0b6f82;
+ --gold:#f7b500; --coral:#ef5f54; --green:#15a06a; --red:#d6455b;
+ --bg:#f4f7fb; --card:#ffffff; --ink:#15233b; --muted:#5b6b82; --line:#e3e9f2;
+ --shadow:0 6px 22px rgba(18,41,77,.08); --radius:16px;
+}
+:root[data-theme="ocean"]{--navy:#0b3b4a;--navy2:#0f5566;--teal:#1aa6bf;--bg:#eef7f9;}
+:root[data-theme="sunset"]{--navy:#5a2240;--navy2:#7a2f50;--teal:#e8694a;--teal-d:#c9553a;--gold:#ffb43d;--bg:#fdf2ec;}
+:root[data-theme="midnight"]{--navy:#0a1220;--navy2:#141f33;--teal:#4db6c9;--bg:#0f1826;--card:#18233a;--ink:#e8eefb;--muted:#9fb0cc;--line:#283650;--shadow:0 6px 22px rgba(0,0,0,.4);}
+*{box-sizing:border-box}
+body{margin:0;font-family:Inter,system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.5}
+h1,h2,h3,.f{font-family:Poppins,sans-serif}
+a{color:var(--teal-d);text-decoration:none}
+img{max-width:100%}
+.wrap{max-width:1060px;margin:0 auto;padding:0 16px}
+
+/* Header */
+header.top{background:linear-gradient(120deg,var(--navy),var(--navy2));color:#fff;position:sticky;top:0;z-index:40;box-shadow:0 2px 12px rgba(0,0,0,.15)}
+.topbar{display:flex;align-items:center;gap:14px;padding:10px 16px;max-width:1060px;margin:0 auto;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:11px;font-family:Poppins;font-weight:700;font-size:1.05rem}
+.brand .logo{height:38px;width:auto;background:#fff;border-radius:7px;padding:3px 6px}
+.brand .co{display:inline-flex;align-items:center;gap:7px}
+.brand .chip{background:var(--gold);color:#1a1300;font-weight:800;font-size:.62rem;letter-spacing:.12em;padding:3px 7px;border-radius:999px}
+.navlinks{margin-left:auto;display:flex;gap:7px;align-items:center;flex-wrap:wrap}
+.navlinks a,.navlinks button{color:#dbe6f7;background:rgba(255,255,255,.08);border:0;font-size:.82rem;padding:7px 11px;border-radius:9px;cursor:pointer;font-family:Inter;font-weight:600}
+.navlinks a:hover,.navlinks button:hover{background:rgba(255,255,255,.18);color:#fff}
+.hudbar{display:flex;gap:8px;align-items:center;background:rgba(0,0,0,.18);padding:6px 10px;border-radius:999px;font-size:.8rem;font-weight:700}
+.hudbar .dot{opacity:.5}
+/* Tabs */
+nav.tabs{background:var(--card);border-bottom:1px solid var(--line);position:sticky;top:59px;z-index:30}
+.tabrow{display:flex;gap:4px;max-width:1060px;margin:0 auto;padding:0 10px;overflow-x:auto}
+.tabrow button{flex:0 0 auto;background:none;border:0;border-bottom:3px solid transparent;color:var(--muted);font-family:Poppins;font-weight:600;font-size:.86rem;padding:12px 13px;cursor:pointer;white-space:nowrap}
+.tabrow button.active{color:var(--teal-d);border-bottom-color:var(--teal)}
+.tabrow button:hover{color:var(--ink)}
+
+main{padding:22px 0 60px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:20px}
+.card+.card{margin-top:16px}
+.grid{display:grid;gap:14px}
+.g2{grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
+.g3{grid-template-columns:repeat(auto-fit,minmax(180px,1fr))}
+.pill{display:inline-block;background:var(--navy);color:#fff;font-size:.68rem;font-weight:700;letter-spacing:.06em;padding:4px 10px;border-radius:999px;text-transform:uppercase}
+.muted{color:var(--muted)}
+.btn{font-family:Poppins;font-weight:600;border:0;border-radius:11px;padding:11px 18px;cursor:pointer;font-size:.92rem;background:var(--teal);color:#fff;transition:.15s}
+.btn:hover{background:var(--teal-d)}
+.btn.sec{background:#eaf1f8;color:var(--navy)}
+:root[data-theme="midnight"] .btn.sec{background:#223252;color:#dce8fb}
+.btn.sec:hover{background:#dce7f3}
+.btn.gold{background:var(--gold);color:#241a00}
+.btn.ghost{background:none;border:1.5px solid var(--line);color:var(--muted)}
+.btn:disabled{opacity:.5;cursor:default}
+.big{font-size:2rem;font-family:Poppins;font-weight:800;line-height:1}
+
+/* stat tiles */
+.tile{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:15px 16px}
+.tile .n{font-family:Poppins;font-weight:800;font-size:1.7rem;line-height:1}
+.tile .l{font-size:.76rem;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;margin-top:3px}
+
+/* question */
+.qbox .qnum{font-size:.74rem;color:var(--muted);font-weight:700;letter-spacing:.05em}
+.qtext{font-family:Poppins;font-weight:600;font-size:1.12rem;margin:6px 0 16px}
+.opts{display:grid;gap:10px}
+.opt{display:flex;align-items:center;gap:12px;border:1.5px solid var(--line);background:var(--card);border-radius:12px;padding:13px 15px;cursor:pointer;text-align:left;font-size:.96rem;font-family:Inter;color:var(--ink);transition:.12s}
+.opt:hover:not(.locked){border-color:var(--teal);background:rgba(15,138,160,.05)}
+.opt .k{flex:0 0 26px;height:26px;border-radius:7px;background:#eef2f8;color:var(--navy);font-weight:800;display:flex;align-items:center;justify-content:center;font-size:.85rem}
+:root[data-theme="midnight"] .opt .k{background:#243555}
+.opt.correct{border-color:var(--green);background:rgba(21,160,106,.12)}
+.opt.correct .k{background:var(--green);color:#fff}
+.opt.wrong{border-color:var(--red);background:rgba(214,69,91,.1)}
+.opt.wrong .k{background:var(--red);color:#fff}
+.opt.locked{cursor:default}
+.explain{margin-top:14px;padding:13px 15px;border-left:4px solid var(--teal);background:rgba(15,138,160,.07);border-radius:0 10px 10px 0;font-size:.92rem}
+.explain b{color:var(--teal-d)}
+.progress{height:8px;background:var(--line);border-radius:999px;overflow:hidden;margin:4px 0 2px}
+.progress > i{display:block;height:100%;background:linear-gradient(90deg,var(--teal),var(--gold));border-radius:999px}
+
+/* registration */
+.gate{position:fixed;inset:0;background:rgba(10,20,40,.55);backdrop-filter:blur(4px);z-index:100;display:flex;align-items:center;justify-content:center;padding:18px}
+.gate .card{max-width:440px;width:100%}
+label.fld{display:block;font-weight:600;font-size:.85rem;margin:14px 0 5px}
+input,select{width:100%;padding:11px 13px;border:1.5px solid var(--line);border-radius:10px;font-size:.95rem;font-family:Inter;background:var(--card);color:var(--ink)}
+input:focus,select:focus{outline:0;border-color:var(--teal)}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+
+.topiccard{cursor:pointer;border:1.5px solid var(--line);border-radius:14px;padding:16px;background:var(--card);transition:.15s}
+.topiccard:hover{border-color:var(--teal);transform:translateY(-2px);box-shadow:var(--shadow)}
+.topiccard .t{font-family:Poppins;font-weight:700;margin-bottom:4px}
+.bar{height:7px;background:var(--line);border-radius:999px;overflow:hidden;margin-top:8px}
+.bar>i{display:block;height:100%;background:var(--teal)}
+.lb-row{display:flex;align-items:center;gap:12px;padding:11px 8px;border-bottom:1px solid var(--line)}
+.lb-row .rk{font-family:Poppins;font-weight:800;width:30px;color:var(--muted)}
+.lb-row.me{background:rgba(247,181,0,.12);border-radius:10px}
+.store-item{border:1.5px solid var(--line);border-radius:14px;padding:16px;text-align:center}
+.store-item .ic{font-size:2rem}
+.toast{position:fixed;bottom:22px;left:50%;transform:translateX(-50%);background:var(--navy);color:#fff;padding:12px 20px;border-radius:12px;font-weight:600;box-shadow:var(--shadow);z-index:200;opacity:0;transition:.3s;font-size:.9rem}
+.toast.show{opacity:1}
+.concept details{border:1px solid var(--line);border-radius:12px;padding:4px 14px;margin-bottom:10px;background:var(--card)}
+.concept summary{font-family:Poppins;font-weight:600;cursor:pointer;padding:10px 0}
+.hide{display:none!important}
+footer{background:var(--navy);color:#c6d4ea;font-size:.8rem;text-align:center;padding:22px 16px}
+footer a{color:#9fd0dc}
+.disc{font-size:.72rem;color:var(--muted);margin-top:14px;line-height:1.5}
+@media(max-width:560px){.brand span.full{display:none}.topbar{gap:8px}.qtext{font-size:1rem}}
+</style>
+</head>
+<body>
+
+<header class="top">
+ <div class="topbar">
+  <div class="brand">
+   <img class="logo" src="basis-logo.png" alt="BASIS International School Bangkok" onerror="this.style.display='none'">
+   <span class="co">&lt;/&gt; <span class="full">Coding&nbsp;Olympiad&nbsp;Practice</span><span class="chip">CS</span></span>
+  </div>
+  <div class="navlinks">
+   <div class="hudbar" id="hud">Lvl 1 <span class="dot">·</span> 0 XP <span class="dot">·</span> 🪙 0</div>
+   <a href="index.html">← Home</a>
+   <button onclick="resetAll()">Switch student</button>
+  </div>
+ </div>
+ <nav class="tabs"><div class="tabrow" id="tabrow"></div></nav>
+</header>
+
+<main class="wrap" id="main"></main>
+
+<footer>
+ Coding Olympiad — Computer Science practice site · Created by Miss K · Liliia Khmarskaia · BASIS International School Bangkok
+ <div class="disc wrap">For preparation only. These practice questions are <b>original</b> and written by Miss K STEM in the style of the Coding Olympiad Computer Science Category, to help students warm up before the official exam. Not affiliated with or endorsed by the Coding Olympiad. Progress is saved only in this browser on this device.</div>
+</footer>
+
+<div class="toast" id="toast"></div>
+
+<!-- Registration gate -->
+<div class="gate" id="gate">
+ <div class="card">
+  <span class="pill">Welcome</span>
+  <h2 style="margin:10px 0 2px">Coding Olympiad — CS Practice</h2>
+  <p class="muted" style="margin-top:4px;font-size:.92rem">A free warm-up before the real exam. Register once to save your progress, XP and coins on this device.</p>
+  <label class="fld">Your name or nickname</label>
+  <input id="r_name" placeholder="e.g. Mali" maxlength="24">
+  <div class="row2">
+   <div><label class="fld">Grade</label>
+    <select id="r_grade">
+     <option value="">Choose…</option>
+     <option>3</option><option>4</option><option>5</option>
+     <option>6</option><option>7</option><option>8</option>
+     <option>9</option><option>10</option><option>11</option>
+    </select></div>
+   <div><label class="fld">Class / section (optional)</label>
+    <input id="r_class" placeholder="e.g. 7A" maxlength="12"></div>
+  </div>
+  <p class="muted" id="r_band" style="font-size:.82rem;margin:10px 0 0"></p>
+  <button class="btn" style="width:100%;margin-top:14px" onclick="register()">Start practising →</button>
+  <p class="disc">We only store your name, grade and scores in this browser. Nothing is sent anywhere.</p>
+ </div>
+</div>
+
+<script id="bank" type="application/json">{"BANK": {"3-5": {"label": "Grades 3–4–5 · Level 1", "topics": {"Computer Basics": [["Which part is the “brain” of the computer that does the thinking?", ["CPU (Central Processing Unit)", "Monitor", "Mouse", "Speaker"], 0, "The CPU is the brain — it processes instructions and does the calculations."], ["Which of these is an INPUT device?", ["Monitor", "Printer", "Keyboard", "Speaker"], 2, "A keyboard sends information INTO the computer, so it is an input device."], ["Which of these is an OUTPUT device?", ["Keyboard", "Microphone", "Monitor", "Mouse"], 2, "A monitor shows information OUT to you, so it is an output device."], ["“Hardware” means…", ["The programs you run", "The physical parts you can touch", "Websites you visit", "Your passwords"], 1, "Hardware is the physical equipment (screen, keyboard, CPU). Software is the programs."], ["Scratch and Microsoft Word are examples of…", ["Hardware", "Software", "Networks", "Cables"], 1, "They are programs, so they are software."], ["Which keeps your files even after the computer is switched OFF?", ["RAM", "Hard drive / USB drive", "CPU", "Clipboard"], 1, "Storage like a hard drive or USB keeps files permanently; RAM is cleared when power is off."], ["A file ending in .jpg is usually a…", ["Song", "Picture", "Video", "Spreadsheet"], 1, ".jpg is a common image (picture) format."], ["A file ending in .mp3 is usually a…", ["Picture", "Sound or song", "Document", "Program"], 1, ".mp3 is a common audio (sound) format."], ["What lets devices join the internet WITHOUT wires?", ["Wi-Fi / router", "CPU", "USB cable", "Monitor"], 0, "Wi-Fi from a router connects devices wirelessly."], ["A STRONG password is…", ["Your first name", "1234", "A long mix of letters, numbers and symbols", "Your birthday"], 2, "Long, mixed passwords are hard to guess. Avoid names and birthdays."], ["An email that tries to trick you into giving your password is called…", ["Phishing", "Caching", "Booting", "Streaming"], 0, "Phishing messages pretend to be real to steal your information."], ["Binary code uses only which two digits?", ["0 and 1", "1 and 2", "A and B", "0 to 9"], 0, "Computers store everything using just 0s and 1s (binary)."], ["Which program would you use to make slides for a presentation?", ["PowerPoint / Google Slides", "Excel", "Paint", "Calculator"], 0, "PowerPoint and Google Slides are presentation tools."], ["The shortcut Ctrl + C is used to…", ["Copy", "Paste", "Save", "Undo"], 0, "Ctrl+C copies; Ctrl+V pastes."]], "Block Coding & Logic": [["A LOOP block is used to…", ["Make a decision", "Repeat actions", "Store a number", "Stop the program"], 1, "Loops repeat a set of instructions automatically."], ["An IF / THEN block is used to…", ["Repeat forever", "Make a decision based on a condition", "Change the color", "Move forward"], 1, "If/then runs code only when a condition is true — that is a decision."], ["A VARIABLE is used to…", ["Store information such as a score", "Draw a circle", "Connect to Wi-Fi", "Print paper"], 0, "A variable stores a value (like score or lives) that can change."], ["In Scratch, which value moves a sprite LEFT and RIGHT?", ["x position", "y position", "z position", "size"], 0, "x is the left–right direction; y is up–down."], ["A sprite at x = 0 runs “change x by 10”. Its new x is…", ["10", "0", "‒10", "100"], 0, "0 + 10 = 10."], ["“Sequence” means the instructions run…", ["Randomly", "In order, one after another", "All at the same time", "Backwards"], 1, "A sequence is steps carried out in order."], ["repeat 4 → [move, turn 90°] draws a…", ["Triangle", "Square", "Circle", "Straight line"], 1, "Four equal sides and four 90° turns make a square."], ["“and”, “or” and “not” blocks are called…", ["Loops", "Logic operators", "Variables", "Sprites"], 1, "They combine true/false conditions — logic operators."], ["Finding and fixing mistakes in your code is called…", ["Debugging", "Looping", "Printing", "Booting"], 0, "Debugging means hunting down and fixing errors (bugs)."], ["A function (“my block”) lets you…", ["Reuse a group of steps with one block", "Delete your project", "Go online", "Save a photo"], 0, "Functions package steps so you can reuse them."]], "Problem Solving & Planning": [["Writing your plan in plain language before you code is called…", ["Pseudocode", "Binary", "Debugging", "Streaming"], 0, "Pseudocode is a plain-language plan for your program."], ["In a flowchart, a yes/no DECISION is shown with a…", ["Rectangle", "Diamond", "Circle", "Arrow"], 1, "A diamond shape marks a decision in a flowchart."], ["On a grid, the point (3, 2) means…", ["3 right and 2 up", "2 right and 3 up", "3 up only", "32 steps"], 0, "The first number is across (x), the second is up (y)."], ["A robot moves 3 steps right, then 2 steps up. How many steps in total?", ["5", "6", "1", "32"], 0, "3 + 2 = 5 steps."], ["The pattern 2, 4, 6, 8 … increases by…", ["1", "2", "4", "8"], 1, "Each number goes up by 2."]]}}, "6-8": {"label": "Grades 6–7–8 · Level 2", "topics": {"Hardware & Systems": [["What TEMPORARILY holds the programs and data you are using right now?", ["RAM", "Hard disk drive", "CPU", "ROM"], 0, "RAM is fast, temporary memory for work in progress; it clears when powered off."], ["Which storage is faster and has NO moving parts?", ["HDD", "SSD", "DVD", "Floppy disk"], 1, "An SSD uses flash memory — faster and more durable than a spinning HDD."], ["The CPU's main job is to…", ["Store files permanently", "Process instructions and do calculations", "Display images", "Connect to Wi-Fi"], 1, "The CPU carries out program instructions."], ["A GPU is especially good at…", ["Graphics and many parallel calculations", "Storing files", "Typing text", "Printing"], 0, "GPUs handle graphics and large parallel workloads (games, AI)."], ["Which software manages all the hardware and other programs?", ["Operating system", "Web browser", "Spreadsheet", "Antivirus"], 0, "The operating system (Windows, macOS, Linux) manages everything."], ["ROM memory is…", ["Temporary like RAM", "Permanent, read-only start-up memory", "Cloud storage", "A type of cable"], 1, "ROM holds permanent instructions (like start-up) and isn't erased when off."]], "Networks & Internet": [["A network that covers a SMALL area, like one school, is a…", ["WAN", "LAN", "CPU", "URL"], 1, "LAN = Local Area Network (small area). WAN covers large distances."], ["A device's unique address on a network is its…", ["IP address", "RAM", "URL bar", "HDMI port"], 0, "An IP address identifies a device on a network."], ["The “S” in HTTPS tells you the connection is…", ["Slower", "Secure / encrypted", "Shared", "Simple"], 1, "HTTPS encrypts data so it's secure."], ["Lossy compression (like .jpg or .mp3) means…", ["No data is ever lost", "Some data is removed to shrink the file", "The file gets bigger", "Only text is kept"], 1, "Lossy formats drop some detail to save space; lossless keeps everything."], ["Two-factor authentication (2FA) improves security by…", ["Using two passwords in a row", "Requiring a second step, like a code sent to your phone", "Deleting cookies", "Turning off Wi-Fi"], 1, "2FA adds a second proof of identity beyond your password."]], "Python & Programming": [["In Python, which command displays text on the screen?", ["print()", "input()", "def", "loop"], 0, "print() outputs text to the screen."], ["In Python, input() always gives you back a…", ["Number", "String (text)", "Boolean", "List"], 1, "input() returns text; use int() to turn it into a number."], ["Which of these is a Python LIST?", ["(1, 2, 3)", "[1, 2, 3]", "{1, 2, 3}", "<1, 2, 3>"], 1, "Square brackets [ ] make a list."], ["A Python dictionary stores data as…", ["Single values", "Key–value pairs", "Only numbers", "Pixels"], 1, "Dictionaries map keys to values, e.g. {\"name\": \"Mali\"}."], ["How many times does for i in range(5) repeat?", ["4", "5", "6", "1"], 1, "range(5) gives 0,1,2,3,4 — five times."], ["The % (modulo) operator returns the…", ["Quotient", "Remainder after division", "Percentage", "Rounded value"], 1, "10 % 3 is 1 — the remainder."], ["A function in Python is defined with the keyword…", ["func", "def", "function", "define"], 1, "def starts a function definition."], ["A value that is only True or False has which data type?", ["int", "string", "boolean", "float"], 2, "True/False values are booleans."], ["In a spreadsheet, every formula must begin with…", ["+ sign", "= sign", "@ sign", "* sign"], 1, "Spreadsheet formulas start with = (e.g. =A1+B1)."], ["Which spreadsheet function finds the LARGEST value in a range?", ["=SUM", "=AVERAGE", "=MAX", "=COUNT"], 2, "=MAX returns the biggest value."]], "Web, Algorithms & Thinking": [["HTML is mainly used to…", ["Style the colors", "Give a web page its structure and content", "Query a database", "Run loops"], 1, "HTML provides structure; CSS does the styling."], ["CSS is mainly used to…", ["Structure the content", "Style the look — colors, fonts, layout", "Store data", "Connect Wi-Fi"], 1, "CSS controls how the page looks."], ["A BINARY search works best when the data is…", ["Random", "Sorted", "Encrypted", "Compressed"], 1, "Binary search needs sorted data so it can halve the search each step."], ["A function that calls ITSELF is using…", ["Iteration", "Recursion", "Compression", "Streaming"], 1, "Recursion is a function calling itself on a smaller problem."], ["A logic gate that is TRUE only when BOTH inputs are true is…", ["OR", "AND", "NOT", "XOR"], 1, "AND is true only if both inputs are true."], ["A database stores information in…", ["Slides", "Tables with rows and columns", "Folders only", "Pixels"], 1, "Databases organize data into tables of rows and columns."], ["Breaking a big problem into smaller, manageable parts is called…", ["Debugging", "Decomposition (modular thinking)", "Encryption", "Streaming"], 1, "Decomposition splits a problem into smaller pieces."], ["In a flowchart, a PROCESS or action step is shown with a…", ["Diamond", "Rectangle", "Oval", "Arrow"], 1, "Rectangles show actions; diamonds show decisions; ovals start/end."]]}}, "9-11": {"label": "Grades 9–10–11 · Level 3", "topics": {"Systems, Networks & Security": [["Which protocol suite routes data across the internet?", ["HTTP only", "TCP/IP", "SMTP only", "CSS"], 1, "TCP/IP is the core set of rules for sending data across the internet."], ["Public-key (asymmetric) encryption uses…", ["One shared secret key", "A public key and a private key", "No keys at all", "Only a password"], 1, "Asymmetric encryption uses a public key to encrypt and a private key to decrypt."], ["Cloud computing mainly provides…", ["Local-only storage", "On-demand computing resources over the internet", "Physically faster CPUs at home", "Free home Wi-Fi"], 1, "The cloud offers remote storage and computing power accessed over the internet."], ["Which describes a NoSQL database?", ["Only fixed SQL tables", "Flexible documents or key–value stores", "A spreadsheet", "Punch cards"], 1, "NoSQL databases store flexible, non-table data like documents or key–value pairs."], ["SQL is a language used to…", ["Style web pages", "Query and manage databases", "Compile C programs", "Draw graphics"], 1, "SQL queries and manages relational databases."]], "Data Structures & Efficiency": [["A data structure that is Last-In, First-Out (LIFO) is a…", ["Queue", "Stack", "Tree", "Array"], 1, "A stack removes the most recently added item first (LIFO)."], ["A First-In, First-Out (FIFO) structure is a…", ["Stack", "Queue", "Tree", "Graph"], 1, "A queue serves items in the order they arrived (FIFO)."], ["Big-O notation describes a program's…", ["Color scheme", "Efficiency / how it grows as input grows", "File size", "Syntax"], 1, "Big-O measures how running time or memory scales with input size."], ["Repeatedly halving a SORTED list to find a value is…", ["Linear search", "Binary search, O(log n)", "Bubble sort", "Hashing"], 1, "Binary search halves the data each step — O(log n)."], ["For large sorted data, which is generally FASTEST to search?", ["O(n) linear", "O(log n) binary", "O(n²)", "O(n!)"], 1, "O(log n) grows very slowly, so it's fastest here."], ["A structure with a root node and branches is a…", ["Stack", "Queue", "Tree", "Array"], 2, "A tree has a root and branches to child nodes."]], "Programming & OOP": [["In object-oriented programming, a blueprint for objects is a…", ["Function", "Class", "Loop", "Variable"], 1, "A class defines the data and behavior; objects are made from it."], ["An OBJECT is…", ["A kind of loop", "An instance of a class", "A database", "A cable"], 1, "An object is a specific instance created from a class."], ["try / except in Python is used for…", ["Loops", "Handling errors safely", "Defining classes", "Importing modules"], 1, "try/except catches and handles errors so the program doesn't crash."], ["A recursive function must include a … to stop.", ["Base case", "GPU", "Loop label", "Semicolon"], 0, "The base case ends the recursion; without it you get infinite recursion."], ["Bubble sort works by…", ["Comparing and swapping neighboring pairs repeatedly", "Sorting whole files at once", "Sorting only the first item", "Picking random items"], 0, "Bubble sort repeatedly swaps adjacent out-of-order pairs."], ["Writing clear code with comments and good names is called…", ["Obfuscation", "Clean code", "Compression", "Hacking"], 1, "Clean code is readable and well-organized."]], "Modern CS: APIs, AI & Ethics": [["An API lets two applications…", ["Share data and talk to each other", "Compress files", "Encrypt disks", "Print faster"], 0, "An API is an agreed way for programs to exchange data and requests."], ["JSON is a common format for…", ["Styling pages", "Exchanging structured data", "Sorting arrays", "Drawing graphics"], 1, "JSON stores and exchanges structured data as key–value pairs."], ["Git is a tool for…", ["Version control and collaboration", "Editing photos", "Running SQL", "Browsing the web"], 0, "Git tracks code changes and lets teams collaborate."], ["Machine learning means a program…", ["Follows fixed rules only", "Learns patterns from data", "Deletes data", "Only encrypts data"], 1, "ML models learn patterns from examples instead of fixed rules."], ["In machine learning, “training data” is…", ["The final answer", "The examples the model learns from", "The user's password", "A type of CPU"], 1, "Training data is the labeled examples a model learns from."], ["Ethical (white-hat) hacking means…", ["Stealing data", "Finding security flaws WITH permission so they can be fixed", "Spreading viruses", "Sending phishing emails"], 1, "White-hat hackers test systems legally to help secure them."], ["A “stack overflow” error most often comes from…", ["Too little storage", "Recursion with no base case", "A slow network", "A broken monitor"], 1, "Endless recursion fills the call stack and overflows it."]]}}}, "CONCEPTS": {"3-5": [["Hardware vs Software", "Hardware = physical parts you can touch (CPU, monitor, keyboard). Software = the programs (Scratch, Word). The CPU is the 'brain'."], ["Input & Output", "Input goes IN (keyboard, mouse, mic). Output comes OUT (monitor, speaker, printer)."], ["Storage & Memory", "Hard drives and USB drives keep files when the power is off. RAM is temporary and clears when you switch off."], ["Staying Safe Online", "Use long passwords with letters, numbers and symbols. Watch out for phishing — fake messages that try to steal your info."], ["Block Coding Blocks", "Sequence = steps in order. Loop = repeat. If/then = decide. Variable = store a value. Function = reuse steps."], ["Coordinates", "x = left/right, y = up/down. Point (3, 2) means 3 across and 2 up."], ["Planning", "Pseudocode = plan in plain words. Flowchart shapes: oval = start/end, rectangle = action, diamond = decision."], ["Keyboard Shortcuts", "Ctrl+C copy · Ctrl+V paste · Ctrl+X cut · Ctrl+Z undo · Ctrl+A select all · Ctrl+S save."]], "6-8": [["Memory & Storage", "RAM = fast, temporary. ROM = permanent read-only. SSD is faster than HDD (no moving parts)."], ["CPU & GPU", "CPU processes instructions. GPU handles graphics and many parallel tasks (games, AI)."], ["Networks", "LAN = small/local, WAN = wide area. Every device has an IP address. HTTPS = secure/encrypted."], ["Compression & Security", "Lossy (.jpg/.mp3) drops some detail to shrink size; lossless keeps all data. 2FA adds a second login step."], ["Python Basics", "print() shows text · input() returns a string · def makes a function · [ ] = list · { } = dictionary · % = remainder · range(5) → 0–4."], ["Spreadsheets", "Formulas start with = . Useful functions: =SUM, =AVERAGE, =MAX, =MIN, =COUNT."], ["Web", "HTML = structure/content, CSS = style/look. A binary search needs sorted data."], ["Computational Thinking", "Decomposition = break a problem into parts. Flowchart: rectangle = action, diamond = decision, oval = start/end."]], "9-11": [["Networks & Protocols", "TCP/IP routes internet data. HTTPS = encrypted. DNS turns names into IP addresses."], ["Security", "Symmetric = one shared key. Asymmetric = public + private key. Protect data with encryption and 2FA."], ["Databases & Cloud", "SQL queries relational tables (rows/columns). NoSQL = flexible documents/key–value. Cloud = remote resources on demand."], ["Data Structures", "Stack = LIFO · Queue = FIFO · Tree = root + branches · Array/List = indexed items."], ["Efficiency (Big-O)", "Describes growth as input grows. O(1) < O(log n) < O(n) < O(n²). Binary search = O(log n)."], ["OOP & Errors", "Class = blueprint, object = instance. Recursion needs a base case. try/except handles errors."], ["Modern CS", "API = apps share data · JSON = structured data format · Git = version control · ML learns patterns from training data."], ["Ethics", "White-hat hacking finds flaws with permission to fix them. Protect privacy with encryption and strong authentication."]]}}</script>
+<script>
+const DB = JSON.parse(document.getElementById('bank').textContent);
+const BANK = DB.BANK, CONCEPTS = DB.CONCEPTS;
+const LS = {get:(k,d)=>{try{return JSON.parse(localStorage.getItem(k))??d}catch(e){return d}},
+            set:(k,v)=>{try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}};
+let S = LS.get('co_student', null);
+let P = LS.get('co_progress', null);
+const DEFAULT_P = {xp:0,coins:0,answered:0,correct:0,streak:0,best:0,perTopic:{},exams:[],theme:'',avatar:'🤖',owned:['🤖'],badges:[]};
+function saveP(){LS.set('co_progress',P)}
+function bandOf(g){g=+g;return g<=5?'3-5':g<=8?'6-8':'9-11'}
+
+/* ---------- registration ---------- */
+const gradeSel=document.getElementById('r_grade');
+gradeSel && gradeSel.addEventListener('change',()=>{const g=gradeSel.value;document.getElementById('r_band').textContent=g?('You will practise the '+BANK[bandOf(g)].label+' level.'):''});
+function register(){
+ const name=document.getElementById('r_name').value.trim();
+ const grade=document.getElementById('r_grade').value;
+ if(!name){toast('Please enter your name');return}
+ if(!grade){toast('Please choose your grade');return}
+ S={name,grade:+grade,band:bandOf(grade),cls:document.getElementById('r_class').value.trim(),at:Date.now()};
+ LS.set('co_student',S);
+ P=P||JSON.parse(JSON.stringify(DEFAULT_P));
+ saveP(); seedLeaderboard(); boot();
+}
+function resetAll(){ if(confirm('Switch student? Your scores stay saved on this device, but you can register a new name.')){ localStorage.removeItem('co_student'); location.reload(); } }
+
+/* ---------- leaderboard (local, real students only) ---------- */
+function seedLeaderboard(){ /* no demo/random names — real registered students only */ }
+function syncLeaderboard(){
+ let lb=LS.get('co_leaderboard',[]).filter(e=>!e.bot && e.name!==S.name);
+ lb.push({name:S.name,xp:P.xp,level:level()});
+ lb.sort((a,b)=>b.xp-a.xp); LS.set('co_leaderboard',lb);
+ return lb.map(e=>Object.assign({},e,{me:e.name===S.name}));
+}
+
+/* ---------- xp / level ---------- */
+function level(){return Math.floor(P.xp/100)+1}
+function xpInLevel(){return P.xp%100}
+function award(correct,topic){
+ P.answered++; P.perTopic[topic]=P.perTopic[topic]||{a:0,c:0}; P.perTopic[topic].a++;
+ if(correct){
+  P.correct++; P.perTopic[topic].c++; P.streak++; P.best=Math.max(P.best,P.streak);
+  let gain=10+Math.min(P.streak-1,5)*2; P.xp+=gain; P.coins+=5;
+  toast('+'+gain+' XP · +5 🪙'+(P.streak>2?'  🔥 '+P.streak+' streak!':''));
+ } else { P.streak=0; }
+ saveP(); updateHud();
+}
+function updateHud(){document.getElementById('hud').innerHTML='Lvl '+level()+' <span class="dot">·</span> '+P.xp+' XP <span class="dot">·</span> 🪙 '+P.coins}
+
+/* ---------- tabs ---------- */
+const TABS=[['dash','Dashboard'],['topic','Practice by Topic'],['quick','Quick Practice'],
+ ['exam','Full Exam'],['concepts','Concepts'],['sheet','Concept Sheet'],
+ ['stats','Statistics'],['leader','Leaderboard'],['store','Store']];
+let cur='dash';
+function buildTabs(){const r=document.getElementById('tabrow');r.innerHTML='';
+ TABS.forEach(([id,label])=>{const b=document.createElement('button');b.textContent=label;b.onclick=()=>go(id);
+  if(id===cur)b.className='active';r.appendChild(b);});}
+function go(id){cur=id;buildTabs();render();window.scrollTo(0,0)}
+
+/* ---------- renderers ---------- */
+const M=()=>document.getElementById('main');
+function render(){({dash:rDash,topic:rTopic,quick:rQuick,exam:rExam,concepts:rConcepts,
+ sheet:rSheet,stats:rStats,leader:rLeader,store:rStore}[cur])()}
+
+function rDash(){
+ const acc=P.answered?Math.round(P.correct/P.answered*100):0;
+ M().innerHTML=`
+ <div class="card" style="background:linear-gradient(120deg,var(--navy),var(--teal));color:#fff;border:0">
+   <span class="pill" style="background:rgba(255,255,255,.2)">${BANK[S.band].label}</span>
+   <h1 style="margin:10px 0 2px">Hi ${esc(S.name)} ${P.avatar} </h1>
+   <p style="margin:0;opacity:.9">Level ${level()} · ${P.xp} XP · 🪙 ${P.coins} coins · 🔥 best streak ${P.best}</p>
+   <div class="progress" style="margin-top:12px;background:rgba(255,255,255,.25)"><i style="width:${xpInLevel()}%"></i></div>
+   <p style="margin:4px 0 0;font-size:.8rem;opacity:.85">${100-xpInLevel()} XP to level ${level()+1}</p>
+ </div>
+ <div class="grid g3" style="margin-top:16px">
+   <div class="tile"><div class="n">${P.answered}</div><div class="l">Questions done</div></div>
+   <div class="tile"><div class="n">${acc}%</div><div class="l">Accuracy</div></div>
+   <div class="tile"><div class="n">${P.exams.length}</div><div class="l">Exams taken</div></div>
+ </div>
+ <div class="card" style="margin-top:16px">
+   <h3 style="margin:0 0 10px">Jump in</h3>
+   <div class="grid g2">
+     <button class="btn" onclick="go('quick')">⚡ Quick Practice (5 Qs)</button>
+     <button class="btn sec" onclick="go('topic')">📚 Practice by Topic</button>
+     <button class="btn sec" onclick="go('exam')">📝 Full Exam</button>
+     <button class="btn sec" onclick="go('concepts')">💡 Study Concepts</button>
+   </div>
+ </div>`;
+}
+
+/* shared single-question player */
+let session=null; // {list,i,mode,examAns}
+function startSession(list,mode){session={list:shuffle(list.slice()),i:0,mode,correctCount:0,examAns:[]};playQ();}
+function playQ(){
+ const q=session.list[session.i];
+ const total=session.list.length;
+ const prog=Math.round(session.i/total*100);
+ M().innerHTML=`<div class="card qbox">
+   <div style="display:flex;justify-content:space-between;align-items:center">
+     <span class="pill">${session.mode}</span>
+     <span class="qnum">Question ${session.i+1} of ${total}${session.mode==='Full Exam'?' · ⏱ '+fmt(examTime):''}</span>
+   </div>
+   <div class="progress" style="margin:12px 0"><i style="width:${prog}%"></i></div>
+   <div class="qtext">${esc(q.q)}</div>
+   <div class="opts" id="opts"></div>
+   <div id="fb"></div>
+   <div id="nav" style="margin-top:16px;display:flex;gap:10px;justify-content:flex-end"></div>
+ </div>`;
+ const K=['A','B','C','D'];
+ const opts=document.getElementById('opts');
+ q.opts.forEach((o,idx)=>{const b=document.createElement('button');b.className='opt';
+   b.innerHTML=`<span class="k">${K[idx]}</span><span>${esc(o)}</span>`;
+   b.onclick=()=>choose(idx,b);opts.appendChild(b);});
+}
+function choose(idx,btn){
+ const q=session.list[session.i];
+ document.querySelectorAll('#opts .opt').forEach((b,i)=>{b.classList.add('locked');
+   if(i===q.a)b.classList.add('correct');});
+ const right=idx===q.a;
+ if(!right)btn.classList.add('wrong');
+ if(session.mode!=='Full Exam'){
+   award(right,q.topic);
+   document.getElementById('fb').innerHTML=`<div class="explain"><b>${right?'Correct! ✅':'Not quite.'}</b> ${esc(q.explain)}</div>`;
+ } else {
+   if(right)session.correctCount++; award(right,q.topic);
+   session.examAns.push({q:q.q,right});
+ }
+ const nav=document.getElementById('nav');
+ const last=session.i>=session.list.length-1;
+ nav.innerHTML=`<button class="btn" onclick="nextQ()">${last?'See results →':'Next question →'}</button>`;
+}
+function nextQ(){ if(session.i>=session.list.length-1){ finishSession(); return;} session.i++; playQ(); }
+function finishSession(){
+ if(session.mode==='Full Exam'){
+   clearInterval(examTimer);
+   const sc=session.correctCount, tot=session.list.length, pct=Math.round(sc/tot*100);
+   P.exams.push({pct,at:Date.now()}); saveP();
+   M().innerHTML=`<div class="card" style="text-align:center">
+     <span class="pill">Exam complete</span>
+     <div class="big" style="margin:16px 0 4px;color:var(--teal-d)">${sc} / ${tot}</div>
+     <div class="muted">${pct}% · ${pct>=80?'Excellent! 🏆':pct>=60?'Good work! 👍':'Keep practising 💪'}</div>
+     <div style="margin-top:18px;display:flex;gap:10px;justify-content:center;flex-wrap:wrap">
+       <button class="btn" onclick="go('exam')">New exam</button>
+       <button class="btn sec" onclick="go('dash')">Dashboard</button>
+     </div></div>`;
+ } else {
+   M().innerHTML=`<div class="card" style="text-align:center">
+     <span class="pill">Set complete 🎉</span>
+     <p style="margin:14px 0">Nice work, ${esc(S.name)}! You earned XP for every correct answer.</p>
+     <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap">
+       <button class="btn" onclick="go('${session.mode==='Quick Practice'?'quick':'topic'}')">Practise more</button>
+       <button class="btn sec" onclick="go('stats')">See stats</button>
+     </div></div>`;
+ }
+ session=null;
+}
+
+function rTopic(){
+ const topics=BANK[S.band].topics;
+ let html=`<div class="card"><h3 style="margin:0 0 4px">Practice by Topic</h3>
+   <p class="muted" style="margin:0 0 16px">${BANK[S.band].label} — pick a topic to practise.</p>
+   <div class="grid g2">`;
+ Object.keys(topics).forEach(t=>{
+   const st=P.perTopic[t]||{a:0,c:0}; const pct=st.a?Math.round(st.c/st.a*100):0;
+   html+=`<div class="topiccard" onclick="startSession(byTopic('${esc(t)}'),'Topic Practice')">
+     <div class="t">${esc(t)}</div>
+     <div class="muted" style="font-size:.82rem">${topics[t].length} questions${st.a?' · '+pct+'% so far':''}</div>
+     <div class="bar"><i style="width:${pct}%"></i></div></div>`;
+ });
+ html+=`</div></div>`; M().innerHTML=html;
+}
+function byTopic(t){return BANK[S.band].topics[t].map(x=>mk(x,t))}
+function allBand(){const o=[];const tp=BANK[S.band].topics;for(const t in tp)tp[t].forEach(x=>o.push(mk(x,t)));return o}
+function mk(x,t){return {q:x[0],opts:x[1],a:x[2],explain:x[3],topic:t}}
+
+function rQuick(){
+ M().innerHTML=`<div class="card" style="text-align:center">
+   <span class="pill">Quick Practice</span>
+   <h3 style="margin:12px 0 4px">5 random questions</h3>
+   <p class="muted">A fast warm-up from across all your topics (${BANK[S.band].label}).</p>
+   <button class="btn" style="margin-top:12px" onclick="startSession(allBand().slice(0,5),'Quick Practice')">Start ⚡</button>
+ </div>`;
+}
+
+let examTime=0, examTimer=null;
+function rExam(){
+ const n=Math.min(20,allBand().length);
+ M().innerHTML=`<div class="card" style="text-align:center">
+   <span class="pill">Full Exam</span>
+   <h3 style="margin:12px 0 4px">${n}-question timed exam</h3>
+   <p class="muted">Just like the real thing — answer all ${n}, no feedback until the end. ${BANK[S.band].label}.</p>
+   <button class="btn" style="margin-top:12px" onclick="beginExam(${n})">Begin exam 📝</button>
+ </div>`;
+}
+function beginExam(n){ startSession(allBand().slice(0,n),'Full Exam');
+ examTime=0; clearInterval(examTimer); examTimer=setInterval(()=>{examTime++;const el=document.querySelector('.qnum');},1000); }
+function fmt(s){return Math.floor(s/60)+':'+String(s%60).padStart(2,'0')}
+
+function rConcepts(){
+ let html=`<div class="card concept"><h3 style="margin:0 0 4px">Concepts to study</h3>
+   <p class="muted" style="margin:0 0 14px">${BANK[S.band].label} — the key ideas behind the questions. Read, then test yourself.</p>`;
+ CONCEPTS[S.band].forEach((c,i)=>{html+=`<details${i===0?' open':''}><summary>${esc(c[0])}</summary>
+   <p style="margin:2px 0 12px">${esc(c[1])}</p></details>`;});
+ html+=`<button class="btn" style="margin-top:8px" onclick="go('quick')">Test yourself ⚡</button></div>`;
+ M().innerHTML=html;
+}
+function rSheet(){
+ let html=`<div class="card"><h3 style="margin:0 0 4px">Concept Sheet (quick reference)</h3>
+   <p class="muted" style="margin:0 0 14px">Your one-page cheat sheet for the ${BANK[S.band].label} exam.</p>
+   <div class="grid g2">`;
+ CONCEPTS[S.band].forEach(c=>{html+=`<div class="tile"><div class="f" style="font-weight:700;margin-bottom:5px;color:var(--teal-d)">${esc(c[0])}</div><div style="font-size:.9rem">${esc(c[1])}</div></div>`;});
+ html+=`</div><p class="disc">Tip: open this on your phone before the exam for a last-minute review.</p></div>`;
+ M().innerHTML=html;
+}
+function rStats(){
+ const acc=P.answered?Math.round(P.correct/P.answered*100):0;
+ let html=`<div class="grid g3">
+   <div class="tile"><div class="n">${P.answered}</div><div class="l">Answered</div></div>
+   <div class="tile"><div class="n">${P.correct}</div><div class="l">Correct</div></div>
+   <div class="tile"><div class="n">${acc}%</div><div class="l">Accuracy</div></div></div>
+   <div class="card" style="margin-top:16px"><h3 style="margin:0 0 12px">Accuracy by topic</h3>`;
+ const tp=BANK[S.band].topics;
+ Object.keys(tp).forEach(t=>{const st=P.perTopic[t]||{a:0,c:0};const pct=st.a?Math.round(st.c/st.a*100):0;
+   html+=`<div style="margin-bottom:12px"><div style="display:flex;justify-content:space-between;font-size:.88rem;font-weight:600"><span>${esc(t)}</span><span class="muted">${st.c}/${st.a}</span></div>
+   <div class="bar" style="height:10px"><i style="width:${pct}%;background:${pct>=70?'var(--green)':pct>=40?'var(--gold)':'var(--coral)'}"></i></div></div>`;});
+ if(P.exams.length){html+=`<h3 style="margin:18px 0 8px">Recent exams</h3>`;
+   P.exams.slice(-6).reverse().forEach(e=>{html+=`<div class="lb-row"><b>${e.pct}%</b><span class="muted" style="margin-left:auto;font-size:.82rem">${new Date(e.at).toLocaleDateString()}</span></div>`;});}
+ html+=`</div>`; M().innerHTML=html;
+}
+function rLeader(){
+ const lb=syncLeaderboard();
+ let html=`<div class="card"><h3 style="margin:0 0 4px">Leaderboard</h3>
+   <p class="muted" style="margin:0 0 12px">Top scores saved on this device. Climb by earning XP!</p>`;
+ lb.slice(0,12).forEach((e,i)=>{const medal=['🥇','🥈','🥉'][i]||'';
+   html+=`<div class="lb-row ${e.me?'me':''}"><span class="rk">${medal||(i+1)}</span>
+     <b>${esc(e.name)}${e.me?' (you)':''}</b>
+     <span style="margin-left:auto;font-weight:700">${e.xp} XP</span>
+     <span class="muted" style="font-size:.78rem;width:54px;text-align:right">Lvl ${e.level}</span></div>`;});
+ html+=`</div>`; M().innerHTML=html;
+}
+const STORE={
+ avatars:[['🤖',0],['🦊',40],['🐼',60],['🚀',80],['🧠',100],['👾',120],['🦉',140],['🐯',160]],
+ themes:[['Default','',0],['Ocean','ocean',50],['Sunset','sunset',70],['Midnight','midnight',90]],
+};
+function rStore(){
+ let html=`<div class="card"><div style="display:flex;justify-content:space-between;align-items:center">
+   <h3 style="margin:0">Store</h3><span class="pill" style="background:var(--gold);color:#241a00">🪙 ${P.coins} coins</span></div>
+   <p class="muted" style="margin:6px 0 16px">Earn coins by answering questions, then spend them here.</p>
+   <h4 class="f" style="margin:0 0 8px">Avatars</h4><div class="grid g3">`;
+ STORE.avatars.forEach(([ic,cost])=>{const owned=P.owned.includes(ic);const on=P.avatar===ic;
+   html+=`<div class="store-item"><div class="ic">${ic}</div>
+     <div style="margin:6px 0">${owned?(on?'<span class="muted">Equipped</span>':'<button class="btn sec" onclick="equipAvatar(\''+ic+'\')">Use</button>'):'<button class="btn gold" onclick="buyAvatar(\''+ic+'\','+cost+')">🪙 '+cost+'</button>'}</div></div>`;});
+ html+=`</div><h4 class="f" style="margin:18px 0 8px">Themes</h4><div class="grid g2">`;
+ STORE.themes.forEach(([name,val,cost])=>{const key='theme:'+val;const owned=cost===0||P.badges.includes(key);const on=(P.theme||'')===val;
+   html+=`<div class="store-item"><div class="f" style="font-weight:700">${name}</div>
+     <div style="margin:8px 0">${owned?(on?'<span class="muted">Active</span>':'<button class="btn sec" onclick="equipTheme(\''+val+'\')">Apply</button>'):'<button class="btn gold" onclick="buyTheme(\''+val+'\','+cost+')">🪙 '+cost+'</button>'}</div></div>`;});
+ html+=`</div></div>`; M().innerHTML=html;
+}
+function buyAvatar(ic,cost){if(P.coins<cost){toast('Not enough coins');return}P.coins-=cost;P.owned.push(ic);P.avatar=ic;saveP();updateHud();rStore();toast('Unlocked '+ic)}
+function equipAvatar(ic){P.avatar=ic;saveP();rStore();updateHud()}
+function buyTheme(val,cost){if(P.coins<cost){toast('Not enough coins');return}P.coins-=cost;P.badges.push('theme:'+val);P.theme=val;applyTheme();saveP();updateHud();rStore();toast('Theme unlocked!')}
+function equipTheme(val){P.theme=val;applyTheme();saveP();rStore()}
+function applyTheme(){if(P.theme)document.documentElement.setAttribute('data-theme',P.theme);else document.documentElement.removeAttribute('data-theme')}
+
+/* ---------- utils ---------- */
+function esc(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function shuffle(a){for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
+let toastT;function toast(m){const t=document.getElementById('toast');t.textContent=m;t.classList.add('show');clearTimeout(toastT);toastT=setTimeout(()=>t.classList.remove('show'),1900)}
+
+/* ---------- boot ---------- */
+function boot(){
+ document.getElementById('gate').classList.add('hide');
+ P=LS.get('co_progress',null)||JSON.parse(JSON.stringify(DEFAULT_P));
+ // migrate missing keys
+ for(const k in DEFAULT_P)if(!(k in P))P[k]=DEFAULT_P[k];
+ saveP(); applyTheme(); updateHud(); buildTabs(); go('dash');
+}
+if(S){seedLeaderboard();boot();}
+</script>
+</body>
+</html>
