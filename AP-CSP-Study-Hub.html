@@ -137,6 +137,84 @@ footer{margin:60px 0 30px; border-top:1px solid var(--line); padding-top:20px; f
 .grid2{display:grid; grid-template-columns:1fr 1fr; gap:16px}
 @media(max-width:760px){.grid2{grid-template-columns:1fr}}
 .notice{font-size:.85rem; color:var(--ink-soft); margin-top:8px}
+
+/* ===== Unit 3 Code Lab (Python · Robot pseudocode · Flowcharts) ===== */
+.lab{border:2px solid var(--teal); border-radius:var(--r); background:#fff; margin:18px 0; overflow:hidden}
+.lab-top{display:flex; flex-wrap:wrap; gap:10px; align-items:center; justify-content:space-between; padding:14px 18px; background:var(--paper); border-bottom:1px solid var(--line)}
+.lab-tabs{display:flex; gap:6px; flex-wrap:wrap}
+.lab-tab{border:1.5px solid var(--line); background:#fff; border-radius:9px; padding:8px 14px; font-weight:700; font-size:.92rem; color:var(--ink)}
+.lab-tab[aria-selected="true"]{background:var(--teal); border-color:var(--teal); color:#fff}
+.lab-name{display:flex; align-items:center; gap:8px; font-size:.85rem; color:var(--ink-soft)}
+.lab-name input{border:1.5px solid var(--line); border-radius:8px; padding:6px 10px; font:inherit; font-size:.9rem; width:170px}
+.lab-panel{padding:18px}
+.lab-panel[hidden]{display:none}
+.lab-intro{color:var(--ink-soft); font-size:.95rem; margin-bottom:12px}
+.lab-acts{display:flex; gap:6px; flex-wrap:wrap; margin:6px 0 14px}
+.lab-act{border:1.5px solid var(--line); background:#fff; border-radius:99px; padding:5px 12px; font-size:.82rem; font-weight:700; color:var(--ink)}
+.lab-act.on{border-color:var(--amber); background:var(--amber-soft); color:#7a4c08}
+.lab-act .done{color:var(--good)}
+.lab-mission{background:var(--amber-soft); border:1.5px solid var(--amber); border-radius:12px; padding:12px 16px; margin-bottom:12px; font-size:.95rem}
+.lab-mission h3{font-size:1.05rem; margin-bottom:6px}
+.lab-mission ol, .lab-mission ul{margin:4px 0 0 20px}
+.lab-mission li{margin:3px 0}
+.lab-grid{display:grid; grid-template-columns:minmax(0,1.15fr) minmax(0,1fr); gap:14px; align-items:start}
+@media(max-width:860px){.lab-grid{grid-template-columns:1fr}}
+.ed-wrap{display:flex; border:1.5px solid #2b3a4c; border-radius:10px; overflow:hidden; background:#1E2A38}
+.ed-gutter{font-family:'JetBrains Mono',monospace; font-size:.85rem; line-height:1.5; color:#7d8ea1; text-align:right; padding:10px 6px 10px 8px; user-select:none; background:#18222e; min-width:38px; overflow:hidden; white-space:pre}
+.ed-gutter .hl{background:var(--amber); color:#1E2A38; border-radius:3px; padding:0 3px}
+.ed{flex:1; font-family:'JetBrains Mono',monospace; font-size:.85rem; line-height:1.5; color:#f3f6f8; background:transparent; border:none; resize:vertical; padding:10px 12px; min-height:300px; outline:none; white-space:pre; overflow:auto; tab-size:4}
+.lab-btns{display:flex; flex-wrap:wrap; gap:6px; margin:10px 0}
+.lab-btns .btn{padding:7px 12px; font-size:.85rem}
+.btn-run{background:var(--good); color:#fff}
+.btn-stop{background:var(--bad); color:#fff}
+.btn-ghost{background:#fff; color:var(--ink); border:1.5px solid var(--line)}
+.lab-status{font-size:.82rem; color:var(--ink-soft); min-height:1.2em}
+.lab-status.ok{color:var(--good)} .lab-status.err{color:var(--bad)}
+.console{font-family:'JetBrains Mono',monospace; font-size:.85rem; background:#0f1720; color:#d7f5dd; border-radius:10px; padding:10px 12px; min-height:150px; max-height:320px; overflow:auto; white-space:pre-wrap; word-break:break-word}
+.console .err{color:#ff9b8f} .console .sys{color:#8fb8ff} .console .in{color:#ffd28a}
+.inrow{display:flex; gap:6px; margin-top:6px}
+.inrow input{flex:1; font-family:'JetBrains Mono',monospace; border:2px solid var(--amber); border-radius:8px; padding:6px 10px}
+.turtle-box{margin-top:10px; border:1.5px solid var(--line); border-radius:10px; overflow:hidden; background:#fff}
+.turtle-box[hidden]{display:none}
+.lab-h4{font-family:'Space Grotesk',sans-serif; font-size:.95rem; margin:6px 0}
+details.lab-hint{margin-top:8px; font-size:.92rem}
+details.lab-hint summary{cursor:pointer; font-weight:700; color:#8a5a10}
+details.lab-hint pre{white-space:pre-wrap; font-family:'JetBrains Mono',monospace; font-size:.82rem; background:var(--paper); border:1px solid var(--line); border-radius:8px; padding:8px 10px; margin-top:6px}
+/* robot */
+.robot-svg{width:100%; height:auto; display:block; background:#fff; border:1.5px solid var(--line); border-radius:10px}
+.robot-tri{transition:transform .25s ease}
+.rob-legend{display:flex; gap:12px; flex-wrap:wrap; font-size:.8rem; color:var(--ink-soft); margin-top:6px}
+.rob-legend span{display:inline-flex; align-items:center; gap:5px}
+.rob-legend i{width:14px; height:14px; border-radius:3px; display:inline-block}
+.speed{display:flex; align-items:center; gap:6px; font-size:.82rem; color:var(--ink-soft)}
+.refcard{font-family:'JetBrains Mono',monospace; font-size:.78rem; background:var(--paper); border:1px solid var(--line); border-radius:10px; padding:10px 12px; margin-top:10px; white-space:pre-wrap; line-height:1.45}
+/* flowchart tracer */
+.fc-svg{width:100%; height:auto; display:block; background:#fff; border:1.5px solid var(--line); border-radius:10px}
+.fc-node .shape{fill:#fff; stroke:#1E2A38; stroke-width:2; transition:fill .2s}
+.fc-node.on .shape{fill:var(--amber)}
+.fc-node.seen .shape{fill:#FFF6E6}
+.fc-node text{font-family:'Atkinson Hyperlegible',sans-serif; font-size:13px; fill:#1E2A38; text-anchor:middle; dominant-baseline:middle}
+.fc-edge{fill:none; stroke:#9aa8b6; stroke-width:2}
+.fc-edge.on{stroke:#E8811F; stroke-width:3.5}
+.fc-lbl{font-family:'JetBrains Mono',monospace; font-size:11px; fill:#46586B; font-weight:700}
+.vartable{width:100%; border-collapse:collapse; font-family:'JetBrains Mono',monospace; font-size:.85rem; margin-bottom:10px}
+.vartable th,.vartable td{border:1px solid var(--line); padding:5px 8px; text-align:left}
+.vartable th{background:var(--paper)}
+.fc-msg{background:var(--paper); border-left:4px solid var(--amber); border-radius:8px; padding:10px 12px; font-size:.95rem; margin-bottom:10px; min-height:2.6em}
+.mm-out{border:1.5px solid var(--line); border-radius:10px; background:#fff; min-height:300px; padding:10px; overflow:auto; display:flex; justify-content:center}
+.mm-out svg{max-width:100%; height:auto}
+.shape-btns{display:flex; flex-wrap:wrap; gap:5px; margin:8px 0}
+.shape-btns button{border:1.5px solid var(--line); background:#fff; border-radius:8px; padding:5px 9px; font-size:.8rem; font-weight:700}
+.checks{list-style:none; margin:8px 0 0; padding:0; font-size:.9rem}
+.checks li{margin:3px 0}
+.checks .y{color:var(--good)} .checks .n{color:var(--ink-soft)}
+.mywork{margin-top:16px; border-top:1px dashed var(--line); padding-top:12px}
+.mywork table{width:100%; border-collapse:collapse; font-size:.85rem}
+.mywork td,.mywork th{border-bottom:1px solid var(--line); padding:5px 6px; text-align:left}
+.lab-sub{display:flex; gap:6px; margin:4px 0 12px; flex-wrap:wrap}
+.lab-sub button{border:1.5px solid var(--line); background:#fff; border-radius:8px; padding:6px 12px; font-weight:700; font-size:.85rem}
+.lab-sub button[aria-selected="true"]{border-color:var(--ink); background:var(--ink); color:#fff}
+
 </style>
 </head>
 <body>
@@ -144,6 +222,7 @@ footer{margin:60px 0 30px; border-top:1px solid var(--line); padding-top:20px; f
   <div class="nav-in">
     <a class="brand" href="#/"><span class="flask">{ }</span> AP CSP Hub</a>
     <div class="navtiles" id="navtiles"></div>
+    <a href="#/lab" style="margin-left:10px; padding:5px 12px; border:1.5px solid #7C5CBF; background:#7C5CBF; border-radius:8px; font-size:.8rem; font-weight:700; text-decoration:none; color:#fff; white-space:nowrap; font-family:inherit; order:2;">💻 Code Lab</a>
     <a href="index.html" style="margin-left:10px; padding:5px 12px; border:1.5px solid var(--ink); border-radius:8px; font-size:.8rem; font-weight:700; text-decoration:none; color:var(--ink); white-space:nowrap; font-family:inherit; order:2;">&larr; Home</a>
     <div class="basis-badge"><img src="basis-logo.png" alt="BASIS International School Bangkok" title="BASIS International School Bangkok"></div>
 </div>
@@ -189,7 +268,8 @@ function route(){
   }
   const h = location.hash || '#/';
   let m;
-  if((m = h.match(/^#\/unit\/([1-9])$/)))      renderUnit(m[1]);
+  if(h==='#/lab') renderLabPage();
+  else if((m = h.match(/^#\/unit\/([1-9])$/)))      renderUnit(m[1]);
   else if((m = h.match(/^#\/test\/([1-9])$/)) && UNITS[m[1]].quiz) renderTestIntro(m[1]);
   else renderHome();
   window.scrollTo(0,0);
@@ -287,6 +367,10 @@ function renderHome(){
       <ul style="margin-left:20px">${HOME.parents.map(p=>`<li style="margin:8px 0">${p}</li>`).join('')}</ul>
     </div>
   </div>
+  <a class="card" href="#/lab" style="display:block; text-decoration:none; color:var(--ink); border:2px solid #7C5CBF">
+    <h2 style="font-size:1.2rem; margin-bottom:6px">💻 New: AP CSP Code Lab</h2>
+    <p>Write and run <b>Python</b>, program the <b>AP pseudocode robot</b>, and <b>simulate and build flowcharts</b> — right here, no sign-up. Your work saves automatically and you can download it to hand in. <b style="color:#7C5CBF">Open the lab →</b></p>
+  </a>
   <div class="card" style="background:var(--ink); color:#fff; border:none">
     <h2 style="font-size:1.2rem; margin-bottom:8px">How the practice tests work</h2>
     <p style="opacity:.9">Units 1–5 each have a growing bank of questions (currently ${Object.keys(DATA.bank).map(u=>DATA.bank[u].length).reduce((a,b)=>a+b,0)} total, more added over the year). Each practice test shuffles that unit's full bank, gives you a visible countdown, and auto-submits when time runs out. You'll get your score plus a question-by-question review with explanations.</p>
@@ -344,6 +428,8 @@ function renderUnit(u){
   <div class="section-h"><span class="tag" style="background:${U.hex}">Python</span><h2>Pseudocode → Python bridge</h2>${MASCOT('clipboard')}</div>
   <div class="card theory">${U.python_ref}</div>` : ''}
 
+  ${u==='3' ? labSection() : ''}
+
   <div class="section-h"><span class="tag" style="background:${U.hex}">Explore</span><h2>Try it hands-on</h2>${MASCOT('magnifier')}</div>
   ${resList(U.resources)}
 
@@ -400,6 +486,17 @@ function renderUnit(u){
     el.hidden = !el.hidden;
     if(b.dataset.t==='sol') b.textContent = el.hidden ? 'Show step-by-step solution' : 'Hide solution';
   }));
+  if(u==='3') initLab();
+}
+
+// ---- standalone Code Lab page (#/lab) ----
+function renderLabPage(){
+  setNav(null);
+  app.innerHTML = `<div class="breadcrumb"><a href="#/">Home</a> → Code Lab</div>
+  <h1 style="margin-top:14px">AP CSP Code Lab</h1>
+  <p style="color:var(--ink-soft); margin-top:6px">Python, AP pseudocode with the robot, and flowcharts — all free, no sign-up. This is the same lab you'll find on the <a href="#/unit/3">Unit 3 page</a>.</p>
+  ${labSection()}`;
+  initLab();
 }
 
 // ---- test ----
@@ -516,6 +613,1350 @@ function submitTest(auto){
   const again = document.getElementById('again');
   if(again) again.addEventListener('click', ()=>startTest(doneUnit));
   window.scrollTo(0,0);
+}
+
+
+// ===================================================================
+//  UNIT 3 CODE LAB — Python Lab · Robot Pseudocode Lab · Flowchart Lab
+//  Runs fully in the browser. No sign-up. Work auto-saves on this device.
+// ===================================================================
+const LAB_LS = 'apcspLab:';
+const SK_URL = 'https://cdn.jsdelivr.net/npm/skulpt@1.2.0/dist/';
+const MERMAID_URL = 'https://cdn.jsdelivr.net/npm/mermaid@11.4.1/dist/mermaid.min.js';
+
+function labSave(key, v){ try{ localStorage.setItem(LAB_LS+key, JSON.stringify({v:v, t:Date.now()})); return true; }catch(e){ return false; } }
+function labLoad(key){ try{ const r = localStorage.getItem(LAB_LS+key); return r ? JSON.parse(r) : null; }catch(e){ return null; } }
+function labDel(key){ try{ localStorage.removeItem(LAB_LS+key); }catch(e){} }
+function labKeys(){ const out=[]; try{ for(let i=0;i<localStorage.length;i++){ const k=localStorage.key(i); if(k && k.startsWith(LAB_LS)) out.push(k.slice(LAB_LS.length)); } }catch(e){} return out.sort(); }
+function labTime(t){ try{ return new Date(t).toLocaleString([], {month:'short', day:'numeric', hour:'2-digit', minute:'2-digit'}); }catch(e){ return ''; } }
+function labHtml(s){ return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+function labStudent(){ const r = labLoad('_name'); return r ? r.v : ''; }
+function labFileBase(){ const n = labStudent().trim().replace(/[^A-Za-z0-9_-]+/g,'_'); return n ? n+'_' : ''; }
+function labDownload(name, text, type){
+  const blob = new Blob([text], {type: type || 'text/plain'});
+  const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = name;
+  document.body.appendChild(a); a.click(); setTimeout(()=>{ URL.revokeObjectURL(a.href); a.remove(); }, 500);
+}
+function labCopy(text, statusEl){
+  const done = ()=>{ if(statusEl){ statusEl.textContent='Copied to clipboard ✓'; statusEl.className='lab-status ok'; } };
+  if(navigator.clipboard && navigator.clipboard.writeText){ navigator.clipboard.writeText(text).then(done, ()=>{}); }
+  else { const t=document.createElement('textarea'); t.value=text; document.body.appendChild(t); t.select(); try{document.execCommand('copy'); done();}catch(e){} t.remove(); }
+}
+function labLoadScript(src){
+  return new Promise((res, rej)=>{
+    const s = document.createElement('script'); s.src = src; s.async = true;
+    s.onload = res; s.onerror = ()=>rej(new Error('Could not load '+src+' — check your internet connection.'));
+    document.head.appendChild(s);
+  });
+}
+
+// ---- simple code editor: textarea + line-number gutter (Tab = 4 spaces, auto-indent) ----
+function labEditor(ta, gutter, onChange, opts){
+  opts = opts || {};
+  const unit = opts.indent || '    ';
+  let hl = 0;
+  function paint(){
+    const n = ta.value.split('\n').length;
+    let h = '';
+    for(let i=1;i<=n;i++) h += (i===hl ? '<span class="hl">'+i+'</span>' : i) + '\n';
+    gutter.innerHTML = h;
+    gutter.scrollTop = ta.scrollTop;
+  }
+  ta.addEventListener('input', ()=>{ paint(); onChange && onChange(); });
+  ta.addEventListener('scroll', ()=>{ gutter.scrollTop = ta.scrollTop; });
+  ta.addEventListener('keydown', e=>{
+    if(e.key === 'Tab'){
+      e.preventDefault();
+      const s = ta.selectionStart, en = ta.selectionEnd;
+      ta.setRangeText(unit, s, en, 'end');
+      ta.dispatchEvent(new Event('input'));
+    } else if(e.key === 'Enter'){
+      const s = ta.selectionStart;
+      const lineStart = ta.value.lastIndexOf('\n', s-1) + 1;
+      const line = ta.value.slice(lineStart, s);
+      let ind = (line.match(/^[ \t]*/)||[''])[0];
+      const t = line.trimEnd();
+      if(t.endsWith(':') || t.endsWith('{')) ind += unit;
+      e.preventDefault();
+      ta.setRangeText('\n'+ind, s, ta.selectionEnd, 'end');
+      ta.dispatchEvent(new Event('input'));
+    }
+  });
+  paint();
+  return {
+    get: ()=>ta.value,
+    set: v=>{ ta.value = v; paint(); },
+    highlight: n=>{ hl = n || 0; paint();
+      if(n){ const lh = parseFloat(getComputedStyle(ta).lineHeight)||20; const y=(n-1)*lh; if(y < ta.scrollTop || y > ta.scrollTop+ta.clientHeight-lh*2) ta.scrollTop = Math.max(0, y-lh*3); } }
+  };
+}
+
+// ---- lab shell ----
+function labSection(standalone){
+  return `
+  <div class="section-h"><span class="tag" style="background:#7C5CBF">Code Lab</span><h2>Practice lab: Python · Robot · Flowcharts</h2></div>
+  <p style="color:var(--ink-soft)">Three free tools that run right here in the hub — <b>no sign-up, no download</b>. Your work <b>saves automatically on this device</b> every time you type. To hand work in, use <b>Download</b> (or Copy) and upload the file where Miss K asks.</p>
+  <div class="lab" id="lab">
+    <div class="lab-top">
+      <div class="lab-tabs" role="tablist">
+        <button class="lab-tab" role="tab" data-tab="py" aria-selected="true">🐍 Python Lab</button>
+        <button class="lab-tab" role="tab" data-tab="rb" aria-selected="false">🤖 Robot Pseudocode Lab</button>
+        <button class="lab-tab" role="tab" data-tab="fc" aria-selected="false">🔀 Flowchart Lab</button>
+        <button class="lab-tab" role="tab" data-tab="mw" aria-selected="false">💾 My saved work</button>
+      </div>
+      <label class="lab-name">Your name <input id="lab-name" placeholder="e.g. Thichar" maxlength="40"></label>
+    </div>
+    <div class="lab-panel" id="lab-py"></div>
+    <div class="lab-panel" id="lab-rb" hidden></div>
+    <div class="lab-panel" id="lab-fc" hidden></div>
+    <div class="lab-panel" id="lab-mw" hidden></div>
+  </div>
+  <div class="section-h"><span class="tag" style="background:#7C5CBF">More tools</span><h2>Other free tools (no sign-up needed)</h2></div>
+  ${resList(LAB_EXTERNAL)}`;
+}
+
+const LAB_EXTERNAL = [
+  {label:'CS++ AP CSP Pseudocode Blocks Editor — drag-and-drop AP pseudocode, includes a Robot mode (no account needed)', url:'https://csplusplus.com/blocks/'},
+  {label:'Python Tutor — watch your Python code run line by line, with every variable drawn as a box', url:'https://pythontutor.com/'},
+  {label:'Programiz Online Python Compiler — quick place to run Python', url:'https://www.programiz.com/python-programming/online-compiler/'},
+  {label:'diagrams.net (draw.io) — free flowchart drawing; save the file to your computer', url:'https://app.diagrams.net/'}
+];
+
+function initLab(){
+  const root = document.getElementById('lab'); if(!root) return;
+  const nameIn = document.getElementById('lab-name');
+  nameIn.value = labStudent();
+  nameIn.addEventListener('input', ()=>labSave('_name', nameIn.value));
+  const tabs = root.querySelectorAll('.lab-tab');
+  const inited = {};
+  function show(t){
+    tabs.forEach(b=>b.setAttribute('aria-selected', b.dataset.tab===t ? 'true':'false'));
+    ['py','rb','fc','mw'].forEach(k=>{ document.getElementById('lab-'+k).hidden = (k!==t); });
+    if(!inited[t] || t==='mw'){ inited[t] = true; ({py:pyInit, rb:rbInit, fc:fcInit, mw:mwInit})[t](); }
+    labSave('_tab', t);
+  }
+  tabs.forEach(b=>b.addEventListener('click', ()=>show(b.dataset.tab)));
+  const last = labLoad('_tab');
+  show(last && ['py','rb','fc'].includes(last.v) ? last.v : 'py');
+}
+
+// ---- My saved work ----
+const LAB_KIND = {py:['🐍 Python','.py'], rb:['🤖 Robot','.txt'], fb:['🔀 Flowchart','.mmd']};
+function labTitleFor(key){
+  const [kind, id] = key.split(':');
+  const list = kind==='py' ? PY_ACTS : kind==='rb' ? RB_LEVELS : kind==='fb' ? FB_ACTS : [];
+  const a = list.find(x=>x.id===id);
+  return (LAB_KIND[kind]?LAB_KIND[kind][0]:kind) + ' — ' + (a ? a.title : id);
+}
+function mwInit(){
+  const el = document.getElementById('lab-mw');
+  const keys = labKeys().filter(k=>/^(py|rb|fb):/.test(k));
+  const rows = keys.map(k=>{ const r=labLoad(k); return `<tr><td>${labTitleFor(k)}</td><td>${r?labTime(r.t):''}</td><td><button class="btn btn-ghost" data-dl="${k}">Download</button></td></tr>`; }).join('');
+  el.innerHTML = `
+   <p class="lab-intro">Everything you have saved in the Code Lab on <b>this device and browser</b>. Saved work stays until you clear your browser data — so download anything you need to hand in.</p>
+   ${keys.length ? `<table class="mywork"><thead><tr><th>Activity</th><th>Last saved</th><th></th></tr></thead><tbody>${rows}</tbody></table>
+   <div class="lab-btns"><button class="btn btn-main" id="mw-all">⬇ Download ALL my work (one file)</button></div>`
+   : `<p><i>Nothing saved yet. Open the Python, Robot, or Flowchart lab and start coding — it saves as you type.</i></p>`}`;
+  el.querySelectorAll('[data-dl]').forEach(b=>b.addEventListener('click', ()=>{
+    const k=b.dataset.dl, r=labLoad(k), kind=k.split(':')[0];
+    labDownload(labFileBase()+k.replace(':','_')+(LAB_KIND[kind]?LAB_KIND[kind][1]:'.txt'), r?r.v:'');
+  }));
+  const all = document.getElementById('mw-all');
+  if(all) all.addEventListener('click', ()=>{
+    let txt = `AP CSP Code Lab — saved work\nStudent: ${labStudent()||'(no name entered)'}\nExported: ${new Date().toLocaleString()}\n`;
+    keys.forEach(k=>{ const r=labLoad(k); txt += `\n${'='.repeat(60)}\n${labTitleFor(k)}   (saved ${r?labTime(r.t):''})\n${'='.repeat(60)}\n${r?r.v:''}\n`; });
+    labDownload(labFileBase()+'AP_CSP_Code_Lab_work.txt', txt);
+  });
+}
+
+// ===================== PYTHON LAB (Skulpt, runs in the browser) =====================
+const PY_ACTS = [
+ {id:'p1', title:'1 · Bubble tea order (variables & math)', concept:'Variables, input, arithmetic',
+  mission:['Run the program and order some drinks.','Add a variable <code>topping_price</code> = 10 baht per drink and include it in the total.','If someone orders 5 or more drinks, they get 15% off — calculate and print the discount price (hint: <code>total * 0.85</code>).'],
+  starter:`# Bubble Tea Shop — variables and math
+# Run it, then complete the mission on the left.
+
+PRICE = 45          # baht per drink (a constant)
+name = input("What is your name? ")
+drinks = int(input("How many drinks? "))
+
+total = drinks * PRICE
+print("Thank you,", name)
+print("Your total is", total, "baht")
+`,
+  hint:`topping_price = 10
+total = drinks * (PRICE + topping_price)
+if drinks >= 5:
+    total = total * 0.85
+print("Your total is", round(total, 2), "baht")`},
+ {id:'p2', title:'2 · Swim meet qualifier (selection)', concept:'IF / ELIF / ELSE, Boolean expressions',
+  mission:['Run the program with 34.2 and with 38.0 — what changes?','Add a <b>gold standard</b>: times of 30.0 or less print "GOLD standard — amazing!".','Use <code>and</code>: if the time is between 35.0 and 36.0 print "So close — keep training!".'],
+  starter:`# Swim Meet Qualifier — selection (IF / ELSE)
+QUALIFY_TIME = 35.0
+
+name = input("Swimmer name: ")
+time = float(input("50m freestyle time (seconds): "))
+
+if time <= QUALIFY_TIME:
+    gap = QUALIFY_TIME - time
+    print(name, "QUALIFIED by", round(gap, 2), "seconds!")
+else:
+    gap = time - QUALIFY_TIME
+    print(name, "needs to be", round(gap, 2), "seconds faster.")
+`,
+  hint:`if time <= 30.0:
+    print("GOLD standard — amazing!")
+elif time <= QUALIFY_TIME:
+    print(name, "QUALIFIED!")
+elif time > 35.0 and time <= 36.0:
+    print("So close — keep training!")
+else:
+    print("Keep practicing!")`},
+ {id:'p3', title:'3 · Lap tracker (iteration & lists)', concept:'FOR loops, accumulators, counters, round-off',
+  mission:['Run it. Why does the average print a long decimal? (round-off error!) Fix it with <code>round(average, 2)</code>.','Add a counter that counts laps <b>faster than</b> the goal.','Find the <b>fastest</b> lap using a loop (don\'t use <code>min()</code>).'],
+  starter:`# Lap Tracker — loops and lists
+lap_times = [42.1, 40.8, 39.5, 41.2, 38.9]
+goal = 40.0
+
+total = 0
+for lap in lap_times:
+    total = total + lap
+
+average = total / len(lap_times)
+print("Laps swum:", len(lap_times))
+print("Average lap:", average)
+`,
+  hint:`fast = 0
+fastest = lap_times[0]
+for lap in lap_times:
+    if lap < goal:
+        fast = fast + 1
+    if lap < fastest:
+        fastest = lap
+print("Laps under goal:", fast)
+print("Fastest lap:", fastest)`},
+ {id:'p4', title:'4 · BTS station finder (list traversal)', concept:'Lists, indexes, linear search',
+  mission:['Run it and search for "Siam". Then search for a station that is NOT in the list.','Print how many stops away the station is from Mo Chit.','Challenge: let the user add a new station with <code>.append()</code> and print the whole list.'],
+  starter:`# BTS Station Finder — traversing a list
+stations = ["Mo Chit", "Saphan Khwai", "Ari", "Sanam Pao", "Victory Monument",
+            "Phaya Thai", "Ratchathewi", "Siam", "Chit Lom", "Phloen Chit"]
+
+target = input("Which station are you looking for? ")
+found = False
+
+for i in range(len(stations)):
+    if stations[i] == target:
+        print(target, "is station number", i + 1, "on the line")
+        found = True
+
+if not found:
+    print("Sorry,", target, "is not on this list.")
+`,
+  hint:`# stops away from Mo Chit = index (Mo Chit is index 0)
+print("Stops from Mo Chit:", i)
+
+new = input("Add a station: ")
+stations.append(new)
+print(stations)`},
+ {id:'p5', title:'5 · Functions with parameters', concept:'Procedures, parameters, return values',
+  mission:['Run it. Find the <b>parameter</b> and the <b>return value</b> in <code>average_lap</code>.','Write a function <code>to_baht(dollars)</code> that returns dollars × 36 and test it with 3 different values.','Write <code>qualifies(time, limit)</code> that returns True or False — then call it inside an <code>if</code>.'],
+  starter:`# Functions — write once, reuse with any input!
+
+def average_lap(laps):
+    total = 0
+    for lap in laps:
+        total = total + lap
+    return round(total / len(laps), 2)
+
+def greet(name, sport):
+    print("Good luck,", name, "— enjoy your", sport, "practice!")
+
+# Calling the functions with different arguments:
+print(average_lap([42.1, 40.8, 39.5]))
+print(average_lap([35.0, 36.2, 34.8, 35.5]))
+greet("Poon", "swim")
+greet("Thichar", "badminton")
+`,
+  hint:`def to_baht(dollars):
+    return dollars * 36
+
+def qualifies(time, limit):
+    return time <= limit
+
+print(to_baht(5))
+if qualifies(34.2, 35.0):
+    print("Qualified!")`},
+ {id:'p6', title:'6 · Turtle art with loops', concept:'Iteration, procedures, abstraction',
+  mission:['Run it to draw a square. Change it to draw a <b>triangle</b> (how many degrees per turn?).','Make a procedure <code>polygon(sides, length)</code> and draw a hexagon.','Challenge: use a loop to draw 12 rotated squares to make a flower.'],
+  starter:`# Turtle Art — loops draw shapes!
+import turtle
+
+t = turtle.Turtle()
+t.speed(5)
+t.color("blue")
+
+for i in range(4):
+    t.forward(100)
+    t.right(90)
+`,
+  hint:`def polygon(sides, length):
+    for i in range(sides):
+        t.forward(length)
+        t.right(360 / sides)
+
+polygon(6, 60)
+
+for i in range(12):
+    polygon(4, 60)
+    t.right(30)`},
+ {id:'p0', title:'★ Free code (my own program)', concept:'Your Create Task practice space',
+  mission:['Use this space for anything: homework, Create Task practice, or your own ideas.','Remember the Create Task needs a <b>list</b>, a <b>procedure with a parameter</b>, <b>selection</b>, and <b>iteration</b>.'],
+  starter:`# My own program
+# Write anything you like here. It saves automatically.
+
+print("Hello from the AP CSP Code Lab!")
+`,
+  hint:`# A Create-Task-shaped skeleton:
+scores = [88, 72, 95, 60]
+
+def count_above(nums, limit):
+    count = 0
+    for n in nums:
+        if n > limit:
+            count = count + 1
+    return count
+
+print(count_above(scores, 80))`}
+];
+
+let pyEd = null, pyAct = null, pyRunning = false, pyInputResolve = null;
+
+function pyInit(){
+  const el = document.getElementById('lab-py');
+  el.innerHTML = `
+   <p class="lab-intro">Real Python 3, running inside the hub. Pick an activity, read the mission, change the code, and press <b>▶ Run</b>. Programs that use <code>input()</code> will ask you in the console. <b>Saved automatically</b> as you type.</p>
+   <div class="lab-acts" id="py-acts"></div>
+   <div class="lab-grid">
+     <div>
+       <div class="lab-mission" id="py-mission"></div>
+       <div class="ed-wrap"><div class="ed-gutter" id="py-gut"></div><textarea class="ed" id="py-ed" spellcheck="false" aria-label="Python code editor"></textarea></div>
+       <div class="lab-btns">
+         <button class="btn btn-run" id="py-run">▶ Run</button>
+         <button class="btn btn-stop" id="py-stop" disabled>■ Stop</button>
+         <button class="btn btn-ghost" id="py-save">💾 Save</button>
+         <button class="btn btn-ghost" id="py-dl">⬇ Download .py</button>
+         <button class="btn btn-ghost" id="py-copy">Copy code</button>
+         <button class="btn btn-ghost" id="py-reset">↺ Start over</button>
+       </div>
+       <div class="lab-status" id="py-status"></div>
+     </div>
+     <div>
+       <div class="lab-h4">Console (output)</div>
+       <div class="console" id="py-out" aria-live="polite"></div>
+       <div class="inrow" id="py-inrow" hidden><input id="py-in" placeholder="Type your answer and press Enter" aria-label="Program input"><button class="btn btn-main" id="py-send">Enter</button></div>
+       <div class="turtle-box" id="py-turtle-box" hidden><div id="py-turtle"></div></div>
+       <details class="lab-hint"><summary>💡 Stuck? Show a hint</summary><pre id="py-hint"></pre></details>
+     </div>
+   </div>`;
+  const ta = document.getElementById('py-ed');
+  let timer = null;
+  pyEd = labEditor(ta, document.getElementById('py-gut'), ()=>{
+    clearTimeout(timer);
+    timer = setTimeout(()=>pySaveNow(true), 600);
+  });
+  document.getElementById('py-run').onclick = pyRun;
+  document.getElementById('py-stop').onclick = pyStop;
+  document.getElementById('py-save').onclick = ()=>pySaveNow(false);
+  document.getElementById('py-dl').onclick = ()=>{ pySaveNow(true); labDownload(labFileBase()+pyAct.id+'_'+pyAct.title.replace(/^[^a-zA-Z]+/,'').replace(/[^A-Za-z0-9]+/g,'_').replace(/_+$/,'')+'.py', pyEd.get(), 'text/x-python'); };
+  document.getElementById('py-copy').onclick = ()=>labCopy(pyEd.get(), document.getElementById('py-status'));
+  document.getElementById('py-reset').onclick = ()=>{
+    if(confirmReset()){ pyEd.set(pyAct.starter); pySaveNow(true); pyStatus('Back to the starter code. (Your old version was replaced.)'); }
+  };
+  const inp = document.getElementById('py-in');
+  const send = ()=>{ if(pyInputResolve){ const v = inp.value; inp.value=''; pyPrint(v+'\n','in'); document.getElementById('py-inrow').hidden = true; const r=pyInputResolve; pyInputResolve=null; r(v); } };
+  inp.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault(); send(); } });
+  document.getElementById('py-send').onclick = send;
+  const last = labLoad('_pyact');
+  pyPick(last && PY_ACTS.find(a=>a.id===last.v) ? last.v : PY_ACTS[0].id);
+}
+function confirmReset(){ return window.confirm('Replace your code with the starter code? Download first if you want to keep it.'); }
+function pyRenderActs(){
+  document.getElementById('py-acts').innerHTML = PY_ACTS.map(a=>`<button class="lab-act ${a.id===pyAct.id?'on':''}" data-a="${a.id}">${labLoad('py:'+a.id)?'<span class="done">●</span> ':''}${a.title}</button>`).join('');
+  document.querySelectorAll('#py-acts .lab-act').forEach(b=>b.onclick=()=>{ if(pyRunning) pyStop(); pySaveNow(true); pyPick(b.dataset.a); });
+}
+function pyPick(id){
+  pyAct = PY_ACTS.find(a=>a.id===id);
+  labSave('_pyact', id);
+  const saved = labLoad('py:'+id);
+  pyEd.set(saved ? saved.v : pyAct.starter);
+  document.getElementById('py-mission').innerHTML = `<h3>🎯 ${pyAct.title}</h3><div style="font-size:.85rem;color:var(--ink-soft);margin-bottom:4px">Big idea: ${pyAct.concept}</div><ol>${pyAct.mission.map(m=>`<li>${m}</li>`).join('')}</ol>`;
+  document.getElementById('py-hint').textContent = pyAct.hint;
+  document.getElementById('py-out').innerHTML = '';
+  document.getElementById('py-turtle-box').hidden = true;
+  pyStatus(saved ? 'Loaded your saved version from '+labTime(saved.t)+'.' : 'Starter code loaded.');
+  pyRenderActs();
+}
+function pySaveNow(quiet){
+  if(!pyAct || !pyEd) return;
+  const isStarter = pyEd.get() === pyAct.starter;
+  if(isStarter && !labLoad('py:'+pyAct.id)) { if(!quiet) pyStatus('Nothing changed yet — edit the code first.'); return; }
+  if(labSave('py:'+pyAct.id, pyEd.get())){ pyStatus('Saved ✓ '+labTime(Date.now()), 'ok'); if(!quiet) pyRenderActs(); }
+  else pyStatus('Could not save in this browser (private mode?). Use Download instead.', 'err');
+}
+function pyStatus(t, cls){ const s=document.getElementById('py-status'); if(s){ s.textContent=t; s.className='lab-status'+(cls?' '+cls:''); } }
+function pyPrint(t, cls){
+  const o = document.getElementById('py-out');
+  const span = document.createElement('span'); if(cls) span.className = cls; span.textContent = t;
+  o.appendChild(span); o.scrollTop = o.scrollHeight;
+}
+function pyAsk(prompt){
+  return new Promise(res=>{
+    if(prompt) pyPrint(prompt, 'in');
+    pyInputResolve = res;
+    document.getElementById('py-inrow').hidden = false;
+    const i = document.getElementById('py-in'); i.focus();
+  });
+}
+function pyBuiltinRead(x){
+  if(Sk.builtinFiles === undefined || Sk.builtinFiles['files'][x] === undefined) throw "File not found: '" + x + "'";
+  return Sk.builtinFiles['files'][x];
+}
+async function pyRun(){
+  if(pyRunning) return;
+  pySaveNow(true);
+  const code = pyEd.get();
+  const out = document.getElementById('py-out'); out.innerHTML = '';
+  pyEd.highlight(0);
+  pyRunning = true;
+  document.getElementById('py-run').disabled = true; document.getElementById('py-stop').disabled = false;
+  try{
+    if(!(window.Sk && Sk.builtinFiles)){
+      pyPrint('Loading Python… (first time only)\n', 'sys');
+      await labLoadScript(SK_URL+'skulpt.min.js');
+      await labLoadScript(SK_URL+'skulpt-stdlib.js');
+      out.innerHTML = '';
+    }
+    const usesTurtle = /\bturtle\b/.test(code);
+    const tb = document.getElementById('py-turtle-box'); tb.hidden = !usesTurtle;
+    document.getElementById('py-turtle').innerHTML = '';
+    (Sk.TurtleGraphics || (Sk.TurtleGraphics = {})).target = 'py-turtle';
+    Sk.TurtleGraphics.width = Math.min(460, Math.max(280, tb.clientWidth-4 || 400)); Sk.TurtleGraphics.height = 320;
+    Sk.configure({
+      output: t=>pyPrint(t),
+      read: pyBuiltinRead,
+      inputfun: p=>pyAsk(p), inputfunTakesPrompt: true,
+      __future__: Sk.python3,
+      execLimit: 15000, yieldLimit: 100, killableWhile: true, killableFor: true
+    });
+    await Sk.misceval.asyncToPromise(()=>Sk.importMainWithBody('<stdin>', false, code, true));
+    pyPrint('\n— program finished —\n', 'sys');
+  }catch(err){
+    let msg = err && err.toString ? err.toString() : String(err);
+    if(/TimeLimitError/.test(msg)) msg = pyStopped ? 'Program stopped.' : 'TimeLimitError: your program ran for 15 seconds — is there an infinite loop?';
+    pyPrint('\n'+msg+'\n', 'err');
+    const m = msg.match(/on line (\d+)/); if(m) pyEd.highlight(+m[1]);
+  }finally{
+    pyRunning = false; pyStopped = false; pyInputResolve = null;
+    document.getElementById('py-inrow').hidden = true;
+    document.getElementById('py-run').disabled = false; document.getElementById('py-stop').disabled = true;
+  }
+}
+let pyStopped = false;
+function pyStop(){
+  if(!pyRunning) return;
+  pyStopped = true;
+  if(window.Sk){ Sk.execLimit = 1; }
+  if(pyInputResolve){ const r = pyInputResolve; pyInputResolve = null; document.getElementById('py-inrow').hidden = true; r(''); }
+}
+
+// ===================== ROBOT PSEUDOCODE LAB (AP CSP exam reference sheet language) =====================
+// Supports: a ← expr · DISPLAY(x) · + - * / MOD · = ≠ < > ≤ ≥ · NOT AND OR · IF/ELSE · REPEAT n TIMES ·
+// REPEAT UNTIL(cond) · FOR EACH x IN list · lists [..] 1-indexed, LENGTH, APPEND, INSERT, REMOVE ·
+// PROCEDURE name(params){ RETURN(x) } · RANDOM(a,b) · MOVE_FORWARD() ROTATE_LEFT() ROTATE_RIGHT()
+// CAN_MOVE(forward|left|right|backward) · GOAL_REACHED()
+
+class PseudoError extends Error{ constructor(msg, line){ super(msg); this.line = line; } }
+class ReturnSignal{ constructor(v){ this.v = v; } }
+
+const PS_KW = new Set(['IF','ELSE','REPEAT','TIMES','UNTIL','FOR','EACH','IN','PROCEDURE','RETURN','NOT','AND','OR','MOD','TRUE','FALSE']);
+
+function psTokenize(src){
+  const toks = []; let i = 0, line = 1;
+  const push = (t, v)=>toks.push({t, v, line});
+  while(i < src.length){
+    const c = src[i];
+    if(c === '\n'){ line++; i++; continue; }
+    if(/\s/.test(c)){ i++; continue; }
+    if((c==='/' && src[i+1]==='/') || c==='#'){ while(i<src.length && src[i]!=='\n') i++; continue; }
+    if(/[0-9]/.test(c) || (c==='.' && /[0-9]/.test(src[i+1]||''))){
+      let j=i; while(j<src.length && /[0-9.]/.test(src[j])) j++;
+      push('num', parseFloat(src.slice(i,j))); i=j; continue;
+    }
+    if(/[A-Za-z_]/.test(c)){
+      let j=i; while(j<src.length && /[A-Za-z0-9_]/.test(src[j])) j++;
+      const w = src.slice(i,j), U = w.toUpperCase();
+      if(PS_KW.has(U)) push('kw', U); else push('id', w);
+      i=j; continue;
+    }
+    if(c==='"' || c==='\'' || c==='“' || c==='”'){
+      const close = c==='“' ? '”' : c; let j=i+1, s='';
+      while(j<src.length && src[j]!==close && !(close==='”' && src[j]==='"') && src[j]!=='\n'){ s+=src[j]; j++; }
+      if(j>=src.length || src[j]==='\n') throw new PseudoError('A text string is missing its closing quote mark.', line);
+      push('str', s); i=j+1; continue;
+    }
+    const two = src.slice(i,i+2);
+    if(two==='<-'){ push('op','←'); i+=2; continue; }
+    if(['<=','>=','!=','=='].includes(two)){ push('op', {'<=':'≤','>=':'≥','!=':'≠','==':'='}[two]); i+=2; continue; }
+    if('←≤≥≠=<>+-*/()[]{},'.includes(c)){ push('op', c==='−'?'-':c); i++; continue; }
+    if(c==='−' || c==='×' || c==='÷'){ push('op', {'−':'-','×':'*','÷':'/'}[c]); i++; continue; }
+    throw new PseudoError(`I don't understand the symbol “${c}”.`, line);
+  }
+  toks.push({t:'eof', v:null, line});
+  return toks;
+}
+
+function psParse(src){
+  const T = psTokenize(src); let p = 0;
+  const peek = (o=0)=>T[p+o];
+  const isOp = (v, o=0)=>T[p+o].t==='op' && T[p+o].v===v;
+  const isKw = (v, o=0)=>T[p+o].t==='kw' && T[p+o].v===v;
+  const next = ()=>T[p++];
+  function expectOp(v, what){
+    if(!isOp(v)) throw new PseudoError(`Expected “${v}”${what?' '+what:''} but found ${desc(peek())}.`, peek().line);
+    return next();
+  }
+  function desc(t){ return t.t==='eof' ? 'the end of the program' : `“${t.v}”`; }
+  function block(){
+    expectOp('{', 'to start a block');
+    const body = [];
+    while(!isOp('}')){
+      if(peek().t==='eof') throw new PseudoError('A block is missing its closing “}”.', peek().line);
+      body.push(stmt());
+    }
+    next();
+    return body;
+  }
+  function stmt(){
+    const t = peek(), line = t.line;
+    if(isKw('IF')){
+      next(); const cond = expr(); const then = block(); let els = null;
+      if(isKw('ELSE')){ next(); els = isKw('IF') ? [stmt()] : block(); }
+      return {k:'if', cond, then, els, line};
+    }
+    if(isKw('REPEAT')){
+      next();
+      if(isKw('UNTIL')){ next(); const cond = expr(); return {k:'until', cond, body:block(), line}; }
+      const n = expr();
+      if(!isKw('TIMES')) throw new PseudoError('REPEAT needs either “n TIMES” or “UNTIL(condition)”.', line);
+      next(); return {k:'times', n, body:block(), line};
+    }
+    if(isKw('FOR')){
+      next(); if(!isKw('EACH')) throw new PseudoError('Write FOR EACH item IN list.', line); next();
+      const v = next(); if(v.t!=='id') throw new PseudoError('FOR EACH needs a variable name.', line);
+      if(!isKw('IN')) throw new PseudoError('Write FOR EACH item IN list.', line); next();
+      const list = expr(); return {k:'foreach', v:v.v, list, body:block(), line};
+    }
+    if(isKw('PROCEDURE')){
+      next(); const nm = next(); if(nm.t!=='id') throw new PseudoError('PROCEDURE needs a name.', line);
+      expectOp('('); const params = [];
+      while(!isOp(')')){ const a = next(); if(a.t!=='id') throw new PseudoError('Parameter names must be words.', line); params.push(a.v); if(isOp(',')) next(); }
+      next(); return {k:'proc', name:nm.v, params, body:block(), line};
+    }
+    if(isKw('RETURN')){
+      next(); let e = null;
+      if(!isOp('}') && peek().t!=='eof') e = expr();
+      return {k:'return', e, line};
+    }
+    if(t.t==='id' && isOp('←',1)){ next(); next(); return {k:'assign', name:t.v, e:expr(), line}; }
+    if(t.t==='id' && isOp('[',1)){
+      const save = p; next(); next(); const idx = expr(); expectOp(']');
+      if(isOp('←')){ next(); return {k:'setidx', name:t.v, idx, e:expr(), line}; }
+      p = save;
+    }
+    if(isOp('←')) throw new PseudoError('The arrow ← needs a variable name on its left.', line);
+    const e = expr();
+    return {k:'expr', e, line};
+  }
+  // precedence climbing
+  function expr(){ return orE(); }
+  function orE(){ let l = andE(); while(isKw('OR')){ const line=next().line; l = {k:'bin', op:'OR', l, r:andE(), line}; } return l; }
+  function andE(){ let l = notE(); while(isKw('AND')){ const line=next().line; l = {k:'bin', op:'AND', l, r:notE(), line}; } return l; }
+  function notE(){ if(isKw('NOT')){ const line=next().line; return {k:'not', e:notE(), line}; } return cmp(); }
+  function cmp(){
+    let l = add();
+    while(peek().t==='op' && ['=','≠','<','>','≤','≥'].includes(peek().v)){ const o = next(); l = {k:'bin', op:o.v, l, r:add(), line:o.line}; }
+    return l;
+  }
+  function add(){ let l = mul(); while(isOp('+')||isOp('-')){ const o=next(); l = {k:'bin', op:o.v, l, r:mul(), line:o.line}; } return l; }
+  function mul(){ let l = unary(); while(isOp('*')||isOp('/')||isKw('MOD')){ const o=next(); l = {k:'bin', op:o.v, l, r:unary(), line:o.line}; } return l; }
+  function unary(){ if(isOp('-')){ const line=next().line; return {k:'neg', e:unary(), line}; } return postfix(); }
+  function postfix(){
+    let e = primary();
+    while(true){
+      if(isOp('(') && e.k==='var'){ next(); const args=[]; while(!isOp(')')){ if(peek().t==='eof') throw new PseudoError('A procedure call is missing “)”.', e.line); args.push(expr()); if(isOp(',')) next(); } next(); e = {k:'call', name:e.name, args, line:e.line}; continue; }
+      if(isOp('[')){ next(); const i = expr(); expectOp(']'); e = {k:'idx', e, i, line:e.line}; continue; }
+      break;
+    }
+    return e;
+  }
+  function primary(){
+    const t = next();
+    if(t.t==='num') return {k:'lit', v:t.v, line:t.line};
+    if(t.t==='str') return {k:'lit', v:t.v, line:t.line};
+    if(t.t==='kw' && (t.v==='TRUE'||t.v==='FALSE')) return {k:'lit', v:t.v==='TRUE', line:t.line};
+    if(t.t==='id') return {k:'var', name:t.v, line:t.line};
+    if(t.t==='op' && t.v==='('){ const e = expr(); expectOp(')'); return e; }
+    if(t.t==='op' && t.v==='['){ const items=[]; while(!isOp(']')){ if(peek().t==='eof') throw new PseudoError('A list is missing “]”.', t.line); items.push(expr()); if(isOp(',')) next(); } next(); return {k:'list', items, line:t.line}; }
+    throw new PseudoError(`Unexpected ${desc(t)} here.`, t.line);
+  }
+  const prog = [];
+  while(peek().t!=='eof') prog.push(stmt());
+  return prog;
+}
+
+// ---- interpreter (generator: yields events so the robot can be animated step by step) ----
+function psRun(prog, world){
+  const globals = new Map(), procs = new Map();
+  let steps = 0;
+  const DIRS = ['N','E','S','W'], DV = {N:[-1,0], E:[0,1], S:[1,0], W:[0,-1]};
+  function fmt(v){ if(Array.isArray(v)) return '[' + v.map(fmt).join(', ') + ']'; if(v===true) return 'true'; if(v===false) return 'false'; if(typeof v==='number') return String(Math.round(v*1e6)/1e6); return String(v); }
+  function lookup(name, sc, line){
+    if(sc.local && sc.local.has(name)) return sc.local.get(name);
+    if(globals.has(name)) return globals.get(name);
+    throw new PseudoError(`The variable “${name}” has not been given a value yet.`, line);
+  }
+  function assign(name, v, sc){
+    if(sc.local && (sc.local.has(name) || !globals.has(name))) sc.local.set(name, v);
+    else globals.set(name, v);
+  }
+  function open(r,c){ return world && r>=0 && c>=0 && r<world.rows && c<world.cols && !world.blocked.has(r+','+c); }
+  function dirTo(rel){ const i = DIRS.indexOf(world.dir); return DIRS[(i + {forward:0,right:1,backward:2,left:3}[rel]) % 4]; }
+  function needWorld(line){ if(!world) throw new PseudoError('There is no robot in this activity.', line); }
+
+  function* evalE(e, sc){
+    switch(e.k){
+      case 'lit': return e.v;
+      case 'var': return lookup(e.name, sc, e.line);
+      case 'list': { const a=[]; for(const it of e.items) a.push(yield* evalE(it, sc)); return a; }
+      case 'neg': { const v = yield* evalE(e.e, sc); if(typeof v!=='number') throw new PseudoError('You can only make a number negative.', e.line); return -v; }
+      case 'not': return !(yield* truthy(e.e, sc));
+      case 'idx': {
+        const L = yield* evalE(e.e, sc), i = yield* evalE(e.i, sc);
+        if(!Array.isArray(L)) throw new PseudoError('Only lists can use [index].', e.line);
+        if(!Number.isInteger(i) || i<1 || i>L.length) throw new PseudoError(`Index ${fmt(i)} is out of range — this list has ${L.length} item(s), so valid indexes are 1 to ${L.length}. (AP lists start at 1!)`, e.line);
+        return L[i-1];
+      }
+      case 'bin': {
+        if(e.op==='AND'){ return (yield* truthy(e.l, sc)) ? (yield* truthy(e.r, sc)) : false; }
+        if(e.op==='OR'){ return (yield* truthy(e.l, sc)) ? true : (yield* truthy(e.r, sc)); }
+        const a = yield* evalE(e.l, sc), b = yield* evalE(e.r, sc);
+        switch(e.op){
+          case '+': if(typeof a==='number' && typeof b==='number') return a+b; return fmt(a)+fmt(b);
+          case '-': case '*': case '/': case 'MOD': {
+            if(typeof a!=='number' || typeof b!=='number') throw new PseudoError(`“${e.op}” needs two numbers.`, e.line);
+            if((e.op==='/'||e.op==='MOD') && b===0) throw new PseudoError('You cannot divide by zero.', e.line);
+            return e.op==='-'?a-b : e.op==='*'?a*b : e.op==='/'?a/b : ((a % b) + b) % b;
+          }
+          case '=': return fmt(a)===fmt(b);
+          case '≠': return fmt(a)!==fmt(b);
+          case '<': return a<b; case '>': return a>b; case '≤': return a<=b; case '≥': return a>=b;
+        }
+        break;
+      }
+      case 'call': return yield* call(e, sc);
+    }
+    throw new PseudoError('Something in this line could not be worked out.', e.line);
+  }
+  function* truthy(e, sc){
+    const v = yield* evalE(e, sc);
+    if(typeof v !== 'boolean') throw new PseudoError(`A condition must be true or false, but this gave ${fmt(v)}.`, e.line);
+    return v;
+  }
+  function* call(e, sc){
+    const N = e.name.toUpperCase(), line = e.line;
+    const args = [];
+    if(N==='CAN_MOVE'){
+      needWorld(line);
+      const a = e.args[0];
+      let rel = a && a.k==='var' ? a.name.toLowerCase() : a && a.k==='lit' ? String(a.v).toLowerCase() : '';
+      if(!['forward','left','right','backward'].includes(rel)) throw new PseudoError('CAN_MOVE needs forward, left, right, or backward.', line);
+      const [dr,dc] = DV[dirTo(rel)];
+      return open(world.r+dr, world.c+dc);
+    }
+    for(const a of e.args) args.push(yield* evalE(a, sc));
+    switch(N){
+      case 'MOVE_FORWARD': {
+        needWorld(line);
+        const [dr,dc] = DV[world.dir], nr = world.r+dr, nc = world.c+dc;
+        if(!open(nr,nc)){ yield {ev:'bump', line}; throw new PseudoError('CRASH! The robot tried to move into a blocked square or off the grid, so the program stops (just like on the AP exam). Check CAN_MOVE first.', line); }
+        world.r = nr; world.c = nc; yield {ev:'move', line}; return;
+      }
+      case 'ROTATE_LEFT': needWorld(line); world.dir = DIRS[(DIRS.indexOf(world.dir)+3)%4]; yield {ev:'turn', line}; return;
+      case 'ROTATE_RIGHT': needWorld(line); world.dir = DIRS[(DIRS.indexOf(world.dir)+1)%4]; yield {ev:'turn', line}; return;
+      case 'GOAL_REACHED': case 'GOALREACHED': needWorld(line); return world.r===world.gr && world.c===world.gc;
+      case 'DISPLAY': yield {ev:'display', text: args.map(fmt).join(' ')+' ', line}; return;
+      case 'LENGTH': if(!Array.isArray(args[0])) throw new PseudoError('LENGTH needs a list.', line); return args[0].length;
+      case 'APPEND': if(!Array.isArray(args[0])) throw new PseudoError('APPEND needs a list first.', line); args[0].push(args[1]); return;
+      case 'INSERT': { const [L,i,v] = args; if(!Array.isArray(L)) throw new PseudoError('INSERT needs a list first.', line); if(!Number.isInteger(i)||i<1||i>L.length+1) throw new PseudoError(`INSERT index ${fmt(i)} is out of range.`, line); L.splice(i-1,0,v); return; }
+      case 'REMOVE': { const [L,i] = args; if(!Array.isArray(L)) throw new PseudoError('REMOVE needs a list first.', line); if(!Number.isInteger(i)||i<1||i>L.length) throw new PseudoError(`REMOVE index ${fmt(i)} is out of range.`, line); L.splice(i-1,1); return; }
+      case 'RANDOM': { const [a,b] = args; return a + Math.floor(Math.random()*(b-a+1)); }
+      case 'INPUT': { const v = yield {ev:'input', line}; return v; }
+    }
+    const pr = procs.get(e.name) || procs.get(N) || [...procs.entries()].find(([k])=>k.toUpperCase()===N)?.[1];
+    if(!pr) throw new PseudoError(`There is no procedure called “${e.name}”. Check the spelling, or define it with PROCEDURE before you use it.`, line);
+    if(args.length !== pr.params.length) throw new PseudoError(`${pr.name} needs ${pr.params.length} argument(s) but got ${args.length}.`, line);
+    const local = new Map(); pr.params.forEach((n,i)=>local.set(n, args[i]));
+    try{ yield* execBlock(pr.body, {local}); }
+    catch(x){ if(x instanceof ReturnSignal) return x.v; throw x; }
+    return undefined;
+  }
+  function* execBlock(stmts, sc){ for(const s of stmts) yield* exec(s, sc); }
+  function* exec(s, sc){
+    if(++steps > 20000) throw new PseudoError('Your program ran more than 20,000 steps — it is probably stuck in an infinite loop. Check that your REPEAT UNTIL condition can become true.', s.line);
+    yield {ev:'line', line:s.line};
+    switch(s.k){
+      case 'assign': assign(s.name, yield* evalE(s.e, sc), sc); return;
+      case 'setidx': {
+        const L = lookup(s.name, sc, s.line), i = yield* evalE(s.idx, sc);
+        if(!Array.isArray(L)) throw new PseudoError(`${s.name} is not a list.`, s.line);
+        if(!Number.isInteger(i)||i<1||i>L.length) throw new PseudoError(`Index ${fmt(i)} is out of range (1 to ${L.length}).`, s.line);
+        L[i-1] = yield* evalE(s.e, sc); return;
+      }
+      case 'expr': yield* evalE(s.e, sc); return;
+      case 'if': if(yield* truthy(s.cond, sc)) yield* execBlock(s.then, sc); else if(s.els) yield* execBlock(s.els, sc); return;
+      case 'times': {
+        const n = yield* evalE(s.n, sc);
+        if(typeof n!=='number' || n<0) throw new PseudoError('REPEAT n TIMES needs a whole number.', s.line);
+        for(let i=0;i<Math.floor(n);i++) yield* execBlock(s.body, sc);
+        return;
+      }
+      case 'until': while(!(yield* truthy(s.cond, sc))){ yield* execBlock(s.body, sc); yield {ev:'line', line:s.line}; if(++steps > 20000) throw new PseudoError('REPEAT UNTIL looped more than 20,000 times — the condition never became true (infinite loop).', s.line); } return;
+      case 'foreach': {
+        const L = yield* evalE(s.list, sc);
+        if(!Array.isArray(L)) throw new PseudoError('FOR EACH needs a list.', s.line);
+        for(const item of L.slice()){ assign(s.v, item, sc); yield* execBlock(s.body, sc); }
+        return;
+      }
+      case 'proc': procs.set(s.name, s); return;
+      case 'return': throw new ReturnSignal(s.e ? (yield* evalE(s.e, sc)) : undefined);
+    }
+  }
+  return (function*(){
+    // hoist procedures so they can be called before they are written
+    for(const s of prog) if(s.k==='proc') procs.set(s.name, s);
+    try{ yield* execBlock(prog, {local:null}); }
+    catch(x){ if(x instanceof ReturnSignal) return; throw x; }
+  })();
+}
+
+// ---------- Robot levels (map rows: R = robot start, G = goal, # = blocked, . = open) ----------
+const RB_LEVELS = [
+ {id:'r1', title:'1 · First steps', dir:'E', map:['#####','R...G','#####'],
+  goal:'Drive the robot (the triangle) to the gold square.',
+  tip:'Each MOVE_FORWARD() moves one square in the direction the triangle points.',
+  starter:`// Level 1 — First steps
+// The robot points the way the triangle points.
+MOVE_FORWARD()
+`},
+ {id:'r2', title:'2 · Turn the corner', dir:'E', map:['R...#','###.#','###.#','###G#'],
+  goal:'Reach the goal around the corner.',
+  tip:'ROTATE_RIGHT() turns the robot 90° clockwise without moving it.',
+  starter:`// Level 2 — Turn the corner
+MOVE_FORWARD()
+MOVE_FORWARD()
+`},
+ {id:'r3', title:'3 · Long hallway (REPEAT)', dir:'E', map:['R.......','#######.','#######.','#######.','#######G'],
+  goal:'Reach the goal using no more than 6 lines of code.',
+  tip:'REPEAT 7 TIMES { MOVE_FORWARD() } is much shorter than writing MOVE_FORWARD() seven times. Shorter code = less to debug!',
+  maxLines:6,
+  starter:`// Level 3 — Long hallway
+// Use REPEAT n TIMES { ... } to keep your code short.
+REPEAT 2 TIMES
+{
+    MOVE_FORWARD()
+}
+`},
+ {id:'r4', title:'4 · Staircase (pattern)', dir:'N', map:['###.G','##..#','#..##','..###','R####'],
+  goal:'Climb the staircase. Find the pattern that repeats!',
+  tip:'Each step is: move, turn right, move, turn left. Put that pattern inside a REPEAT.',
+  maxLines:9,
+  starter:`// Level 4 — Staircase
+// Find the pattern, then repeat it.
+MOVE_FORWARD()
+ROTATE_RIGHT()
+`},
+ {id:'r5', title:'5 · Maze (REPEAT UNTIL + CAN_MOVE)', dir:'E', map:['R..###','##.###','##...#','####.#','#G...#','######'],
+  goal:'Write ONE algorithm that solves the maze without counting squares: keep going until GOAL_REACHED().',
+  tip:'Inside REPEAT UNTIL(GOAL_REACHED()) — IF you CAN_MOVE(forward), move. ELSE check CAN_MOVE(left) and turn left, ELSE turn right. This is a real AP exam pattern!',
+  starter:`// Level 5 — Maze
+// Use REPEAT UNTIL, IF / ELSE and CAN_MOVE(direction)
+REPEAT UNTIL(GOAL_REACHED())
+{
+    IF(CAN_MOVE(forward))
+    {
+        MOVE_FORWARD()
+    }
+}
+`},
+ {id:'r6', title:'6 · Spiral (PROCEDURE with a parameter)', dir:'E', map:['R.....','...G#.','.####.','.####.','.####.','......'],
+  goal:'Write a procedure moveAndTurn(steps) and call it 5 times with different arguments to reach the goal.',
+  tip:'Calls needed: moveAndTurn(5), moveAndTurn(5), moveAndTurn(5), moveAndTurn(4), moveAndTurn(3). The parameter makes ONE procedure work for every side.',
+  starter:`// Level 6 — Spiral
+// A procedure with a PARAMETER: write it once, reuse it with different numbers.
+PROCEDURE moveAndTurn(steps)
+{
+    REPEAT steps TIMES
+    {
+        MOVE_FORWARD()
+    }
+    ROTATE_RIGHT()
+}
+
+moveAndTurn(5)
+`},
+ {id:'r7', title:'7 · Lists & DISPLAY (no robot moves needed)', dir:'E', map:['R...','....','...G'],
+  goal:'Practice AP pseudocode with lists: complete the program so it DISPLAYs the average lap time and how many laps were under 40.',
+  tip:'Use FOR EACH lap IN laps, an accumulator (total ← total + lap) and a counter. LENGTH(laps) gives the number of items. Remember: AP lists start at index 1.',
+  noGoal:true,
+  starter:`// Level 7 — Lists in AP pseudocode
+laps ← [42.1, 40.8, 39.5, 41.2, 38.9]
+total ← 0
+FOR EACH lap IN laps
+{
+    total ← total + lap
+}
+DISPLAY("Total:")
+DISPLAY(total)
+DISPLAY("First lap:")
+DISPLAY(laps[1])
+`},
+ {id:'r8', title:'★ Free play', dir:'E', map:['R.....#','.##.#..','..#....','#...##.','..#...G'],
+  goal:'Free practice: solve this grid any way you like — then try to solve it with the shortest code you can.',
+  tip:'Try reusing your Level 5 maze algorithm. Does it work here? Why or why not?',
+  starter:`// Free play
+MOVE_FORWARD()
+`}
+];
+
+const RB_REF = `AP PSEUDOCODE QUICK REFERENCE
+a ← expression          assign a value
+DISPLAY(x)              show a value
+x MOD y   + - * /       math
+= ≠ < > ≤ ≥             compare
+NOT  AND  OR            logic
+IF(condition) { }  ELSE { }
+REPEAT n TIMES { }
+REPEAT UNTIL(condition) { }
+FOR EACH item IN list { }
+list ← [1, 2, 3]   list[1] is the FIRST item
+LENGTH(list)  APPEND(list, x)
+INSERT(list, i, x)  REMOVE(list, i)
+PROCEDURE name(p1, p2) { RETURN(x) }
+ROBOT:  MOVE_FORWARD()  ROTATE_LEFT()
+        ROTATE_RIGHT()  GOAL_REACHED()
+        CAN_MOVE(forward | left | right | backward)
+Tip: type <- for ←, != for ≠, <= for ≤, >= for ≥`;
+
+let rbEd = null, rbLvl = null, rbWorld = null, rbGen = null, rbTimer = null, rbMode = 'idle', rbPendingErr = null;
+
+function rbParseMap(L){
+  const rows = L.map.length, cols = L.map[0].length, blocked = new Set();
+  let r0=0,c0=0,gr=-1,gc=-1;
+  L.map.forEach((row,r)=>[...row].forEach((ch,c)=>{ if(ch==='#') blocked.add(r+','+c); if(ch==='R'){r0=r;c0=c;} if(ch==='G'){gr=r;gc=c;} }));
+  return {rows, cols, blocked, r:r0, c:c0, dir:L.dir, gr, gc, trail:[[r0,c0]]};
+}
+function rbInit(){
+  const el = document.getElementById('lab-rb');
+  el.innerHTML = `
+   <p class="lab-intro">Program the robot using the <b>exact pseudocode from the AP exam reference sheet</b>. The triangle shows which way the robot faces. Use <b>Step</b> to run one line at a time and watch the highlighted line — this is how you trace code on the exam. Saved automatically.</p>
+   <div class="lab-acts" id="rb-acts"></div>
+   <div class="lab-grid">
+     <div>
+       <div class="lab-mission" id="rb-mission"></div>
+       <div class="ed-wrap"><div class="ed-gutter" id="rb-gut"></div><textarea class="ed" id="rb-ed" spellcheck="false" aria-label="Pseudocode editor"></textarea></div>
+       <div class="lab-btns">
+         <button class="btn btn-run" id="rb-run">▶ Run</button>
+         <button class="btn btn-main" id="rb-step">⏭ Step</button>
+         <button class="btn btn-ghost" id="rb-reset">⟲ Reset robot</button>
+         <button class="btn btn-ghost" id="rb-save">💾 Save</button>
+         <button class="btn btn-ghost" id="rb-dl">⬇ Download</button>
+         <button class="btn btn-ghost" id="rb-copy">Copy</button>
+         <button class="btn btn-ghost" id="rb-start">↺ Start over</button>
+       </div>
+       <div class="lab-status" id="rb-status"></div>
+       <details class="lab-hint"><summary>📄 AP pseudocode reference</summary><pre>${labHtml(RB_REF)}</pre></details>
+     </div>
+     <div>
+       <div id="rb-grid"></div>
+       <div class="rob-legend"><span><i style="background:#7C5CBF"></i>robot</span><span><i style="background:#F2C14E"></i>goal</span><span><i style="background:#46586B"></i>blocked</span><span><i style="background:#E9E2FA"></i>path</span>
+         <label class="speed">Speed <input type="range" id="rb-speed" min="1" max="10" value="5" aria-label="Animation speed"></label></div>
+       <div class="lab-h4" style="margin-top:10px">DISPLAY output</div>
+       <div class="console" id="rb-out" style="min-height:70px"></div>
+       <details class="lab-hint"><summary>💡 Hint</summary><pre id="rb-tip"></pre></details>
+     </div>
+   </div>`;
+  let t = null;
+  rbEd = labEditor(document.getElementById('rb-ed'), document.getElementById('rb-gut'), ()=>{ clearTimeout(t); t = setTimeout(()=>rbSaveNow(true), 600); if(rbMode!=='idle') rbResetWorld(); });
+  document.getElementById('rb-run').onclick = ()=>rbGo('run');
+  document.getElementById('rb-step').onclick = ()=>rbGo('step');
+  document.getElementById('rb-reset').onclick = ()=>{ rbResetWorld(); rbStatus('Robot back at the start.'); };
+  document.getElementById('rb-save').onclick = ()=>rbSaveNow(false);
+  document.getElementById('rb-dl').onclick = ()=>{ rbSaveNow(true); labDownload(labFileBase()+'robot_'+rbLvl.id+'.txt', rbEd.get()); };
+  document.getElementById('rb-copy').onclick = ()=>labCopy(rbEd.get(), document.getElementById('rb-status'));
+  document.getElementById('rb-start').onclick = ()=>{ if(confirmReset()){ rbEd.set(rbLvl.starter); rbSaveNow(true); rbResetWorld(); } };
+  const last = labLoad('_rblvl');
+  rbPick(last && RB_LEVELS.find(l=>l.id===last.v) ? last.v : RB_LEVELS[0].id);
+}
+function rbRenderActs(){
+  const done = (labLoad('_rbdone')||{v:[]}).v;
+  document.getElementById('rb-acts').innerHTML = RB_LEVELS.map(l=>`<button class="lab-act ${l.id===rbLvl.id?'on':''}" data-l="${l.id}">${done.includes(l.id)?'<span class="done">★</span> ':''}${l.title}</button>`).join('');
+  document.querySelectorAll('#rb-acts .lab-act').forEach(b=>b.onclick=()=>{ rbSaveNow(true); rbPick(b.dataset.l); });
+}
+function rbPick(id){
+  rbStop();
+  rbLvl = RB_LEVELS.find(l=>l.id===id);
+  labSave('_rblvl', id);
+  const saved = labLoad('rb:'+id);
+  rbEd.set(saved ? saved.v : rbLvl.starter);
+  document.getElementById('rb-mission').innerHTML = `<h3>🎯 ${rbLvl.title}</h3><p>${rbLvl.goal}</p>${rbLvl.maxLines?`<p style="margin-top:6px"><b>Challenge:</b> use at most ${rbLvl.maxLines} lines (blank lines and // comments don't count).</p>`:''}`;
+  document.getElementById('rb-tip').textContent = rbLvl.tip;
+  rbResetWorld();
+  rbStatus(saved ? 'Loaded your saved version from '+labTime(saved.t)+'.' : 'Starter code loaded.');
+  rbRenderActs();
+}
+function rbSaveNow(quiet){
+  if(!rbLvl || !rbEd) return;
+  if(rbEd.get()===rbLvl.starter && !labLoad('rb:'+rbLvl.id)){ if(!quiet) rbStatus('Nothing changed yet — edit the code first.'); return; }
+  if(labSave('rb:'+rbLvl.id, rbEd.get())){ if(!quiet){ rbStatus('Saved ✓ '+labTime(Date.now()), 'ok'); rbRenderActs(); } }
+  else rbStatus('Could not save in this browser. Use Download instead.', 'err');
+}
+function rbStatus(t, cls){ const s=document.getElementById('rb-status'); if(s){ s.textContent=t; s.className='lab-status'+(cls?' '+cls:''); } }
+function rbResetWorld(){
+  rbStop(); rbGen = null; rbMode = 'idle';
+  rbWorld = rbParseMap(rbLvl);
+  document.getElementById('rb-out').textContent = '';
+  rbEd.highlight(0);
+  rbDraw(false);
+}
+function rbDraw(bump){
+  const W = rbWorld, S = 52, pad = 2;
+  const w = W.cols*S+pad*2, h = W.rows*S+pad*2;
+  let g = '';
+  for(let r=0;r<W.rows;r++) for(let c=0;c<W.cols;c++){
+    const x = pad+c*S, y = pad+r*S, b = W.blocked.has(r+','+c);
+    g += `<rect x="${x}" y="${y}" width="${S}" height="${S}" fill="${b?'#46586B':'#fff'}" stroke="#DEE6E4"/>`;
+  }
+  W.trail.forEach(([r,c])=>{ g += `<rect x="${pad+c*S+3}" y="${pad+r*S+3}" width="${S-6}" height="${S-6}" rx="6" fill="#E9E2FA"/>`; });
+  if(W.gr>=0 && !rbLvl.noGoal){ const x=pad+W.gc*S, y=pad+W.gr*S; g += `<rect x="${x+3}" y="${y+3}" width="${S-6}" height="${S-6}" rx="6" fill="#F2C14E"/><text x="${x+S/2}" y="${y+S/2+1}" text-anchor="middle" dominant-baseline="middle" font-size="22">★</text>`; }
+  const ang = {N:0,E:90,S:180,W:270}[W.dir];
+  const cx = pad+W.c*S+S/2, cy = pad+W.r*S+S/2;
+  g += `<g class="robot-tri" style="transform:translate(${cx}px,${cy}px) rotate(${ang}deg)"><polygon points="0,-18 15,14 -15,14" fill="${bump?'#C0392B':'#7C5CBF'}" stroke="#fff" stroke-width="2.5"/></g>`;
+  document.getElementById('rb-grid').innerHTML = `<svg class="robot-svg" viewBox="0 0 ${w} ${h}" role="img" aria-label="Robot grid">${g}</svg>`;
+}
+function rbCountLines(code){ return code.split('\n').filter(l=>{ const t=l.trim(); return t && !t.startsWith('//') && !t.startsWith('#') && t!=='{' && t!=='}'; }).length; }
+function rbGo(mode){
+  if(rbMode==='done' || rbMode==='error') rbResetWorld();
+  if(!rbGen){
+    rbSaveNow(true);
+    let prog;
+    try{ prog = psParse(rbEd.get()); }
+    catch(e){ rbFail(e); return; }
+    rbWorld = rbParseMap(rbLvl); document.getElementById('rb-out').textContent=''; rbDraw(false);
+    rbGen = psRun(prog, rbWorld);
+    rbStatus('Running…');
+  }
+  if(mode==='step'){ rbStop(); rbMode='step'; rbStepOnce(true); }
+  else { rbMode='run'; rbLoop(); }
+}
+function rbDelay(){ const v = +document.getElementById('rb-speed').value; return Math.round(560 - v*52); }
+function rbLoop(){
+  clearTimeout(rbTimer);
+  if(rbMode!=='run') return;
+  const res = rbStepOnce(false);
+  if(res === 'end') return;
+  rbTimer = setTimeout(rbLoop, res==='visual' ? rbDelay() : (rbDelay()>300?40:0));
+}
+function rbStop(){ clearTimeout(rbTimer); if(rbMode==='run') rbMode='paused'; }
+// returns 'visual' if the robot moved/turned/displayed, 'line' for a plain step, 'end' when finished
+function rbStepOnce(stopAtLine){
+  let guard = 0;
+  while(true){
+    let r;
+    try{ r = rbGen.next(); }
+    catch(e){ rbFail(e); return 'end'; }
+    if(r.done){ rbFinish(); return 'end'; }
+    const ev = r.value;
+    if(ev.line) rbEd.highlight(ev.line);
+    if(ev.ev==='move'){ rbWorld.trail.push([rbWorld.r, rbWorld.c]); rbDraw(false); return 'visual'; }
+    if(ev.ev==='turn'){ rbDraw(false); return 'visual'; }
+    if(ev.ev==='bump'){ rbDraw(true); continue; }
+    if(ev.ev==='display'){ const o=document.getElementById('rb-out'); o.textContent += ev.text; return 'visual'; }
+    if(ev.ev==='input'){ continue; }
+    if(ev.ev==='line'){ if(stopAtLine) { rbStatus('Paused on line '+ev.line+'. Press Step again for the next line.'); return 'line'; } if(++guard > 400) return 'line'; }
+  }
+}
+function rbFail(e){
+  rbStop(); rbMode='error'; rbGen=null;
+  if(e && e.line) rbEd.highlight(e.line);
+  rbStatus((e && e.line ? 'Line '+e.line+': ' : '') + (e && e.message ? e.message : String(e)), 'err');
+}
+function rbFinish(){
+  rbStop(); rbMode='done'; rbGen=null; rbEd.highlight(0);
+  const W = rbWorld, L = rbLvl;
+  if(L.noGoal){ rbStatus('Program finished ✓ — check the DISPLAY output.', 'ok'); rbMarkDone(); return; }
+  if(W.r===W.gr && W.c===W.gc){
+    const n = rbCountLines(rbEd.get());
+    if(L.maxLines && n > L.maxLines){ rbStatus(`You reached the goal 🎉 — but used ${n} lines. Can you do it in ${L.maxLines} or fewer with REPEAT?`, 'ok'); return; }
+    rbStatus('★ GOAL REACHED! Great algorithm. Level complete and saved.', 'ok'); rbMarkDone();
+  } else rbStatus('The program ended but the robot is not on the goal yet. Trace it with Step to see where it goes wrong.', 'err');
+}
+function rbMarkDone(){
+  const d = (labLoad('_rbdone')||{v:[]}).v; if(!d.includes(rbLvl.id)){ d.push(rbLvl.id); labSave('_rbdone', d); }
+  rbSaveNow(true); rbRenderActs();
+}
+
+// ===================== FLOWCHART LAB =====================
+// Part A: Flowchart Simulator — step through a flowchart and watch variables change.
+// Part B: Flowchart Builder — write simple Mermaid text, see your flowchart drawn live, save & download.
+
+// node types: term (start/end oval), proc (rectangle), io (parallelogram), dec (diamond)
+const FC_CHARTS = [
+ {id:'swim', title:'Selection · Swim qualifier', w:400, h:430, input:{label:'Swimmer time (seconds)', value:'34.2', key:'time'},
+  q:'Before you step: if the time is 35.0 exactly, which output will appear? Test it!',
+  nodes:{ s:{t:'term',x:200,y:34,txt:'Start'}, i:{t:'io',x:200,y:104,txt:'INPUT time'},
+          d:{t:'dec',x:200,y:194,txt:'time ≤ 35 ?'}, y:{t:'io',x:95,y:296,txt:'DISPLAY "Qualified!"'},
+          n:{t:'io',x:305,y:296,txt:'DISPLAY "Keep training"'}, e:{t:'term',x:200,y:392,txt:'End'} },
+  edges:[['s','i'],['i','d'],['d','y','Yes',[[120,194],[95,194],[95,277]]],['d','n','No',[[280,194],[305,194],[305,277]]],['y','e','',[[95,315],[95,392],[150,392]]],['n','e','',[[305,315],[305,392],[250,392]]]],
+  run: function*(V,out,inp){
+    yield {n:'s', m:'Start: the algorithm begins at the oval.'};
+    V.time = parseFloat(inp); if(isNaN(V.time)) V.time = 0;
+    yield {n:'i', m:`INPUT: the user types ${V.time}, so time ← ${V.time}.`};
+    const c = V.time <= 35;
+    yield {n:'d', m:`Decision: is ${V.time} ≤ 35? That is ${c?'TRUE → follow the Yes arrow':'FALSE → follow the No arrow'}.`};
+    if(c){ out.push('Qualified!'); yield {n:'y', m:'Output: "Qualified!" is displayed.'}; }
+    else { out.push('Keep training'); yield {n:'n', m:'Output: "Keep training" is displayed.'}; }
+    yield {n:'e', m:'End: the algorithm stops. Only ONE branch of a selection runs.'};
+  }},
+ {id:'count', title:'Iteration · Countdown loop', w:480, h:470, input:{label:'Start counting from', value:'3', key:'count'},
+  q:'Predict: how many times will the diamond be checked if you start from 3? (Hint: it is NOT 3.)',
+  nodes:{ s:{t:'term',x:170,y:34,txt:'Start'}, a:{t:'proc',x:170,y:100,txt:'count ← start'},
+          d:{t:'dec',x:170,y:186,txt:'count > 0 ?'}, p:{t:'io',x:170,y:280,txt:'DISPLAY count'},
+          q:{t:'proc',x:170,y:350,txt:'count ← count − 1'}, x:{t:'io',x:375,y:280,txt:'DISPLAY "Blast off!"'},
+          e:{t:'term',x:375,y:420,txt:'End'} },
+  edges:[['s','a'],['a','d'],['d','p','Yes'],['p','q'],['q','d','',[[85,350],[40,350],[40,186],[90,186]]],['d','x','No',[[250,186],[375,186],[375,261]]],['x','e']],
+  run: function*(V,out,inp){
+    yield {n:'s', m:'Start.'};
+    V.count = parseInt(inp); if(isNaN(V.count)) V.count = 3; if(V.count>8) V.count = 8;
+    yield {n:'a', m:`count ← ${V.count}`};
+    while(true){
+      const c = V.count > 0;
+      yield {n:'d', m:`Check the condition: is ${V.count} > 0? ${c?'TRUE → go around the loop again':'FALSE → leave the loop'}.`};
+      if(!c) break;
+      out.push(String(V.count)); yield {n:'p', m:`Display ${V.count}.`};
+      V.count = V.count - 1; yield {n:'q', m:`count ← count − 1, so count is now ${V.count}. The arrow goes BACK to the diamond — that is what makes it a loop.`};
+    }
+    out.push('Blast off!'); yield {n:'x', m:'Display "Blast off!"'};
+    yield {n:'e', m:'End. The condition was checked one extra time — the last check is the one that is false.'};
+  }},
+ {id:'sum', title:'Traversal · Add up a list', w:470, h:600, input:{label:'Lap times (comma separated)', value:'42, 40, 39', key:'laps'},
+  q:'Predict the final value of total before you press Run. Then try a list with 4 items.',
+  nodes:{ s:{t:'term',x:170,y:34,txt:'Start'}, a:{t:'proc',x:170,y:96,txt:'laps ← [ … ]'},
+          b:{t:'proc',x:170,y:156,txt:'total ← 0'}, c:{t:'proc',x:170,y:216,txt:'i ← 1'},
+          d:{t:'dec',x:170,y:306,hw:100,txt:'i ≤ LENGTH(laps) ?'}, p:{t:'proc',x:170,y:410,txt:'total ← total + laps[i]'},
+          q:{t:'proc',x:170,y:476,txt:'i ← i + 1'}, x:{t:'io',x:350,y:410,txt:'DISPLAY total'},
+          e:{t:'term',x:350,y:556,txt:'End'} },
+  edges:[['s','a'],['a','b'],['b','c'],['c','d'],['d','p','Yes'],['p','q'],['q','d','',[[85,476],[30,476],[30,306],[70,306]]],['d','x','No',[[270,306],[350,306],[350,391]]],['x','e']],
+  run: function*(V,out,inp){
+    yield {n:'s', m:'Start.'};
+    const L = String(inp).split(',').map(s=>parseFloat(s)).filter(v=>!isNaN(v)).slice(0,6);
+    V.laps = '['+L.join(', ')+']'; yield {n:'a', m:`laps ← [${L.join(', ')}]  (LENGTH is ${L.length})`};
+    V.total = 0; yield {n:'b', m:'total ← 0 (an accumulator always starts at 0).'};
+    V.i = 1; yield {n:'c', m:'i ← 1 (AP lists start at index 1).'};
+    while(true){
+      const c = V.i <= L.length;
+      yield {n:'d', m:`Is i (${V.i}) ≤ ${L.length}? ${c?'TRUE → process the next item':'FALSE → every item has been visited'}.`};
+      if(!c) break;
+      const add = L[V.i-1]; V.total = Math.round((V.total + add)*100)/100;
+      yield {n:'p', m:`laps[${V.i}] is ${add}, so total becomes ${V.total}.`};
+      V.i = V.i + 1; yield {n:'q', m:`i ← ${V.i}. Back to the decision.`};
+    }
+    out.push(String(V.total)); yield {n:'x', m:`Display ${V.total}.`};
+    yield {n:'e', m:'End. This pattern (start at 1, check, process, add 1) is a list TRAVERSAL.'};
+  }}
+];
+
+let fcChart = null, fcGen = null, fcV = {}, fcOut = [], fcPrev = null, fcSeen = new Set(), fcTimer = null, fcActive = null;
+
+function fcInit(){
+  const el = document.getElementById('lab-fc');
+  el.innerHTML = `
+   <div class="lab-sub" role="tablist">
+     <button data-s="sim" aria-selected="true">▶ Flowchart simulator</button>
+     <button data-s="build" aria-selected="false">✏️ Build my own flowchart</button>
+   </div>
+   <div id="fc-sim"></div>
+   <div id="fc-build" hidden></div>`;
+  el.querySelectorAll('.lab-sub button').forEach(b=>b.onclick=()=>{
+    el.querySelectorAll('.lab-sub button').forEach(x=>x.setAttribute('aria-selected', x===b?'true':'false'));
+    document.getElementById('fc-sim').hidden = b.dataset.s!=='sim';
+    document.getElementById('fc-build').hidden = b.dataset.s!=='build';
+    if(b.dataset.s==='build') fbInit();
+  });
+  fcSimInit();
+}
+function fcSimInit(){
+  const el = document.getElementById('fc-sim');
+  el.innerHTML = `
+   <p class="lab-intro">Watch an algorithm run <b>one shape at a time</b>. The orange shape is the step running now, and the table shows every variable — exactly how you trace a flowchart on the AP exam. Change the input and run it again.</p>
+   <div class="lab-acts" id="fc-acts"></div>
+   <div class="lab-grid">
+     <div id="fc-svg"></div>
+     <div>
+       <div class="lab-mission" id="fc-q"></div>
+       <label class="lab-h4" for="fc-in" id="fc-inlbl"></label>
+       <input id="fc-in" style="width:100%; border:1.5px solid var(--line); border-radius:8px; padding:7px 10px; font-family:'JetBrains Mono',monospace; margin-bottom:8px">
+       <div class="lab-btns">
+         <button class="btn btn-main" id="fc-step">⏭ Step</button>
+         <button class="btn btn-run" id="fc-run">▶ Run</button>
+         <button class="btn btn-ghost" id="fc-reset">⟲ Reset</button>
+       </div>
+       <div class="fc-msg" id="fc-msg">Press <b>Step</b> to begin.</div>
+       <div class="lab-h4">Variables</div>
+       <table class="vartable" id="fc-vars"></table>
+       <div class="lab-h4">Output</div>
+       <div class="console" id="fc-out" style="min-height:60px"></div>
+     </div>
+   </div>`;
+  document.getElementById('fc-step').onclick = ()=>{ clearInterval(fcTimer); fcStep(); };
+  document.getElementById('fc-run').onclick = ()=>{ clearInterval(fcTimer); if(!fcGen) fcStart(); fcTimer = setInterval(()=>{ if(!fcStep()) clearInterval(fcTimer); }, 900); };
+  document.getElementById('fc-reset').onclick = ()=>fcReset();
+  document.getElementById('fc-in').addEventListener('input', ()=>fcReset());
+  fcPick(FC_CHARTS[0].id);
+}
+function fcPick(id){
+  fcChart = FC_CHARTS.find(c=>c.id===id);
+  document.getElementById('fc-acts').innerHTML = FC_CHARTS.map(c=>`<button class="lab-act ${c.id===id?'on':''}" data-c="${c.id}">${c.title}</button>`).join('');
+  document.querySelectorAll('#fc-acts .lab-act').forEach(b=>b.onclick=()=>fcPick(b.dataset.c));
+  document.getElementById('fc-q').innerHTML = `<h3>🤔 Predict first</h3><p>${fcChart.q}</p>`;
+  document.getElementById('fc-inlbl').textContent = fcChart.input.label;
+  document.getElementById('fc-in').value = fcChart.input.value;
+  fcReset();
+}
+function fcReset(){
+  clearInterval(fcTimer); fcGen = null; fcV = {}; fcOut = []; fcPrev = null; fcSeen = new Set(); fcActive = null;
+  fcDraw(); fcPanel('Press <b>Step</b> to begin, or <b>Run</b> to watch it all.');
+}
+function fcStart(){ fcV = {}; fcOut = []; fcPrev = null; fcSeen = new Set(); fcGen = fcChart.run(fcV, fcOut, document.getElementById('fc-in').value); }
+function fcStep(){
+  if(!fcGen) fcStart();
+  const r = fcGen.next();
+  if(r.done){ fcGen = null; fcPanel('✅ Finished. Change the input and run it again, or press Reset.'); return false; }
+  const st = r.value;
+  fcActive = {node:st.n, from:fcPrev};
+  if(fcPrev) fcSeen.add(fcPrev);
+  fcPrev = st.n;
+  fcDraw(); fcPanel(st.m);
+  return true;
+}
+function fcPanel(msg){
+  document.getElementById('fc-msg').innerHTML = msg;
+  const keys = Object.keys(fcV);
+  document.getElementById('fc-vars').innerHTML = keys.length ? `<tr><th>variable</th><th>value</th></tr>` + keys.map(k=>`<tr><td>${k}</td><td>${labHtml(fcV[k])}</td></tr>`).join('') : '<tr><td><i>no variables yet</i></td></tr>';
+  document.getElementById('fc-out').textContent = fcOut.join('\n');
+}
+function fcShape(n){
+  const {x,y,t} = n;
+  if(t==='term') return `<rect class="shape" x="${x-50}" y="${y-18}" width="100" height="36" rx="18"/>`;
+  if(t==='proc') return `<rect class="shape" x="${x-85}" y="${y-19}" width="170" height="38" rx="3"/>`;
+  if(t==='io')   return `<polygon class="shape" points="${x-78},${y-19} ${x+92},${y-19} ${x+78},${y+19} ${x-92},${y+19}"/>`;
+  if(t==='dec'){ const hw = n.hw || 80; return `<polygon class="shape" points="${x},${y-36} ${x+hw},${y} ${x},${y+36} ${x-hw},${y}"/>`; }
+}
+function fcHalfH(n){ return n.t==='dec'?36 : n.t==='term'?18 : 19; }
+function fcDraw(){
+  const C = fcChart; let g = '<defs><marker id="fcar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#46586B"/></marker><marker id="fcar2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#E8811F"/></marker></defs>';
+  C.edges.forEach(([a,b,lbl,pts])=>{
+    const A = C.nodes[a], B = C.nodes[b];
+    let P;
+    if(!pts) P = [[A.x, A.y+fcHalfH(A)], [B.x, B.y-fcHalfH(B)]];
+    else if(pts[0][1]===A.y) P = pts.slice();            // leaves from the side of the shape
+    else P = [[A.x, A.y+fcHalfH(A)], ...pts];           // leaves from the bottom
+    const on = fcActive && fcActive.from===a && fcActive.node===b;
+    g += `<path class="fc-edge ${on?'on':''}" d="M${P.map(p=>p.join(',')).join(' L')}" marker-end="url(#${on?'fcar2':'fcar'})"/>`;
+    if(lbl){ const p = P[1]; const vert = p[0]===P[0][0]; g += `<text class="fc-lbl" x="${vert ? P[0][0]+8 : (P[0][0]+p[0])/2 - 10}" y="${vert ? (P[0][1]+p[1])/2+4 : P[0][1]-7}">${lbl}</text>`; }
+  });
+  Object.entries(C.nodes).forEach(([id,n])=>{
+    const cls = fcActive && fcActive.node===id ? 'on' : (fcSeen.has(id) ? 'seen' : '');
+    g += `<g class="fc-node ${cls}">${fcShape(n)}<text x="${n.x}" y="${n.y}">${labHtml(n.txt)}</text></g>`;
+  });
+  document.getElementById('fc-svg').innerHTML = `<svg class="fc-svg" viewBox="0 0 ${C.w} ${C.h}" role="img" aria-label="${C.title} flowchart">${g}</svg>`;
+}
+
+// ---------- Part B: Flowchart builder (Mermaid) ----------
+const FB_ACTS = [
+ {id:'f1', title:'1 · Morning routine (sequence)', need:{io:0, dec:0, loop:false, min:5},
+  task:'Draw the steps you do every school morning, in order, from Start to End. Use at least 5 shapes.',
+  starter:`flowchart TD
+    A([Start]) --> B[Wake up at 6:30]
+    B --> C[Brush teeth]
+    C --> D([End])
+`},
+ {id:'f2', title:'2 · Umbrella or not? (selection)', need:{io:1, dec:1, loop:false, min:5},
+  task:'INPUT the weather. If it is raining, DISPLAY "Take an umbrella", otherwise DISPLAY "Sunglasses!". Both branches must reach End.',
+  starter:`flowchart TD
+    A([Start]) --> B[/INPUT weather/]
+    B --> C{weather = rain?}
+    C -->|Yes| D[/DISPLAY Take an umbrella/]
+    D --> E([End])
+`},
+ {id:'f3', title:'3 · 10 jumping jacks (iteration)', need:{io:1, dec:1, loop:true, min:6},
+  task:'Use a counter variable and a decision diamond so the flowchart repeats "Do 1 jumping jack" 10 times, then displays "Done!". The loop arrow must go BACK UP to the diamond.',
+  starter:`flowchart TD
+    A([Start]) --> B[count ← 0]
+    B --> C{count < 10?}
+    C -->|Yes| D[Do 1 jumping jack]
+    C -->|No| F([End])
+`},
+ {id:'f4', title:'4 · Find the fastest lap (list traversal)', need:{io:1, dec:2, loop:true, min:8},
+  task:'Given a list of lap times, find the SMALLEST time. Use fastest ← laps[1], a loop over every lap, and a second diamond: is lap < fastest? Then DISPLAY fastest.',
+  starter:`flowchart TD
+    A([Start]) --> B["fastest ← laps[1]"]
+    B --> C[i ← 2]
+    C --> D{"i ≤ LENGTH(laps)?"}
+`},
+ {id:'f5', title:'★ My Create Task plan', need:{io:1, dec:1, loop:true, min:6},
+  task:'Plan the main procedure of your own program (or Create Task idea) as a flowchart: input, a loop, a decision, and output.',
+  starter:`flowchart TD
+    A([Start]) --> B[/INPUT .../]
+    B --> C([End])
+`}
+];
+const FB_SNIPS = [
+  ['Start/End oval', 'X([End])'], ['Process rectangle', 'X[total ← total + 1]'], ['Input/Output', 'X[/DISPLAY total/]'],
+  ['Decision diamond', 'X{total > 10?}'], ['Arrow', 'A --> B'], ['Yes arrow', 'C -->|Yes| D'], ['No arrow', 'C -->|No| E']
+];
+let fbAct = null, fbTimer = null, fbReady = null, fbN = 0, fbInited = false;
+
+function fbInit(){
+  if(fbInited) return; fbInited = true;
+  const el = document.getElementById('fc-build');
+  el.innerHTML = `
+   <p class="lab-intro">Type your flowchart as simple text and it is drawn for you instantly. Each line is <code>A --> B</code> (an arrow). Shapes: <code>([oval])</code> start/end, <code>[rectangle]</code> process, <code>[/parallelogram/]</code> input/output, <code>{diamond}</code> decision. Label branches with <code>-->|Yes|</code>. If your text has brackets, quotes or a colon inside, wrap it in quotes: <code>B["x ← list[1]"]</code>. Saved automatically.</p>
+   <div class="lab-acts" id="fb-acts"></div>
+   <div class="lab-grid">
+     <div>
+       <div class="lab-mission" id="fb-task"></div>
+       <div class="shape-btns" id="fb-snips"></div>
+       <div class="ed-wrap"><div class="ed-gutter" id="fb-gut"></div><textarea class="ed" id="fb-ed" spellcheck="false" aria-label="Flowchart text editor" style="min-height:260px"></textarea></div>
+       <div class="lab-btns">
+         <button class="btn btn-ghost" id="fb-save">💾 Save</button>
+         <button class="btn btn-ghost" id="fb-svg">⬇ Download picture (SVG)</button>
+         <button class="btn btn-ghost" id="fb-png">⬇ Download picture (PNG)</button>
+         <button class="btn btn-ghost" id="fb-dl">⬇ Download text</button>
+         <button class="btn btn-ghost" id="fb-start">↺ Start over</button>
+       </div>
+       <div class="lab-status" id="fb-status"></div>
+     </div>
+     <div>
+       <div class="mm-out" id="fb-out"><i style="color:var(--ink-soft)">Loading the flowchart drawer…</i></div>
+       <div class="lab-h4" style="margin-top:10px">Checklist</div>
+       <ul class="checks" id="fb-checks"></ul>
+     </div>
+   </div>`;
+  document.getElementById('fb-snips').innerHTML = FB_SNIPS.map((s,i)=>`<button data-i="${i}" title="Insert: ${labHtml(s[1])}">+ ${s[0]}</button>`).join('');
+  const ta = document.getElementById('fb-ed');
+  window.__fbEd = labEditor(ta, document.getElementById('fb-gut'), ()=>{ clearTimeout(fbTimer); fbTimer = setTimeout(()=>{ fbRender(); fbSaveNow(true); }, 450); });
+  document.querySelectorAll('#fb-snips button').forEach(b=>b.onclick=()=>{
+    const s = FB_SNIPS[+b.dataset.i][1]; const pos = ta.selectionEnd;
+    const before = ta.value.slice(0,pos); const pre = before.length && !before.endsWith('\n') ? '\n    ' : '    ';
+    ta.setRangeText(pre + s + '\n', pos, pos, 'end'); ta.focus(); ta.dispatchEvent(new Event('input'));
+  });
+  document.getElementById('fb-save').onclick = ()=>fbSaveNow(false);
+  document.getElementById('fb-dl').onclick = ()=>{ fbSaveNow(true); labDownload(labFileBase()+'flowchart_'+fbAct.id+'.mmd', window.__fbEd.get()); };
+  document.getElementById('fb-svg').onclick = ()=>{ const s = document.querySelector('#fb-out svg'); if(s) labDownload(labFileBase()+'flowchart_'+fbAct.id+'.svg', fbSvgText(s), 'image/svg+xml'); };
+  document.getElementById('fb-png').onclick = fbPng;
+  document.getElementById('fb-start').onclick = ()=>{ if(confirmReset()){ window.__fbEd.set(fbAct.starter); fbSaveNow(true); fbRender(); } };
+  fbReady = (window.mermaid ? Promise.resolve() : labLoadScript(MERMAID_URL)).then(()=>{
+    mermaid.initialize({startOnLoad:false, securityLevel:'strict', theme:'base',
+      themeVariables:{primaryColor:'#FFF6E6', primaryBorderColor:'#1E2A38', lineColor:'#46586B', fontFamily:'Atkinson Hyperlegible, sans-serif', fontSize:'15px'},
+      flowchart:{htmlLabels:false, curve:'basis'}});
+  }).catch(e=>{ document.getElementById('fb-out').innerHTML = `<p style="color:var(--bad)">${labHtml(e.message)}</p>`; });
+  const last = labLoad('_fbact');
+  fbPick(last && FB_ACTS.find(a=>a.id===last.v) ? last.v : FB_ACTS[0].id);
+}
+function fbRenderActs(){
+  document.getElementById('fb-acts').innerHTML = FB_ACTS.map(a=>`<button class="lab-act ${a.id===fbAct.id?'on':''}" data-a="${a.id}">${labLoad('fb:'+a.id)?'<span class="done">●</span> ':''}${a.title}</button>`).join('');
+  document.querySelectorAll('#fb-acts .lab-act').forEach(b=>b.onclick=()=>{ fbSaveNow(true); fbPick(b.dataset.a); });
+}
+function fbPick(id){
+  fbAct = FB_ACTS.find(a=>a.id===id); labSave('_fbact', id);
+  const saved = labLoad('fb:'+id);
+  window.__fbEd.set(saved ? saved.v : fbAct.starter);
+  document.getElementById('fb-task').innerHTML = `<h3>🎯 ${fbAct.title}</h3><p>${fbAct.task}</p>`;
+  fbStatus(saved ? 'Loaded your saved version from '+labTime(saved.t)+'.' : 'Starter flowchart loaded — finish it!');
+  fbRenderActs(); fbRender();
+}
+function fbSaveNow(quiet){
+  if(!fbAct) return;
+  const v = window.__fbEd.get();
+  if(v===fbAct.starter && !labLoad('fb:'+fbAct.id)){ if(!quiet) fbStatus('Nothing changed yet — edit the flowchart first.'); return; }
+  if(labSave('fb:'+fbAct.id, v)){ fbStatus('Saved ✓ '+labTime(Date.now()), 'ok'); if(!quiet) fbRenderActs(); }
+  else fbStatus('Could not save in this browser. Use Download instead.', 'err');
+}
+function fbStatus(t, cls){ const s=document.getElementById('fb-status'); if(s){ s.textContent=t; s.className='lab-status'+(cls?' '+cls:''); } }
+function fbAnalyze(code){
+  const order = [], shapes = {term:0, proc:0, io:0, dec:0}, seen = new Set();
+  const nodeRe = /([A-Za-z0-9_]+)\s*(\(\[|\[\/|\{|\[)/g; let m;
+  const lines = code.split('\n').slice(1);
+  lines.forEach(l=>{ while((m = nodeRe.exec(l))){ const id=m[1]; if(seen.has(id)) continue; seen.add(id); order.push(id);
+      const o=m[2]; shapes[o==='(['?'term':o==='[/'?'io':o==='{'?'dec':'proc']++; } });
+  // also ids that only appear in arrows
+  const edgeRe = /([A-Za-z0-9_]+)[^\n]*?-->(?:\|[^|]*\|)?\s*([A-Za-z0-9_]+)/g; let loop = false, edges = 0;
+  lines.forEach(l=>{ edgeRe.lastIndex = 0; while((m = edgeRe.exec(l))){ edges++; const a = order.indexOf(m[1]), b = order.indexOf(m[2]); if(a>=0 && b>=0 && b<a) loop = true; [m[1],m[2]].forEach(id=>{ if(!seen.has(id)){ seen.add(id); order.push(id); } }); } });
+  return {shapes, loop, edges, count: seen.size};
+}
+function fbChecks(code){
+  const A = fbAnalyze(code), N = fbAct.need;
+  const items = [
+    [A.shapes.term >= 2, 'Has a Start AND an End oval'],
+    [A.count >= N.min, `Uses at least ${N.min} shapes (you have ${A.count})`],
+  ];
+  if(N.io) items.push([A.shapes.io >= N.io, 'Has an input/output parallelogram  [/ … /]']);
+  if(N.dec) items.push([A.shapes.dec >= N.dec, N.dec>1 ? `Has ${N.dec} decision diamonds { … } (you have ${A.shapes.dec})` : 'Has a decision diamond  { … }']);
+  if(N.dec) items.push([/-->\s*\|\s*yes\s*\|/i.test(code) && /-->\s*\|\s*no\s*\|/i.test(code), 'Both the Yes and No arrows are labeled']);
+  if(N.loop) items.push([A.loop, 'Has a loop: an arrow goes back to an earlier shape']);
+  document.getElementById('fb-checks').innerHTML = items.map(([ok,t])=>`<li class="${ok?'y':'n'}">${ok?'✅':'⬜'} ${t}</li>`).join('');
+}
+async function fbRender(){
+  const code = window.__fbEd.get();
+  fbChecks(code);
+  if(!fbReady) return;
+  try{ await fbReady; }catch(e){ return; }
+  if(!window.mermaid) return;
+  const out = document.getElementById('fb-out');
+  try{
+    if(!/^\s*(flowchart|graph)\b/.test(code)) throw new Error('The first line must be:  flowchart TD');
+    const { svg } = await mermaid.render('fbsvg'+(++fbN), code);
+    out.innerHTML = svg;
+  }catch(e){
+    const msg = (e && (e.str || e.message)) || String(e);
+    out.innerHTML = `<div style="color:var(--bad); font-size:.9rem; text-align:left; width:100%"><b>Can't draw this yet:</b><pre style="white-space:pre-wrap; font-size:.78rem; margin-top:6px">${labHtml(msg.split('\n').slice(0,4).join('\n'))}</pre><p style="color:var(--ink-soft); margin-top:6px">Common fixes: every arrow is <code>--></code>; brackets match; wrap text that has ( ) [ ] or quotes in "double quotes".</p></div>`;
+    document.querySelectorAll('[id^="dfbsvg"], [id^="fbsvg"]').forEach(n=>{ if(!out.contains(n)) n.remove(); });
+  }
+}
+function fbSvgText(svg){
+  const c = svg.cloneNode(true); c.setAttribute('xmlns','http://www.w3.org/2000/svg');
+  return '<?xml version="1.0" encoding="UTF-8"?>\n' + new XMLSerializer().serializeToString(c);
+}
+function fbPng(){
+  const svg = document.querySelector('#fb-out svg'); if(!svg) return;
+  const box = svg.viewBox && svg.viewBox.baseVal && svg.viewBox.baseVal.width ? svg.viewBox.baseVal : svg.getBBox();
+  const scale = 2, w = Math.ceil(box.width*scale), h = Math.ceil(box.height*scale);
+  const c = svg.cloneNode(true); c.setAttribute('width', box.width); c.setAttribute('height', box.height); c.setAttribute('xmlns','http://www.w3.org/2000/svg');
+  const img = new Image();
+  img.onload = ()=>{ const cv = document.createElement('canvas'); cv.width=w; cv.height=h; const x=cv.getContext('2d'); x.fillStyle='#fff'; x.fillRect(0,0,w,h); x.drawImage(img,0,0,w,h);
+    cv.toBlob(b=>{ const a=document.createElement('a'); a.href=URL.createObjectURL(b); a.download=labFileBase()+'flowchart_'+fbAct.id+'.png'; document.body.appendChild(a); a.click(); setTimeout(()=>{URL.revokeObjectURL(a.href); a.remove();},500); }); };
+  img.onerror = ()=>fbStatus('PNG download is not supported in this browser — use SVG instead.', 'err');
+  img.src = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(new XMLSerializer().serializeToString(c));
 }
 
 route();
