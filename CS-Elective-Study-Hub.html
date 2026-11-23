@@ -209,6 +209,165 @@ sub,sup{line-height:0}
   <div style="display:flex; align-items:center; gap:8px; margin-bottom:10px;"><a href="mailto:l.khmarskaia@basis.ac.th" title="Email Miss K at BASIS International School Bangkok" style="display:inline-flex; align-items:center; gap:8px; text-decoration:none; color:var(--ink);"><span style="width:22px;height:22px;flex-shrink:0;display:block;"><svg viewBox="0 0 100 100" role="img" aria-label="Miss K STEM logo" style="display:block;width:100%;height:100%;"><defs><linearGradient id="mkgfoot" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2E3FA6"/><stop offset="1" stop-color="#1E2C7A"/></linearGradient></defs><rect x="4" y="4" width="92" height="92" rx="24" fill="url(#mkgfoot)"/><g stroke="#fff" stroke-opacity=".10" stroke-width="1.4"><path d="M4 30h92M4 54h92M4 78h92M30 4v92M54 4v92M78 4v92"/></g><ellipse cx="50" cy="52" rx="33" ry="12.5" fill="none" stroke="#E8811F" stroke-width="2.6" transform="rotate(-32 50 52)"/><ellipse cx="50" cy="52" rx="33" ry="12.5" fill="none" stroke="#E8811F" stroke-opacity=".45" stroke-width="2" transform="rotate(32 50 52)"/><g stroke="#fff" stroke-width="8.5" stroke-linecap="round" stroke-linejoin="round" fill="none"><path d="M37 27V75"/><path d="M37 52L61 27"/><path d="M37 52L62 76"/></g><circle cx="37" cy="52" r="5.6" fill="#E8811F" stroke="#fff" stroke-width="1.6"/></svg></span><span style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:.85rem;">Email Miss K</span></a></div>
     Built for the Middle School Computer Science Elective (BASIS-style curriculum, 2026–2027). Python runs in your browser via <a href="https://skulpt.org" target="_blank" rel="noopener">Skulpt</a>. Course platforms: <a href="https://scratch.mit.edu" target="_blank" rel="noopener">Scratch (MIT)</a>, <a href="https://codehs.com" target="_blank" rel="noopener">CodeHS</a>, <a href="https://code.org" target="_blank" rel="noopener">Code.org</a>, and <a href="https://create.roblox.com" target="_blank" rel="noopener">Roblox Studio</a>. This study site is a companion, not a replacement, for class instruction.
 </footer>
+<style id="mk-widgets">
+/* ===== Miss K interactive unit widgets ===== */
+.simcard{margin:16px 0}
+.simcard h3{font-size:1.15rem;margin-bottom:4px}
+.simhint{color:var(--ink-soft);font-size:.95rem;margin-bottom:12px}
+.simcard h4{margin:14px 0 6px;font-size:1rem}
+
+/* timeline (U1) */
+.tl{display:flex;flex-wrap:wrap;gap:8px}
+.tlchip{display:flex;flex-direction:column;gap:2px;text-align:left;background:#fff;border:1.5px solid var(--line);border-radius:10px;padding:8px 10px;cursor:pointer;min-width:92px;transition:.15s}
+.tlchip b{font-size:.72rem;color:var(--u1)}
+.tlchip span{font-size:.82rem;font-weight:600}
+.tlchip:hover{transform:translateY(-2px)}
+.tlchip.on{background:var(--u1);color:#fff}
+.tlchip.on b{color:#fff}
+.tldetail{margin-top:12px;background:var(--paper);border-left:4px solid var(--u1);border-radius:8px;padding:12px 14px;min-height:48px;font-size:.95rem}
+.moore{margin-top:16px;background:var(--paper);border-radius:10px;padding:12px 14px}
+.moore input[type=range]{width:100%}
+.moorebar{height:16px;background:#e7edf3;border-radius:9px;overflow:hidden;margin-top:6px}
+.moorebar>div{height:100%;width:2%;background:linear-gradient(90deg,var(--u1),#c9a0ea);border-radius:9px;transition:width .2s}
+
+/* inside the computer (U3) */
+.inside{display:grid;grid-template-columns:repeat(auto-fit,minmax(110px,1fr));gap:10px;background:var(--paper);border-radius:12px;padding:14px}
+.part{background:#fff;border:1.5px solid var(--line);border-radius:10px;padding:12px 8px;text-align:center;cursor:pointer;font-weight:700;font-size:.9rem;transition:.15s}
+.part:hover{transform:translateY(-2px);border-color:var(--u3)}
+.part.on{background:var(--u3);color:#fff;border-color:var(--u3)}
+.part .pico{font-size:1.6rem;display:block;margin-bottom:4px}
+.detailpane{margin-top:12px;background:var(--paper);border-left:4px solid var(--u3);border-radius:8px;padding:12px 14px;min-height:60px;font-size:.95rem}
+.detailpane .ptag{display:inline-block;font-size:.72rem;font-weight:700;background:var(--u3);color:#fff;border-radius:20px;padding:2px 10px;margin-top:6px}
+
+/* data & analytics (U4) */
+.dgrid{display:grid;grid-template-columns:1fr 1.3fr;gap:16px;align-items:start}
+@media(max-width:620px){.dgrid{grid-template-columns:1fr}}
+.dinputs{display:flex;flex-direction:column;gap:6px}
+.dinputs label{display:flex;align-items:center;gap:8px;font-size:.85rem}
+.dinputs input{width:70px;padding:4px 6px;border:1.5px solid var(--line);border-radius:6px;font-family:inherit}
+.dchart{display:flex;align-items:flex-end;gap:8px;height:180px;background:var(--paper);border-radius:10px;padding:12px}
+.dbar{flex:1;background:linear-gradient(180deg,var(--u4),#79c99a);border-radius:6px 6px 0 0;min-height:2px;position:relative;transition:height .25s}
+.dbar span{position:absolute;top:-18px;left:0;right:0;text-align:center;font-size:.72rem;font-weight:700}
+.dstat{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.dstat div{background:var(--paper);border-radius:8px;padding:8px 12px;font-size:.85rem}
+.dstat b{color:var(--u4);font-size:1.05rem}
+.dtoggle{margin-top:10px;font-size:.85rem;display:flex;align-items:center;gap:8px;color:var(--ink-soft)}
+
+/* phishing (U5) */
+.phish{background:#fff;border:1.5px solid var(--line);border-radius:12px;overflow:hidden;max-width:560px}
+.phmail{padding:14px 16px;font-size:.92rem;line-height:1.5}
+.phmail .phhead{border-bottom:1px solid var(--line);padding-bottom:8px;margin-bottom:10px;color:var(--ink-soft);font-size:.85rem}
+.flag{background:#fff3cd;border-bottom:2px dashed #e0a800;cursor:pointer;border-radius:3px;padding:0 2px}
+.flag.found{background:#c8e6c9;border-bottom:2px solid #2e7d32}
+.phmeter{background:var(--paper);padding:10px 16px;font-weight:700;display:flex;justify-content:space-between;align-items:center}
+
+/* scratch (U6) */
+.scratchbox{background:var(--paper);border-radius:12px;padding:14px;text-align:center}
+.scratchbox iframe{width:100%;max-width:520px;height:402px;border:2px solid var(--line);border-radius:10px;background:#fff}
+.scratch-cta{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:12px}
+
+/* lua runner (U7) */
+.luaide .idebar .fname{color:#e7c08a}
+.lua-snips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:10px}
+.lua-snip{background:#fff;border:1.5px solid var(--line);border-radius:999px;padding:5px 12px;font-size:.82rem;cursor:pointer}
+.lua-snip:hover{border-color:var(--u7);color:var(--u7)}
+
+/* flowchart (U8) */
+.flowwrap{display:grid;grid-template-columns:1fr 1fr;gap:16px;align-items:start}
+@media(max-width:620px){.flowwrap{grid-template-columns:1fr}}
+.flow{display:flex;flex-direction:column;align-items:center;gap:6px;background:var(--paper);border-radius:12px;padding:16px}
+.fnode{padding:8px 14px;border:2px solid var(--u8);border-radius:8px;background:#fff;font-size:.85rem;font-weight:600;text-align:center;min-width:130px;transition:.2s}
+.fnode.term{border-radius:999px}
+.fnode.dec{position:relative;width:170px;height:116px;border:none;background:none;padding:0;display:flex;align-items:center;justify-content:center}
+.fnode.dec svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.fnode.dec .dia{fill:#fff;stroke:var(--u8);stroke-width:2.5;stroke-linejoin:round;transition:fill .2s;filter:drop-shadow(0 2px 3px rgba(30,42,56,.12))}
+.fnode.dec span{position:relative;z-index:1;display:block;font-size:.82rem;line-height:1.15;text-align:center;color:var(--ink)}
+.fnode.dec.on .dia{fill:var(--u8)}
+.fnode.dec.on span{color:#fff}
+.fnode.on{background:var(--u8);color:#fff;box-shadow:0 0 0 4px rgba(47,107,154,.2)}
+.farrow{color:var(--u8);font-size:1.1rem;line-height:1}
+.fbranch{display:flex;gap:40px;font-size:.78rem;color:var(--ink-soft);font-weight:700}
+.flowctl{background:var(--paper);border-radius:12px;padding:14px}
+.flowctl input{width:90px;padding:6px 8px;border:1.5px solid var(--line);border-radius:6px;font-family:inherit}
+.flowlog{margin-top:10px;font-size:.88rem;line-height:1.6}
+
+/* algorithms (U8) */
+.algobars{display:flex;align-items:flex-end;gap:4px;height:160px;background:var(--paper);border-radius:10px;padding:12px}
+.algobar{flex:1;background:var(--u8);border-radius:4px 4px 0 0;transition:height .18s,background .18s;position:relative}
+.algobar.cmp{background:#e8a33d}
+.algobar.swap{background:#e06b5b}
+.algobar.done{background:#3e8e5a}
+.algobtns{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}
+.algostat{font-size:.88rem;color:var(--ink-soft);min-height:20px}
+/* ===== second-interactive styles ===== */
+/* match (U1) */
+.matchwrap{display:grid;grid-template-columns:1fr 1.5fr;gap:12px}
+.matchcol{display:flex;flex-direction:column;gap:8px}
+.matchitem{text-align:left;background:#fff;border:1.5px solid var(--line);border-radius:10px;padding:10px 12px;cursor:pointer;font-size:.88rem;transition:.15s}
+.matchitem:hover{border-color:var(--u1)}
+.matchitem.sel{background:var(--u1);color:#fff;border-color:var(--u1)}
+.matchitem.ok{background:#c8e6c9;border-color:#2e7d32;color:#1b5e20;cursor:default}
+.matchitem.bad{background:#ffcdd2;border-color:#c62828}
+
+/* ascii (U2) */
+.asciitbl{display:flex;flex-direction:column;gap:3px;margin-top:8px;max-width:420px}
+.asciirow{display:grid;grid-template-columns:1fr 1fr 2fr;gap:8px;background:var(--paper);border-radius:6px;padding:6px 10px;font-size:.9rem}
+.asciirow.asciihead{background:var(--u2);color:#fff;font-weight:700}
+
+/* hardware vs software (U3) */
+.hwsw{display:flex;flex-direction:column;gap:8px}
+.hwitem{display:flex;justify-content:space-between;align-items:center;gap:10px;background:var(--paper);border-radius:10px;padding:8px 12px;flex-wrap:wrap}
+.hwbtns button{border:1.5px solid var(--line);background:#fff;border-radius:8px;padding:5px 10px;margin-left:6px;cursor:pointer;font-size:.82rem;font-family:inherit}
+.hwbtns button:hover{border-color:var(--u3)}
+.hwitem.good{background:#c8e6c9}
+.hwitem.good .hwbtns{display:none}
+.hwitem.wrong{background:#ffcdd2}
+
+/* password (U5) */
+.pwmeter{height:14px;background:#e7edf3;border-radius:8px;overflow:hidden;max-width:340px;margin:4px 0}
+.pwmeter>div{height:100%;width:0;border-radius:8px;transition:width .2s,background .2s}
+.pwlist{list-style:none;margin:8px 0 0;padding:0;font-size:.85rem;color:var(--ink-soft)}
+.pwlist li{margin:3px 0}
+.pwlist li.met{color:#2e7d32;font-weight:600}
+
+/* scratch stage (U6) */
+.stage{position:relative;height:200px;background:linear-gradient(#eaf4ff,#f7fbff);border:2px solid var(--line);border-radius:12px;overflow:hidden;margin-bottom:10px}
+.sprite{position:absolute;font-size:2rem;transition:left .25s,top .25s,transform .25s;line-height:1}
+.bubble{position:absolute;background:#fff;border:1.5px solid var(--line);border-radius:12px;padding:3px 10px;font-size:.82rem;font-weight:700;box-shadow:0 2px 6px rgba(0,0,0,.1)}
+
+/* lua quiz (U7) */
+.quizcard{background:var(--paper);border-radius:10px;padding:12px;margin:10px 0}
+.quizcode{background:#12202e;color:#e7eef5;border-radius:8px;padding:10px 12px;font-size:.85rem;white-space:pre;overflow-x:auto;margin-bottom:8px}
+.quizopts{display:flex;flex-wrap:wrap;gap:8px}
+.quizopts button{border:1.5px solid var(--line);background:#fff;border-radius:8px;padding:6px 14px;cursor:pointer;font-family:inherit;font-size:.85rem}
+.quizopts button:hover:not(:disabled){border-color:var(--u7)}
+.quizopts button.right{background:#c8e6c9;border-color:#2e7d32;font-weight:700}
+.quizopts button.wrongpick{background:#ffcdd2;border-color:#c62828}
+.quizwhy{margin-top:8px;font-size:.88rem;background:#fff;border-left:4px solid var(--u7);border-radius:6px;padding:8px 10px}
+
+/* accumulator (U8) */
+.acctbl{display:flex;flex-direction:column;gap:3px;max-width:420px;margin-top:8px}
+.accrow{display:grid;grid-template-columns:1fr 2fr 1fr;gap:8px;background:var(--paper);border-radius:6px;padding:6px 10px;font-size:.9rem;transition:background .3s}
+.accrow.acchead{background:var(--u8);color:#fff;font-weight:700}
+.accrow.new{background:#fff3cd}
+.accrow.accfinal{background:#c8e6c9;font-weight:700}
+
+/* per-unit section menu */
+.unitmenu{display:flex;flex-wrap:wrap;gap:8px;position:sticky;top:0;z-index:30;background:rgba(255,255,255,.95);backdrop-filter:blur(6px);padding:10px 4px;margin:4px 0 12px;border-bottom:1px solid var(--line)}
+.umenu-btn{background:var(--paper);border:1.5px solid var(--line);border-radius:999px;padding:6px 13px;font-size:.85rem;font-weight:600;font-family:inherit;color:var(--ink);cursor:pointer;transition:.15s}
+.umenu-btn:hover{background:var(--ink);color:#fff;border-color:var(--ink);transform:translateY(-1px)}
+.sec-target{scroll-margin-top:64px}
+/* games & simulations grid */
+.gamegrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:12px;margin-top:10px}
+.gamecard{display:flex;flex-direction:column;gap:6px;background:#fff;border:1.5px solid var(--line);border-radius:12px;padding:14px;text-decoration:none;color:var(--ink);transition:.15s;box-shadow:0 1px 2px rgba(30,42,56,.04)}
+.gamecard:hover{transform:translateY(-3px);box-shadow:0 6px 16px rgba(30,42,56,.12)}
+.gamecard .gico{font-size:1.7rem;line-height:1}
+.gamecard b{font-size:.98rem}
+.gamecard .gblurb{font-size:.84rem;color:var(--ink-soft);flex:1}
+.gamecard .glaunch{font-size:.82rem;font-weight:700;margin-top:4px}
+
+</style>
+<script src="https://cdn.jsdelivr.net/npm/fengari-web@0.1.4/dist/fengari-web.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/skulpt/1.2.0/skulpt.min.js" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/skulpt/1.2.0/skulpt-stdlib.js" crossorigin="anonymous"></script>
 <script>
@@ -293,7 +452,7 @@ const UNITS = {
     body:`<p>Data sizes stack up fast: 8 bits = 1 <b>byte</b>; ≈1,000 bytes = 1 <b>KB</b> (a paragraph); ≈1,000 KB = 1 <b>MB</b> (a photo); ≈1,000 MB = 1 <b>GB</b> (a short movie). <b>Example:</b> a 5 MB song × 200 = about 1 GB of music.</p>`,
     levelup:`<p>Why does color code #FF861C never exceed FF? Each pair of hex digits is one byte per channel (red, green, blue), and one byte maxes out at 11111111 = 255 = FF. One hex digit is exactly 4 bits — that's why programmers love Base 16.</p>`}],
   tools:[
-   {label:"Cisco Binary Game", url:"https://learningnetwork.cisco.com/s/binary-game", how:"A fast-paced Tetris-style game: race to build the right binary numbers before the board fills."},
+   {label:"Cisco Binary Game", url:"https://learningcontent.cisco.com/games/binary/index.html", how:"A fast-paced Tetris-style game: race to build the right binary numbers before the board fills."},
    {label:"Code.org — Binary widget", url:"https://studio.code.org/projects/applab/", how:"Explore how text and images become bits in the CS Discoveries binary lessons."}],
   widget:"binary"
 },
@@ -422,7 +581,7 @@ const UNITS = {
     levelup:`<p>Passwords: length beats cleverness. 'Mango!Tuk2Tuk#47' (16 mixed characters) would take centuries to crack; 'password123' takes seconds. Use a different password per account, and turn on two-factor authentication where offered.</p>`}],
   tools:[
    {label:"▶ Built-in Web Playground (type HTML & CSS, see it live)", url:"#/web", how:"No account needed — your code renders instantly on the right. Start with the Food Guide task.", internal:true},
-   {label:"Code.org — Web Lab", url:"https://studio.code.org/courses/csd-2024", how:"CS Discoveries Unit 2 gives step-by-step web design lessons with a shareable site at the end."},
+   {label:"Code.org — Web Lab", url:"https://code.org/csd", how:"CS Discoveries Unit 2 gives step-by-step web design lessons with a shareable site at the end."},
    {label:"Be Internet Awesome (Interland game)", url:"https://beinternetawesome.withgoogle.com/en_us/interland", how:"Play the Reality River level and collect three phishing warning signs to share with the class."}]
 },
 "6": {
@@ -467,7 +626,7 @@ const UNITS = {
   tools:[
    {label:"Scratch editor (free, no download)", url:"https://scratch.mit.edu/projects/editor/", how:"Create — no account needed to build; ask before creating an account to save and share."},
    {label:"Scratch Ideas & tutorials", url:"https://scratch.mit.edu/ideas", how:"The official starter tutorials: pick 'Make a Chase Game' after finishing the motion lessons."},
-   {label:"Code.org — CS Discoveries interactive games unit", url:"https://studio.code.org/courses/csd-2024", how:"Extra guided practice with the same concepts if you want more structured steps."}]
+   {label:"Code.org — CS Discoveries interactive games unit", url:"https://code.org/csd", how:"Extra guided practice with the same concepts if you want more structured steps."}]
 },
 "7": {
   sym:"Rb", name:"Roblox Game Design · Lua", hex:"#c0392b",
@@ -742,7 +901,7 @@ function renderUnit(u){
      ${s.levelup?`<div class="levelup"><b class="lu">🚀 Level Up — for students working ahead</b>${s.levelup}</div>`:''}
    </div>`).join('')}
 
-  ${U.widget === 'binary' ? binaryWidget() : ''}
+  ${unitWidget(u)}
 
   <div class="section-h"><span class="tag" style="background:${U.hex}">Explore</span><h2>Tools &amp; platforms we use</h2>${MASCOT('magnifier')}</div>
   ${U.tools.map(t=>`
@@ -779,7 +938,7 @@ function renderUnit(u){
     el.hidden = !el.hidden;
     if(b.dataset.t==='sol') b.textContent = el.hidden ? 'Show step-by-step solution' : 'Hide solution';
   }));
-  if(U.widget === 'binary') wireBinary();
+  wireUnitWidget(u);
 }
 
 // ---- binary widget (Unit 2) ----
@@ -1149,6 +1308,796 @@ function submitTest(auto){
   const again = document.getElementById('again');
   if(again) again.addEventListener('click', ()=>startTest(doneUnit));
   window.scrollTo(0,0);
+}
+
+
+/* ============================================================
+   Miss K — interactive unit widgets
+   Dispatched from renderUnit(). One interactive sim per unit.
+   ============================================================ */
+const WIDGET = {
+  "1":"timeline", "2":"binary", "3":"inside", "4":"data",
+  "5":"phishing", "6":"scratch", "7":"lua", "8":"coding"
+};
+function unitWidget(u){
+  let core = "";
+  switch(WIDGET[u]){
+    case "binary":   core = binaryWidget() + asciiWidget(); break;
+    case "timeline": core = timelineWidget() + matchWidget(); break;
+    case "inside":   core = insideWidget() + hwswWidget(); break;
+    case "data":     core = dataWidget() + outlierWidget(); break;
+    case "phishing": core = phishingWidget() + passwordWidget(); break;
+    case "scratch":  core = scratchWidget() + stageWidget(); break;
+    case "lua":      core = luaWidget() + luaQuizWidget(); break;
+    case "coding":   core = flowWidget() + algoWidget() + accWidget(); break;
+  }
+  return core + gamesWidget(u);
+}
+function wireUnitWidget(u){
+  switch(WIDGET[u]){
+    case "binary":   wireBinary(); wireAscii(); break;
+    case "timeline": wireTimeline(); wireMatch(); break;
+    case "inside":   wireInside(); wireHwsw(); break;
+    case "data":     wireData(); wireOutlier(); break;
+    case "phishing": wirePhishing(); wirePassword(); break;
+    case "scratch":  wireStage(); break;
+    case "lua":      wireLua(); wireLuaQuiz(); break;
+    case "coding":   wireFlow(); wireAlgo(); wireAcc(); break;
+  }
+  injectSectionMenu();
+}
+const sleep = ms => new Promise(r => setTimeout(r, ms));
+
+/* ---------- Unit 1 · computing timeline ---------- */
+const TL_M = [
+ ["~2000 BC","Abacus","Beads on rods let traders calculate — humanity's first calculating tool, still sold in Bangkok markets today."],
+ ["1830s","Analytical Engine","Charles Babbage designs a programmable mechanical computer with a processor (the 'mill') and memory (the 'store')."],
+ ["1840s","First program","Ada Lovelace writes an algorithm for the Analytical Engine — a program written before any computer existed."],
+ ["1936","Turing machine","Alan Turing describes a universal machine that can run ANY algorithm — the idea behind every computer."],
+ ["1945","ENIAC","The first general-purpose electronic computer: about 27 tons and ~18,000 vacuum tubes filling a whole room."],
+ ["1947","Transistor","A fingernail-sized ON/OFF switch replaces the hot, fragile vacuum tube — computers can finally shrink."],
+ ["1971","Microprocessor","A whole CPU on a single chip (the Intel 4004) — the start of computers getting small and cheap."],
+ ["1991","The World Wide Web","Tim Berners-Lee links documents with hyperlinks, creating the Web that rides on top of the Internet."],
+ ["2007","Smartphone","A touchscreen supercomputer in your pocket, more powerful than every ENIAC combined."],
+ ["Today","Artificial Intelligence","Machines do tasks that used to need human thinking — translating, drawing, and chatting."]
+];
+function timelineWidget(){
+  return `<div class="card simcard" style="border:2px solid var(--u1)">
+    <h3>🕰️ Try it: the computing timeline</h3>
+    <p class="simhint">Click a milestone to hear its story. Then drag the slider to watch how many transistors fit on one chip over time.</p>
+    <div class="tl" id="tl">${TL_M.map((m,i)=>`<button class="tlchip" data-i="${i}"><b>${m[0]}</b><span>${m[1]}</span></button>`).join("")}</div>
+    <div class="tldetail" id="tldetail">Pick a milestone above ↑</div>
+    <div class="moore">
+      <h4>Moore's Law — transistors keep doubling (about every 2 years)</h4>
+      <input type="range" id="mooreyr" min="1971" max="2021" step="2" value="1971" aria-label="year">
+      <p>Year <b id="mooreyrv">1971</b> · about <b id="moorect" class="mono">2,300</b> transistors on one chip</p>
+      <div class="moorebar"><div id="moorefill"></div></div>
+    </div>
+  </div>`;
+}
+function wireTimeline(){
+  const chips = [...document.querySelectorAll(".tlchip")];
+  const detail = document.getElementById("tldetail");
+  chips.forEach(c => c.addEventListener("click", () => {
+    chips.forEach(x => x.classList.remove("on"));
+    c.classList.add("on");
+    const m = TL_M[+c.dataset.i];
+    detail.innerHTML = `<b>${m[0]} — ${m[1]}.</b> ${m[2]}`;
+  }));
+  const yr = document.getElementById("mooreyr");
+  const yrv = document.getElementById("mooreyrv");
+  const ct = document.getElementById("moorect");
+  const fill = document.getElementById("moorefill");
+  const upd = () => {
+    const y = +yr.value;
+    const count = 2300 * Math.pow(2, (y - 1971) / 2);
+    yrv.textContent = y;
+    ct.textContent = count >= 1e9 ? (count/1e9).toFixed(1)+" billion"
+                   : count >= 1e6 ? (count/1e6).toFixed(1)+" million"
+                   : Math.round(count).toLocaleString();
+    // log scale width 2% .. 100%
+    const frac = Math.log10(count/2300) / Math.log10(5e10/2300);
+    fill.style.width = (2 + frac*98).toFixed(1) + "%";
+  };
+  yr.addEventListener("input", upd);
+  upd();
+}
+
+/* ---------- Unit 3 · inside the computer ---------- */
+const INSIDE = [
+ ["cpu","🧠","CPU (Processor)","The 'brain' of the computer. It follows instructions and does the math — billions of tiny steps every second.","Hardware · Processing"],
+ ["ram","⚡","RAM (Memory)","Super-fast temporary workspace. Everything you have open right now lives here — and it empties the moment you power off.","Hardware · Temporary memory"],
+ ["ssd","💾","Storage (SSD / Drive)","Keeps your files, photos, and apps safe even when the power is off. Bigger but slower than RAM.","Hardware · Permanent storage"],
+ ["gpu","🎮","GPU (Graphics)","Draws everything on screen and powers games and video — thousands of little calculations at once.","Hardware · Processing + Output"],
+ ["mb","🔌","Motherboard","The big board that connects every part so they can send signals to each other.","Hardware"],
+ ["psu","🔋","Power Supply","Turns the strong electricity from the wall into the gentle, steady power the parts need.","Hardware"],
+ ["os","🪟","Operating System","The software — Windows, macOS, ChromeOS — that runs the machine and lets your apps work.","Software"],
+ ["kb","⌨️","Keyboard & Mouse","How YOU put information into the computer.","Hardware · Input"],
+ ["mon","🖥️","Monitor","How the computer shows information back to you.","Hardware · Output"]
+];
+function insideWidget(){
+  return `<div class="card simcard" style="border:2px solid var(--u3)">
+    <h3>🖥️ Try it: look inside the computer</h3>
+    <p class="simhint">Click each part to find out what it does — and whether it is <b>hardware</b> or <b>software</b>, and <b>input</b>, <b>output</b>, <b>processing</b>, or <b>storage</b>.</p>
+    <div class="inside" id="inside">${INSIDE.map(p=>`<button class="part" data-k="${p[0]}"><span class="pico">${p[1]}</span>${p[2]}</button>`).join("")}</div>
+    <div class="detailpane" id="insidedetail">Pick a part above to open it up ↑</div>
+  </div>`;
+}
+function wireInside(){
+  const parts = [...document.querySelectorAll(".part")];
+  const d = document.getElementById("insidedetail");
+  parts.forEach(b => b.addEventListener("click", () => {
+    parts.forEach(x => x.classList.remove("on"));
+    b.classList.add("on");
+    const p = INSIDE.find(x => x[0] === b.dataset.k);
+    d.innerHTML = `<b>${p[2]}</b><br>${p[3]}<br><span class="ptag">${p[4]}</span>`;
+  }));
+}
+
+/* ---------- Unit 4 · data & analytics ---------- */
+const D_LABELS = ["Mon","Tue","Wed","Thu","Fri","Sat"];
+const D_START  = [8,12,15,9,20,14];
+function dataWidget(){
+  return `<div class="card simcard" style="border:2px solid var(--u4)">
+    <h3>📊 Try it: build a chart and read the data</h3>
+    <p class="simhint">Change the cups of bubble tea sold each day. The chart and the statistics update as you type.</p>
+    <div class="dgrid">
+      <div class="dinputs" id="dinputs">
+        ${D_LABELS.map((l,i)=>`<label>${l} <input type="number" min="0" max="40" value="${D_START[i]}" data-i="${i}"></label>`).join("")}
+      </div>
+      <div>
+        <div class="dchart" id="dchart"></div>
+        <div class="dstat" id="dstat"></div>
+        <label class="dtoggle"><input type="checkbox" id="dmislead"> Show a <b>misleading</b> chart (axis doesn't start at zero)</label>
+      </div>
+    </div>
+  </div>`;
+}
+function wireData(){
+  const inputs = [...document.querySelectorAll("#dinputs input")];
+  const chart = document.getElementById("dchart");
+  const stat  = document.getElementById("dstat");
+  const mis   = document.getElementById("dmislead");
+  const draw = () => {
+    const vals = inputs.map(i => Math.max(0, +i.value || 0));
+    const base = mis.checked ? Math.min(...vals) - 1 : 0;
+    const top  = Math.max(...vals, base + 1);
+    chart.innerHTML = vals.map((v,i) => {
+      const h = Math.max(2, ((v - base) / (top - base)) * 100);
+      return `<div class="dbar" style="height:${h}%"><span>${v}</span></div>`;
+    }).join("");
+    const sorted = [...vals].sort((a,b)=>a-b);
+    const n = sorted.length;
+    const mean = (vals.reduce((s,v)=>s+v,0)/n);
+    const median = n%2 ? sorted[(n-1)/2] : (sorted[n/2-1]+sorted[n/2])/2;
+    const counts = {}; vals.forEach(v=>counts[v]=(counts[v]||0)+1);
+    const maxc = Math.max(...Object.values(counts));
+    const modes = Object.keys(counts).filter(k=>counts[k]===maxc);
+    const mode = maxc>1 ? modes.join(", ") : "none";
+    stat.innerHTML = `<div>Mean <b>${mean.toFixed(1)}</b></div>
+      <div>Median <b>${median}</b></div>
+      <div>Mode <b>${mode}</b></div>
+      <div>Range <b>${Math.max(...vals)-Math.min(...vals)}</b></div>
+      <div>Total <b>${vals.reduce((s,v)=>s+v,0)}</b></div>`;
+  };
+  inputs.forEach(i => i.addEventListener("input", draw));
+  mis.addEventListener("change", draw);
+  draw();
+}
+
+/* ---------- Unit 5 · spot the phishing ---------- */
+const PHISH_FLAGS = {
+  sender:"The sender's address is <span class='mono'>paypaI-security.com</span> — that is a capital i, not an L. Real companies use their real domain.",
+  greeting:"'Dear Customer' — a real bank knows your name. Generic greetings are a warning sign.",
+  urgency:"Scary urgency ('within 24 hours or your account is closed') is designed to make you panic and click without thinking.",
+  link:"The link hides its real destination behind a shortener. Hover first — never click links in surprise emails.",
+  attach:"An unexpected <span class='mono'>.exe</span> attachment can install a virus. Never open files you didn't ask for."
+};
+function phishingWidget(){
+  return `<div class="card simcard" style="border:2px solid var(--u5)">
+    <h3>🎣 Try it: spot the phishing email</h3>
+    <p class="simhint">This email is a scam. Click the <b>5 red flags</b> hidden in it. Each one you find turns green.</p>
+    <div class="phish">
+      <div class="phmail">
+        <div class="phhead">From: PayPal Security &lt;<span class="flag" data-f="sender">security@paypaI-security.com</span>&gt;<br>Subject: <span class="flag" data-f="urgency">URGENT: Act within 24 hours or your account is closed!</span></div>
+        <p><span class="flag" data-f="greeting">Dear Customer,</span></p>
+        <p>We noticed unusual activity on your account. To keep it safe, please verify your details immediately by clicking below:</p>
+        <p>👉 <span class="flag" data-f="link">http://bit.ly/verify-account-now</span></p>
+        <p>We have also attached your recent statement: <span class="flag" data-f="attach">statement_invoice.exe</span></p>
+        <p>Thank you,<br>The PayPal Team</p>
+      </div>
+      <div class="phmeter"><span id="phcount">0 of 5 red flags found</span><button class="btn btn-ghost" id="phreveal">Reveal all</button></div>
+    </div>
+    <div class="detailpane" id="phdetail" style="border-color:var(--u5)">Click anything that looks suspicious ↑</div>
+  </div>`;
+}
+function wirePhishing(){
+  const flags = [...document.querySelectorAll(".phish .flag")];
+  const count = document.getElementById("phcount");
+  const detail = document.getElementById("phdetail");
+  const found = new Set();
+  const upd = () => count.textContent = `${found.size} of 5 red flags found` + (found.size===5 ? " — nice work! 🎉" : "");
+  flags.forEach(f => f.addEventListener("click", () => {
+    f.classList.add("found"); found.add(f.dataset.f);
+    detail.innerHTML = `<b>Red flag:</b> ${PHISH_FLAGS[f.dataset.f]}`;
+    upd();
+  }));
+  document.getElementById("phreveal").addEventListener("click", () => {
+    flags.forEach(f => { f.classList.add("found"); found.add(f.dataset.f); });
+    detail.innerHTML = "<b>All red flags shown.</b> When several of these appear together, delete the message and never click.";
+    upd();
+  });
+}
+
+/* ---------- Unit 6 · Scratch ---------- */
+const SCRATCH_ID = "1225124129"; /* verified embeddable featured project: "Physics" */
+function scratchWidget(){
+  return `<div class="card simcard" style="border:2px solid var(--u6)">
+    <h3>🐱 Try it: Scratch, right here</h3>
+    <p class="simhint">Press the green flag to run the project below. Then open the full editor to snap your own blocks together.</p>
+    <div class="scratchbox">
+      <iframe src="https://scratch.mit.edu/projects/${SCRATCH_ID}/embed" allowtransparency="true" frameborder="0" scrolling="no" allowfullscreen title="Scratch project"></iframe>
+      <div class="scratch-cta">
+        <a class="btn btn-main" style="text-decoration:none" href="https://scratch.mit.edu/projects/editor/" target="_blank" rel="noopener">Open the Scratch editor ↗</a>
+        <a class="btn btn-ghost" style="text-decoration:none" href="https://scratch.mit.edu/ideas" target="_blank" rel="noopener">Starter tutorials ↗</a>
+      </div>
+      <p class="simhint" style="margin-top:8px">If the project doesn't appear, your network may block it at school — open the editor link above at home.</p>
+    </div>
+  </div>`;
+}
+
+/* ---------- Unit 7 · Lua (Roblox) ---------- */
+const LUA_SNIPPETS = [
+ ["🌱 Hello, Roblox", `-- Your first Lua script. Press Run.
+-- In Roblox this would print to the Output window.
+print("Hello from Lua!")
+print("Welcome to my obby!")`],
+ ["🌱 Variables & math", `-- Variables store values (no special keyword needed)
+local coins = 5
+local reward = 10
+
+coins = coins + reward
+print("You now have", coins, "coins")`],
+ ["🚀 A for loop", `-- Give a prize to 5 players
+for i = 1, 5 do
+  print("Player " .. i .. " gets a trophy 🏆")
+end`],
+ ["🚀 if / else", `-- Decide if a player wins
+local score = 80
+
+if score >= 100 then
+  print("You win!")
+elseif score >= 50 then
+  print("Almost there...")
+else
+  print("Keep trying!")
+end`],
+ ["⭐ Function: kill brick", `-- The LOGIC behind a Roblox kill brick.
+-- (game.Workspace only exists inside Roblox Studio,
+--  but the function logic runs right here.)
+local function onTouch(playerHealth)
+  print("A player touched the brick!")
+  playerHealth = 0
+  print("Health is now", playerHealth)
+  return playerHealth
+end
+
+onTouch(100)`],
+ ["⭐ Tables (a leaderboard)", `local scores = { Nong = 40, Mook = 90, Ton = 75 }
+
+for name, points in pairs(scores) do
+  print(name .. ": " .. points .. " pts")
+end`]
+];
+function luaWidget(){
+  return `<div class="card simcard" style="border:2px solid var(--u7)">
+    <h3>🎮 Try it: write Lua, the Roblox language</h3>
+    <p class="simhint">Roblox games are scripted in Lua. Pick a starter, press <b>Run</b>, and change it. Real Lua runs right in this page.</p>
+    <div class="lua-snips">${LUA_SNIPPETS.map((s,i)=>`<button class="lua-snip" data-i="${i}">${s[0]}</button>`).join("")}</div>
+    <div class="ide luaide">
+      <div class="idebar">${DOTS}<span class="fname">Script.lua</span><span class="spacer"></span>
+        <button class="btn btn-ghost" id="luaclear" style="color:#9fb2c4; border-color:#33475c">Clear</button>
+        <button class="btn btn-main" id="luarun">▶ Run</button>
+      </div>
+      <div class="panes">
+        <textarea class="editor" id="luacode" spellcheck="false" aria-label="Lua code editor"></textarea>
+        <div class="outpane">
+          <div class="outlabel">Output</div>
+          <pre id="luaout">Press ▶ Run to see your script's output here.</pre>
+        </div>
+      </div>
+    </div>
+    <p class="notice">To build a real 3D game, download <b>Roblox Studio</b> at home — this playground is for practising the Lua logic first.</p>
+  </div>`;
+}
+function wireLua(){
+  const ed = document.getElementById("luacode");
+  const out = document.getElementById("luaout");
+  ed.value = LUA_SNIPPETS[0][1];
+  document.querySelectorAll(".lua-snip").forEach(b => b.addEventListener("click", () => {
+    ed.value = LUA_SNIPPETS[+b.dataset.i][1];
+    out.textContent = "Press ▶ Run to see your script's output here.";
+  }));
+  document.getElementById("luaclear").addEventListener("click", () => out.textContent = "");
+  document.getElementById("luarun").addEventListener("click", () => {
+    out.textContent = "";
+    if(typeof fengari === "undefined"){
+      out.innerHTML = '<span class="err">The Lua engine is still loading (it needs internet the first time). Wait a moment and press Run again.</span>';
+      return;
+    }
+    const { lua, lauxlib, lualib, to_luastring } = fengari;
+    const L = lauxlib.luaL_newstate();
+    lualib.luaL_openlibs(L);
+    // capture print() with a native function (no require("js"))
+    lua.lua_pushcfunction(L, function(S){
+      const n = lua.lua_gettop(S);
+      const parts = [];
+      for(let i = 1; i <= n; i++){
+        lauxlib.luaL_tolstring(S, i);
+        parts.push(lua.lua_tojsstring(S, -1));
+        lua.lua_pop(S, 1);
+      }
+      out.textContent += parts.join("  ") + "\n";
+      return 0;
+    });
+    lua.lua_setglobal(L, to_luastring("print"));
+    const ok = lauxlib.luaL_dostring(L, to_luastring(ed.value));
+    if(ok !== lua.LUA_OK){
+      out.innerHTML += '<span class="err">' + lua.lua_tojsstring(L, -1) + '</span>';
+    } else if(!out.textContent){
+      out.textContent = "Script finished (no output).";
+    }
+  });
+}
+
+/* ---------- Unit 8 · flowchart tracer ---------- */
+function flowWidget(){
+  return `<div class="card simcard" style="border:2px solid var(--u8)">
+    <h3>🔀 Try it: trace a flowchart</h3>
+    <p class="simhint">A flowchart is a picture of an algorithm. Type a number and press <b>Trace</b> to walk the path the computer takes to decide even or odd.</p>
+    <div class="flowwrap">
+      <div class="flow">
+        <div class="fnode term" id="fn-start">Start</div><div class="farrow">▼</div>
+        <div class="fnode" id="fn-input">Read number n</div><div class="farrow">▼</div>
+        <div class="fnode dec" id="fn-dec"><svg viewBox="0 0 170 116" aria-hidden="true"><polygon class="dia" points="85,5 165,58 85,111 5,58"/></svg><span>n % 2<br>= 0 ?</span></div>
+        <div class="fbranch"><span>◀ No (odd)</span><span>Yes (even) ▶</span></div>
+        <div style="display:flex;gap:40px">
+          <div class="fnode" id="fn-odd">Print "Odd"</div>
+          <div class="fnode" id="fn-even">Print "Even"</div>
+        </div>
+        <div class="farrow">▼</div><div class="fnode term" id="fn-end">End</div>
+      </div>
+      <div class="flowctl">
+        <p>Number n = <input type="number" id="flown" value="7"> <button class="btn btn-main" id="flowrun">Trace ▶</button></p>
+        <div class="flowlog" id="flowlog">The highlighted boxes show the exact steps the computer follows.</div>
+      </div>
+    </div>
+  </div>`;
+}
+function wireFlow(){
+  const btn = document.getElementById("flowrun");
+  const log = document.getElementById("flowlog");
+  const ids = ["fn-start","fn-input","fn-dec","fn-odd","fn-even","fn-end"];
+  const clear = () => ids.forEach(i => document.getElementById(i).classList.remove("on"));
+  const on = id => document.getElementById(id).classList.add("on");
+  btn.addEventListener("click", async () => {
+    btn.disabled = true; clear(); log.innerHTML = "";
+    const n = Math.trunc(+document.getElementById("flown").value || 0);
+    const steps = [
+      ["fn-start", "<b>Start.</b>"],
+      ["fn-input", `Read the number: <b>n = ${n}</b>.`],
+      ["fn-dec",   `Test the decision: is <b>${n} % 2 = 0</b>? ${n%2===0 ? "Yes." : "No, it is "+(n%2)+"."}`]
+    ];
+    const even = n % 2 === 0;
+    steps.push(even ? ["fn-even", `Because the remainder is 0, go right and <b>print \"Even\"</b>.`]
+                    : ["fn-odd",  `Because the remainder is not 0, go left and <b>print \"Odd\"</b>.`]);
+    steps.push(["fn-end", "<b>End.</b>"]);
+    for(const [id, msg] of steps){
+      clear(); on(id);
+      log.innerHTML += `<div>➡ ${msg}</div>`;
+      await sleep(850);
+    }
+    log.innerHTML += `<div style="margin-top:8px;font-weight:700;color:var(--u8)">Result: ${n} is ${even?"EVEN":"ODD"}.</div>`;
+    btn.disabled = false;
+  });
+}
+
+/* ---------- Unit 8 · sorting visualizer ---------- */
+function algoWidget(){
+  return `<div class="card simcard" style="border:2px solid var(--u8)">
+    <h3>📶 Try it: watch a sorting algorithm think</h3>
+    <p class="simhint">Computers sort by comparing two bars at a time. <span style="color:#e8a33d">Orange</span> = being compared, <span style="color:#e06b5b">red</span> = swapping, <span style="color:#3e8e5a">green</span> = finished.</p>
+    <div class="algobars" id="algobars"></div>
+    <div class="algobtns">
+      <button class="btn btn-ghost" id="algoshuffle">🔀 Shuffle</button>
+      <button class="btn btn-main" id="algobubble">Bubble sort ▶</button>
+      <button class="btn btn-main" id="algosel">Selection sort ▶</button>
+    </div>
+    <div class="algostat" id="algostat">Press Shuffle, then pick a sort.</div>
+  </div>`;
+}
+function wireAlgo(){
+  const wrap = document.getElementById("algobars");
+  const stat = document.getElementById("algostat");
+  const btns = ["algoshuffle","algobubble","algosel"].map(id=>document.getElementById(id));
+  let arr = [], running = false;
+  const render = (cmp=[], swap=[], done=[]) => {
+    const max = Math.max(...arr);
+    wrap.innerHTML = arr.map((v,i) => {
+      let c = ""; if(done.includes(i)) c="done"; else if(swap.includes(i)) c="swap"; else if(cmp.includes(i)) c="cmp";
+      return `<div class="algobar ${c}" style="height:${(v/max*100).toFixed(1)}%"></div>`;
+    }).join("");
+  };
+  const shuffle = () => { arr = Array.from({length:12}, ()=> 5 + Math.floor(Math.random()*95)); render(); stat.textContent = "Ready — pick a sort."; };
+  const lock = on => btns.forEach(b => b.disabled = on);
+  async function bubble(){
+    running=true; lock(true); let swaps=0;
+    for(let i=0;i<arr.length-1;i++){
+      for(let j=0;j<arr.length-1-i;j++){
+        render([j,j+1], [], range(arr.length-i, arr.length));
+        await sleep(90);
+        if(arr[j]>arr[j+1]){ [arr[j],arr[j+1]]=[arr[j+1],arr[j]]; swaps++; render([], [j,j+1], range(arr.length-i, arr.length)); await sleep(90); }
+      }
+    }
+    render([],[],range(0,arr.length)); stat.textContent = `Done! Bubble sort made ${swaps} swaps.`; lock(false); running=false;
+  }
+  async function selection(){
+    running=true; lock(true); let swaps=0;
+    for(let i=0;i<arr.length;i++){
+      let min=i;
+      for(let j=i+1;j<arr.length;j++){ render([min,j], [], range(0,i)); await sleep(70); if(arr[j]<arr[min]) min=j; }
+      if(min!==i){ [arr[i],arr[min]]=[arr[min],arr[i]]; swaps++; render([], [i,min], range(0,i)); await sleep(110); }
+    }
+    render([],[],range(0,arr.length)); stat.textContent = `Done! Selection sort made ${swaps} swaps.`; lock(false); running=false;
+  }
+  function range(a,b){ const r=[]; for(let i=a;i<b;i++) r.push(i); return r; }
+  btns[0].addEventListener("click", () => { if(!running) shuffle(); });
+  btns[1].addEventListener("click", () => { if(!running) bubble(); });
+  btns[2].addEventListener("click", () => { if(!running) selection(); });
+  shuffle();
+}
+
+/* ============================================================
+   Second interactive per unit
+   ============================================================ */
+
+/* ---- Unit 1 · match the pioneer ---- */
+const MATCH = [
+ ["Ada Lovelace","Wrote the first computer program"],
+ ["Charles Babbage","Designed the Analytical Engine"],
+ ["Alan Turing","Described the universal machine & cracked wartime codes"],
+ ["Grace Hopper","Built an early compiler & popularized 'debugging'"]
+];
+function shuffle(a){ a=[...a]; for(let i=a.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [a[i],a[j]]=[a[j],a[i]]; } return a; }
+function matchWidget(){
+  const names = shuffle(MATCH.map((m,i)=>[i,m[0]]));
+  const deeds = shuffle(MATCH.map((m,i)=>[i,m[1]]));
+  return `<div class="card simcard" style="border:2px solid var(--u1)">
+    <h3>🧩 Try it: match the computing pioneer</h3>
+    <p class="simhint">Click a name, then click what they are famous for. Correct matches lock in green.</p>
+    <div class="matchwrap">
+      <div class="matchcol" id="mnames">${names.map(n=>`<button class="matchitem" data-i="${n[0]}">${n[1]}</button>`).join("")}</div>
+      <div class="matchcol" id="mdeeds">${deeds.map(d=>`<button class="matchitem deed" data-i="${d[0]}">${d[1]}</button>`).join("")}</div>
+    </div>
+    <p class="algostat" id="matchmsg">0 of 4 matched.</p>
+  </div>`;
+}
+function wireMatch(){
+  let pick=null, done=0;
+  const msg=document.getElementById("matchmsg");
+  const names=[...document.querySelectorAll("#mnames .matchitem")];
+  const deeds=[...document.querySelectorAll("#mdeeds .matchitem")];
+  names.forEach(b=>b.addEventListener("click",()=>{
+    if(b.classList.contains("ok"))return;
+    names.forEach(x=>x.classList.remove("sel")); b.classList.add("sel"); pick=b;
+  }));
+  deeds.forEach(b=>b.addEventListener("click",()=>{
+    if(!pick || b.classList.contains("ok"))return;
+    if(b.dataset.i===pick.dataset.i){
+      b.classList.add("ok"); pick.classList.add("ok"); pick.classList.remove("sel"); pick=null; done++;
+      msg.textContent = `${done} of 4 matched.` + (done===4?" 🎉 All correct!":"");
+    } else {
+      b.classList.add("bad"); setTimeout(()=>b.classList.remove("bad"),500);
+      msg.textContent = "Not a match — try again.";
+    }
+  }));
+}
+
+/* ---- Unit 2 · ASCII encoder ---- */
+function asciiWidget(){
+  return `<div class="card simcard" style="border:2px solid var(--u2)">
+    <h3>🔡 Try it: turn letters into binary (ASCII)</h3>
+    <p class="simhint">Computers store every letter as a number, then as 8 bits. Type a short word and watch it become binary.</p>
+    <p>Text: <input type="text" id="asciiin" maxlength="14" value="Hi!" style="padding:6px 8px;border:1.5px solid var(--line);border-radius:6px;font-family:inherit"></p>
+    <div class="asciitbl" id="asciiout"></div>
+  </div>`;
+}
+function wireAscii(){
+  const inp=document.getElementById("asciiin");
+  const out=document.getElementById("asciiout");
+  const draw=()=>{
+    const s=inp.value.slice(0,14);
+    out.innerHTML = `<div class="asciirow asciihead"><span>Letter</span><span>ASCII #</span><span>8-bit binary</span></div>` +
+      [...s].map(ch=>{
+        const c=ch.charCodeAt(0);
+        return `<div class="asciirow"><span class="mono">${ch===" "?"␣":ch}</span><span class="mono">${c}</span><span class="mono">${c.toString(2).padStart(8,"0")}</span></div>`;
+      }).join("") || '<p class="simhint">Type something above ↑</p>';
+  };
+  inp.addEventListener("input",draw); draw();
+}
+
+/* ---- Unit 3 · hardware vs software sorter ---- */
+const HWSW = [
+ ["CPU chip","hw"],["Windows 11","sw"],["Keyboard","hw"],["Google Chrome","sw"],
+ ["RAM stick","hw"],["A Python program","sw"],["Monitor","hw"],["The operating system","sw"]
+];
+function hwswWidget(){
+  return `<div class="card simcard" style="border:2px solid var(--u3)">
+    <h3>🧰 Try it: hardware or software?</h3>
+    <p class="simhint">Hardware is the parts you can touch. Software is the instructions. Sort each one.</p>
+    <div class="hwsw" id="hwsw">${HWSW.map((it,i)=>`
+      <div class="hwitem" data-ans="${it[1]}" data-i="${i}"><span>${it[0]}</span>
+        <span class="hwbtns"><button data-pick="hw">Hardware</button><button data-pick="sw">Software</button></span>
+      </div>`).join("")}</div>
+    <p class="algostat" id="hwmsg">0 of ${HWSW.length} correct.</p>
+  </div>`;
+}
+function wireHwsw(){
+  const msg=document.getElementById("hwmsg"); let done=0;
+  document.querySelectorAll("#hwsw .hwitem").forEach(it=>{
+    it.querySelectorAll("button").forEach(btn=>btn.addEventListener("click",()=>{
+      if(it.classList.contains("locked"))return;
+      if(btn.dataset.pick===it.dataset.ans){ it.classList.add("locked","good"); done++; msg.textContent=`${done} of ${HWSW.length} correct.`+(done===HWSW.length?" 🎉":""); }
+      else { it.classList.add("wrong"); setTimeout(()=>it.classList.remove("wrong"),450); }
+    }));
+  });
+}
+
+/* ---- Unit 4 · the outlier effect ---- */
+function outlierWidget(){
+  return `<div class="card simcard" style="border:2px solid var(--u4)">
+    <h3>⚖️ Try it: why mean and median disagree</h3>
+    <p class="simhint">Five friends scored 20, 22, 19, 21, 23. Now one more person joins — drag their score up and watch the <b>mean</b> get dragged along while the <b>median</b> stays steady.</p>
+    <p>6th score: <b id="outval" class="mono">20</b><br><input type="range" id="outrange" min="0" max="200" value="20" style="width:100%"></p>
+    <div class="dstat">
+      <div>Mean <b id="outmean">—</b></div>
+      <div>Median <b id="outmed">—</b></div>
+    </div>
+    <p class="algostat" id="outmsg"></p>
+  </div>`;
+}
+function wireOutlier(){
+  const base=[20,22,19,21,23];
+  const r=document.getElementById("outrange"), val=document.getElementById("outval");
+  const mE=document.getElementById("outmean"), medE=document.getElementById("outmed"), msg=document.getElementById("outmsg");
+  const draw=()=>{
+    const v=+r.value; val.textContent=v;
+    const arr=[...base,v].sort((a,b)=>a-b);
+    const mean=arr.reduce((s,x)=>s+x,0)/arr.length;
+    const med=(arr[2]+arr[3])/2;
+    mE.textContent=mean.toFixed(1); medE.textContent=med.toFixed(1);
+    msg.textContent = v>40 ? "See how one big value yanks the mean up, but the median barely moves? That's why the median is 'fairer' when there's an outlier." : "";
+  };
+  r.addEventListener("input",draw); draw();
+}
+
+/* ---- Unit 5 · password strength ---- */
+const COMMON=["password","123456","qwerty","letmein","admin","iloveyou","welcome","abc123"];
+function passwordWidget(){
+  return `<div class="card simcard" style="border:2px solid var(--u5)">
+    <h3>🔐 Try it: how strong is a password?</h3>
+    <p class="simhint">Type a (pretend!) password and watch the strength meter. Never type a password you really use.</p>
+    <p><input type="text" id="pwin" placeholder="try: dog  then  Blue-Dragon-42!" style="width:100%;max-width:340px;padding:8px;border:1.5px solid var(--line);border-radius:6px;font-family:inherit"></p>
+    <div class="pwmeter"><div id="pwfill"></div></div>
+    <p class="algostat" id="pwlabel">Start typing…</p>
+    <ul class="pwlist" id="pwlist"></ul>
+  </div>`;
+}
+function wirePassword(){
+  const inp=document.getElementById("pwin"), fill=document.getElementById("pwfill"),
+        label=document.getElementById("pwlabel"), list=document.getElementById("pwlist");
+  const draw=()=>{
+    const p=inp.value;
+    const checks=[
+      ["At least 12 characters", p.length>=12],
+      ["Upper and lower case", /[a-z]/.test(p)&&/[A-Z]/.test(p)],
+      ["A number", /[0-9]/.test(p)],
+      ["A symbol (!?-#…)", /[^A-Za-z0-9]/.test(p)],
+      ["Not a common password", p.length>0 && !COMMON.includes(p.toLowerCase())]
+    ];
+    const score=checks.filter(c=>c[1]).length;
+    const pct=[6,20,40,65,85,100][score];
+    const col=score<=2?"#e06b5b":score<=3?"#e8a33d":"#3e8e5a";
+    fill.style.width=(p?pct:0)+"%"; fill.style.background=col;
+    label.textContent = !p?"Start typing…":score<=2?"Weak — too easy to guess.":score<=3?"Okay — could be stronger.":score<=4?"Strong!":"Excellent! 🛡️";
+    label.style.color=col;
+    list.innerHTML=checks.map(c=>`<li class="${c[1]?'met':''}">${c[1]?'✓':'○'} ${c[0]}</li>`).join("");
+  };
+  inp.addEventListener("input",draw); draw();
+}
+
+/* ---- Unit 6 · Scratch-style stage ---- */
+function stageWidget(){
+  return `<div class="card simcard" style="border:2px solid var(--u6)">
+    <h3>🎬 Try it: be the blocks</h3>
+    <p class="simhint">Each button is a Scratch block. Press them to drive the cat — this is exactly how blocks turn into actions.</p>
+    <div class="stage" id="stage"><div class="sprite" id="sprite">🐱</div><div class="bubble" id="bubble" hidden></div></div>
+    <div class="algobtns">
+      <button class="btn btn-main" data-blk="move">move 40 steps</button>
+      <button class="btn btn-main" data-blk="turn">turn ↻ 45°</button>
+      <button class="btn btn-main" data-blk="say">say "Meow!"</button>
+      <button class="btn btn-ghost" data-blk="reset">reset</button>
+    </div>
+  </div>`;
+}
+function wireStage(){
+  const stage=document.getElementById("stage"), sp=document.getElementById("sprite"), bub=document.getElementById("bubble");
+  let x=20,y=90,dir=0;
+  const place=()=>{ sp.style.left=x+"px"; sp.style.top=y+"px"; sp.style.transform=`rotate(${dir}deg)`; };
+  const run=blk=>{
+    if(blk==="move"){ x+=Math.cos(dir*Math.PI/180)*40; y+=Math.sin(dir*Math.PI/180)*40;
+      const w=stage.clientWidth-40, h=stage.clientHeight-40; x=Math.max(0,Math.min(w,x)); y=Math.max(0,Math.min(h,y)); }
+    else if(blk==="turn"){ dir=(dir+45)%360; }
+    else if(blk==="say"){ bub.hidden=false; bub.textContent="Meow!"; bub.style.left=(x+30)+"px"; bub.style.top=(y-10)+"px"; setTimeout(()=>bub.hidden=true,1200); }
+    else if(blk==="reset"){ x=20;y=90;dir=0;bub.hidden=true; }
+    place();
+  };
+  document.querySelectorAll("#stage ~ .algobtns button").forEach(b=>b.addEventListener("click",()=>run(b.dataset.blk)));
+  place();
+}
+
+/* ---- Unit 7 · predict the Lua output ---- */
+const LUA_QUIZ=[
+ {code:'for i = 1, 3 do\n  print(i * 2)\nend', opts:["1 2 3","2 4 6","3 6 9"], a:1, why:"i counts 1, 2, 3 — and i*2 gives 2, 4, 6."},
+ {code:'local x = 5\nif x > 10 then\n  print("big")\nelse\n  print("small")\nend', opts:['"big"','"small"','nothing'], a:1, why:"5 is not greater than 10, so the else branch runs."},
+ {code:'local s = "Ro" .. "blox"\nprint(#s)', opts:["2","6","Roblox"], a:1, why:'".." joins the strings into "Roblox"; # counts its 6 letters.'}
+];
+function luaQuizWidget(){
+  return `<div class="card simcard" style="border:2px solid var(--u7)">
+    <h3>🔮 Try it: predict the output</h3>
+    <p class="simhint">Read each Lua script and guess what it prints. Click your answer to check.</p>
+    ${LUA_QUIZ.map((q,i)=>`<div class="quizcard" data-i="${i}">
+      <pre class="mono quizcode">${q.code}</pre>
+      <div class="quizopts">${q.opts.map((o,j)=>`<button data-j="${j}">${o}</button>`).join("")}</div>
+      <div class="quizwhy" hidden></div>
+    </div>`).join("")}
+  </div>`;
+}
+function wireLuaQuiz(){
+  document.querySelectorAll(".quizcard").forEach(card=>{
+    const q=LUA_QUIZ[+card.dataset.i], why=card.querySelector(".quizwhy");
+    card.querySelectorAll(".quizopts button").forEach(b=>b.addEventListener("click",()=>{
+      const j=+b.dataset.j;
+      card.querySelectorAll(".quizopts button").forEach(x=>x.disabled=true);
+      card.querySelector(`.quizopts button[data-j="${q.a}"]`).classList.add("right");
+      if(j!==q.a) b.classList.add("wrongpick");
+      why.hidden=false; why.innerHTML=(j===q.a?"✅ Correct! ":"❌ Not quite. ")+q.why;
+    }));
+  });
+}
+
+/* ---- Unit 8 · accumulator / loop tracer ---- */
+function accWidget(){
+  return `<div class="card simcard" style="border:2px solid var(--u8)">
+    <h3>🧮 Try it: trace a loop (the #1 coding skill)</h3>
+    <p class="simhint">Watch <span class="mono">total = total + i</span> build up step by step — the pattern behind almost every program.</p>
+    <p>Add 1 up to n = <input type="number" id="accn" value="5" min="1" max="12" style="width:70px;padding:6px;border:1.5px solid var(--line);border-radius:6px;font-family:inherit"> <button class="btn btn-main" id="accrun">Run ▶</button></p>
+    <div class="acctbl" id="acctbl"></div>
+  </div>`;
+}
+function wireAcc(){
+  const btn=document.getElementById("accrun"), tbl=document.getElementById("acctbl");
+  btn.addEventListener("click", async ()=>{
+    btn.disabled=true; tbl.innerHTML=`<div class="accrow acchead"><span>i</span><span>total = total + i</span><span>total</span></div>`;
+    const n=Math.max(1,Math.min(12,+document.getElementById("accn").value||1));
+    let total=0;
+    for(let i=1;i<=n;i++){
+      const prev=total; total+=i;
+      const row=document.createElement("div"); row.className="accrow new";
+      row.innerHTML=`<span class="mono">${i}</span><span class="mono">${prev} + ${i}</span><span class="mono">${total}</span>`;
+      tbl.appendChild(row); await sleep(650); row.classList.remove("new");
+    }
+    const f=document.createElement("div"); f.className="accrow accfinal";
+    f.innerHTML=`<span></span><span>final total</span><span class="mono">${total}</span>`; tbl.appendChild(f);
+    btn.disabled=false;
+  });
+}
+
+/* ---- per-unit section jump menu (under the header) ---- */
+function injectSectionMenu(){
+  const hero = document.querySelector(".unit-hero");
+  if(!hero || document.querySelector(".unitmenu")) return;
+  const byText = (sel, txt) => [...document.querySelectorAll(sel)].find(e => e.textContent.includes(txt));
+  const defs = [
+    ["📖 Theory",      byText(".section-h", "Theory")],
+    ["🔑 Key words",   byText(".section-h", "Key words")],
+    ["🎮 Play & explore", document.querySelector(".simcard")],
+    ["🎲 Games & sims", byText(".section-h", "Games & simulations")],
+    ["🧭 Tools",       byText(".section-h", "Tools")],
+    ["✏️ Practice",    byText(".section-h", "Guided practice")],
+    ["📝 Test",        [...document.querySelectorAll(".card")].find(e => e.textContent.includes("Ready to test"))]
+  ];
+  let html = '<nav class="unitmenu" aria-label="Jump to a section">';
+  defs.forEach(([label, el], i) => {
+    if(!el) return;
+    const id = "sec-" + i; el.id = id; el.classList.add("sec-target");
+    html += `<button class="umenu-btn" data-id="${id}">${label}</button>`;
+  });
+  html += "</nav>";
+  hero.insertAdjacentHTML("afterend", html);
+  document.querySelectorAll(".unitmenu .umenu-btn").forEach(b => b.addEventListener("click", () => {
+    const el = document.getElementById(b.dataset.id);
+    if(el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+  }));
+}
+
+/* ============================================================
+   Curated external interactive games & simulations per unit
+   (every URL checked against a live, reputable education site)
+   ============================================================ */
+const GAMES = {
+ "1":[
+  ["⚙️","Turing Machine Simulator","https://turingmachine.io/","Build and run the 'universal machine' Alan Turing imagined — the idea behind every computer."],
+  ["✋","CS Unplugged","https://www.csunplugged.org/en/","Hands-on computer-science games and puzzles you can play with no computer at all."],
+  ["⏱️","Hour of Code","https://hourofcode.com/us/learn","Dozens of one-hour coding games — pick any theme and start."],
+  ["🏛️","Computer History Timeline","https://www.computerhistory.org/timeline/","Explore computing invention by invention, from the 1930s to today."]
+ ],
+ "2":[
+  ["🔢","CS Field Guide: Binary","https://www.csfieldguide.org.nz/en/chapters/data-representation/numbers/","Flip interactive binary cards and watch the number change."],
+  ["🏁","Cisco Binary Game","https://learningcontent.cisco.com/games/binary/index.html","Race the clock to make numbers in binary before the blocks pile up."],
+  ["📿","CS Unplugged: Binary Numbers","https://classic.csunplugged.org/activities/binary-numbers/","The classic 'binary bracelet' activity — count on five cards."],
+  ["🔡","CS Field Guide: Text & ASCII","https://www.csfieldguide.org.nz/en/chapters/data-representation/text/","See how letters become numbers, then binary."]
+ ],
+ "3":[
+  ["🔌","Nandgame","https://nandgame.com/","Start with one tiny switch and build a whole working computer, gate by gate."],
+  ["🚦","Logic.ly Demo","https://logic.ly/demo","Drag AND / OR / NOT gates and wire up your own logic circuit."],
+  ["🤖","Little Man Computer","https://peterhigginson.co.uk/lmc/","A friendly model CPU you can watch fetch and run instructions step by step."],
+  ["🔧","Tinkercad Circuits","https://www.tinkercad.com/circuits","Snap together real electronic circuits and switch them on in your browser."]
+ ],
+ "4":[
+  ["🌍","Gapminder Tools","https://www.gapminder.org/tools/","Press play and watch 200 years of world data move as a bubble chart."],
+  ["📊","VisuAlgo — Sorting","https://visualgo.net/en/sorting","Watch data get sorted in slow motion and compare the algorithms."],
+  ["📈","Our World in Data","https://ourworldindata.org/","Interactive charts on almost any topic — hover, zoom, and explore."],
+  ["➗","Desmos Graphing","https://www.desmos.com/calculator","Type in numbers and formulas and see them plotted instantly."]
+ ],
+ "5":[
+  ["🐸","Flexbox Froggy","https://flexboxfroggy.com/","Learn how web pages lay things out by guiding frogs with CSS."],
+  ["🍽️","CSS Diner","https://flukeout.github.io/","A tasty game that teaches CSS selectors, plate by plate."],
+  ["🌱","Grid Garden","https://cssgridgarden.com/","Grow a carrot garden while learning CSS grid layout."],
+  ["🎣","Google Phishing Quiz","https://phishingquiz.withgoogle.com/","Eight real-looking emails — can you tell the scams from the safe ones?"]
+ ],
+ "6":[
+  ["🧩","Blockly Games","https://blockly.games/","Block puzzles that sneak in loops, conditionals, and functions."],
+  ["⛏️","Minecraft Hour of Code","https://code.org/minecraft","Program Steve and Alex through a Minecraft world with blocks."],
+  ["💃","Dance Party","https://code.org/dance","Code your own music video — make sprites dance to the beat."],
+  ["⭐","Star Wars: Build a Galaxy","https://code.org/starwars","Drag blocks to program droids and build your own Star Wars game."]
+ ],
+ "7":[
+  ["📚","Roblox Coding Fundamentals","https://create.roblox.com/docs/tutorials/fundamentals/coding-1/coding-fundamentals","Roblox's own step-by-step lessons — from your first script to a real game."],
+  ["▶️","Lua Live Demo","https://www.lua.org/demo.html","The official Lua site — type Lua and run it on the spot."],
+  ["🕹️","MakeCode Arcade","https://arcade.makecode.com/","Build a retro arcade game in blocks or code and play it instantly."],
+  ["⚔️","CodeCombat","https://codecombat.com/","Learn real coding by playing a wizards-and-dungeons adventure."]
+ ],
+ "8":[
+  ["🤖","Reeborg's World","https://reeborg.ca/world.html","Guide a little robot through mazes by writing Python commands."],
+  ["⚔️","CodeCombat","https://codecombat.com/","An RPG where your Python code moves the hero and casts the spells."],
+  ["🐍","futurecoder","https://futurecoder.io/","A free, friendly, fully interactive Python course with a built-in helper."],
+  ["🧠","CheckiO","https://py.checkio.org/","Solve bite-sized Python puzzles as a game and compare solutions."]
+ ]
+};
+function gamesWidget(u){
+  const hex = (typeof UNITS !== "undefined" && UNITS[u] && UNITS[u].hex) || "#2f6b9a";
+  const list = GAMES[u] || [];
+  if(!list.length) return "";
+  return `<div class="section-h" style="margin-top:18px"><span class="tag" style="background:${hex}">Play</span><h2>Games &amp; simulations</h2></div>
+    <p style="color:var(--ink-soft);max-width:720px">Four hand-picked interactive sites for this unit — simulations, coding games, and puzzles. They open in a new tab.</p>
+    <div class="gamegrid">${list.map(g=>`
+      <a class="gamecard" href="${g[2]}" target="_blank" rel="noopener" style="border-top:4px solid ${hex}">
+        <span class="gico">${g[0]}</span>
+        <b>${g[1]}</b>
+        <span class="gblurb">${g[3]}</span>
+        <span class="glaunch" style="color:${hex}">Open ↗</span>
+      </a>`).join("")}</div>`;
 }
 
 route();
